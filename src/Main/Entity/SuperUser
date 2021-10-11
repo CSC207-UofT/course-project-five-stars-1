@@ -1,0 +1,14 @@
+package Entity;
+
+public class SuperUser extends User{
+    String privilige;
+
+    public SuperUser(String username, String password){
+        super(username, password);
+    }
+
+    @Override
+    public String toString(){
+        return "Regular User{" + "username=" + username + "}";
+    }
+}
