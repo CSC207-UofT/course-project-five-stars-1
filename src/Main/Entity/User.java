@@ -54,7 +54,7 @@ public abstract class User{
 
     @Override
     public String toString(){
-        return "Rugular User{" + "username=" + username + "}";
+        return "Regular User{" + "username=" + username + "}";
     }
 
 }
