@@ -1,5 +1,4 @@
 package UseCase;
-
 import Entity.*;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -10,9 +9,9 @@ public class UserManager {
     public UserManager(ArrayList<User> userList){
         userlist = userList;
     }
-    public String getUser(String username, Iterable<? extends User> userList){
+    public String getUser(String id, Iterable<? extends User> userList){
         for (User u : userList){
-            if(u.getUsername().equals(username))
+            if(u.getUsername().equals(id))
                 return u.toString();
         }
         return "The user doesn't exist.";
@@ -32,5 +31,6 @@ public class UserManager {
         User user = new Employer(username, password, salary, attendance, id);
         userlist.add(user);
     }
+
 
 }
