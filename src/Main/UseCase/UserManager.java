@@ -17,9 +17,9 @@ public class UserManager {
         }
         return "The user doesn't exist.";
     }
-    public boolean verifyUser(String id, String password){
+    public boolean verifyUser(String id){
         for (User u : userlist){
-            if (Objects.equals(u.getUsername(), id) && Objects.equals(u.getPassword(id), password))
+            if (Objects.equals(u.getID(), id))
                 return true;
         }
         return false;
@@ -28,4 +28,9 @@ public class UserManager {
         User user = new Employee(username, password, salary, attendance, id);
         userlist.add(user);
     }
+    public void createEmployer(String username, String password, int salary, boolean attendance, String id){
+        User user = new Employer(username, password, salary, attendance, id);
+        userlist.add(user);
+    }
+
 }

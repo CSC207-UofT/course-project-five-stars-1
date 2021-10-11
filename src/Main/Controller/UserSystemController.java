@@ -12,7 +12,7 @@ public class UserSystemController {
         um.createRegularUser(username, password);
     }
 
-    public boolean verify(String username, String password){
-        return um.verifyUser(username, password);
+    public boolean verify(String username){
+        return um.verifyUser(username);
     }
 }
