@@ -3,13 +3,13 @@ package Entity;
 
 public class Employee extends User{
 
-    public Employee(String username, String password, int salary,  boolean attendance, String ID){
-        super(username, password, salary, attendance, ID);
+    public Employee(String username, String password, int salary,  boolean attendance, String id){
+        super(username, password, salary, attendance, id);
     }
 
     @Override
     public String toString(){
         return "Employee {" + "username=" + username + ", salary = " + salary + ", Attendance = " + attendance +
-                ", ID = " + ID + "}";
+                ", ID = " + id + "}";
     }
 }

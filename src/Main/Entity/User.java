@@ -6,15 +6,15 @@ public abstract class User{
     public String password;
     public int salary;
     public boolean attendance;
-    public String ID;
+    public String id;
 
 
-    public User(String username, String password, int salary, boolean attendance, String ID){
+    public User(String username, String password, int salary, boolean attendance, String id){
         this.username = username;
         this.password = password;
         this.attendance = attendance;
         this.salary = salary;
-        this.ID = ID;
+        this.id = id;
     }
 
     public String getUsername(){
@@ -44,10 +44,10 @@ public abstract class User{
         this.attendance = attendance;
     }
     public String getID(){
-        return this.ID;
+        return this.id;
     }
-    public void setID(String ID){
-        this.ID = ID;
+    public void setID(String id){
+        this.id = id;
     }
 
 
