@@ -9,6 +9,7 @@ public class Employer extends User{
 
     @Override
     public String toString(){
-        return "Regular User{" + "username=" + username + "}";
+        return "Employer {" + "username=" + username + ", salary = " + salary + ", Attendance = " + Attendance +
+                ", ID = " + ID + "}";
     }
 }
