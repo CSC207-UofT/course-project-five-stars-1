@@ -1,6 +1,5 @@
 package Entity;
 
-import java.io.Serializable;
 
 public class Employee extends User{
 
@@ -10,6 +9,7 @@ public class Employee extends User{
 
     @Override
     public String toString(){
-        return "Regular User{" + "username=" + username + "}";
+        return "Employee {" + "username=" + username + ", salary = " + salary + ", Attendance = " + Attendance +
+                ", ID = " + ID + "}";
     }
 }
