@@ -3,10 +3,10 @@ package View;
 public class UI {
 }
 import Controller.UserSystemController;
-        import Controller.UserSystemFacde;
-        import UserCases.UserManager;
+import Controller.UserSystemFacde;
+import UserCases.UserManager;
 
-        import java.util.Scanner;
+import java.util.Scanner;
 
 
 public class textUI{
