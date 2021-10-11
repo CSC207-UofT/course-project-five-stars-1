@@ -7,7 +7,7 @@ public class SalaryManagement {
 
     public SalaryManagement(HashMap<String, Integer> sm){
         this.sm = sm;}
-    public boolean pullSalary(String id, int salary) {
+    public boolean giveSalary(String id, int salary) {
         if (this.sm.containsKey(id)) {
             return false;
         } else {
