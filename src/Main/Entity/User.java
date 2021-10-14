@@ -43,7 +43,7 @@ public abstract class User{
     /**
      * Get the password of one specific User
      */
-    public String getPassword(String password){
+    public String getPassword(){
         return password;
     }
 
