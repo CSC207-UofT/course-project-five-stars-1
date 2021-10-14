@@ -8,7 +8,7 @@ public class Employer extends User{
 
     @Override
     public String toString(){
-        return "Employer {" + "Username=" + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
+        return "Employer {Username = " + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
                 + getAttendance() + ", ID = " + getID() + "}";
     }
 }
