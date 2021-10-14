@@ -15,7 +15,7 @@ public class Employee extends User{
      */
     @Override
     public String toString(){
-        return "Employee {" + "Username=" + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
+        return "Employee {Username = " + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
                 + getAttendance() + ", ID = " + getID() + "}";
     }
 }
