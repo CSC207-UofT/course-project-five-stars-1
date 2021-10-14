@@ -2,10 +2,12 @@ package Controller;
 
 import UseCase.SalaryManagement;
 
+import java.util.HashMap;
+
 public class SalarySystemController {
     private SalaryManagement salaryManagement;
 
-    public SalarySystemController(SalaryManagement salaryManagement){this.salaryManagement = salaryManagement;}
+    public SalarySystemController(){this.salaryManagement = new SalaryManagement();}
 
     public void showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
