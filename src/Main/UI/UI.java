@@ -24,18 +24,17 @@ public class UI {
                 System.out.println("This is your salary");
                 ssc.showSalary(id);
             } else if (option == 2){
-                System.out.println("Welcome, enter your option");
+                System.out.println("Welcome, enter your option: 1 for adding user, 2 for get user information, 3 for verify the user.");
                 int pp = sc.nextInt();
                 if (pp == 1){
                     System.out.println("Enter your username");
                     sc.nextLine();
                     String username = sc.nextLine();
                     System.out.println("Enter your password");
-                    sc.nextLine();
                     String password = sc.nextLine();
-                    System.out.println("Enter your salary");
+                    System.out.println("Enter your salary, it must be integer");
                     int salary = sc.nextInt();
-                    System.out.println("Enter your attendance");
+                    System.out.println("Enter your attendance, it must be boolean");
                     boolean attendance = sc.nextBoolean();
                     System.out.println("Enter your id");
                     sc.nextLine();
@@ -46,13 +45,13 @@ public class UI {
                     sc.nextLine();
                     String id = sc.nextLine();
                     System.out.println("This is the result");
-                    usc.getUser(id);
+                    System.out.println(usc.getUser(id));
                 } else if (pp == 3){
-                    System.out.println("Enter your username");
+                    System.out.println("Enter your id");
                     sc.nextLine();
-                    String username = sc.nextLine();
+                    String id = sc.nextLine();
                     System.out.println("This is your result");
-                    usc.verify(username);
+                    System.out.println(usc.verify(id));
                 }
 
             } else if (option == 0){

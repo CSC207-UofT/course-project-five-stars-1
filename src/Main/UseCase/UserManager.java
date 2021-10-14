@@ -21,7 +21,7 @@ public class UserManager {
     public String getUserFromId(String id){
         for (User u : this.userlist){
             if (u.getID().equals(id))
-                return id;
+                return u.toString();
         }
         return "The user id doesn't exist.";
     }
