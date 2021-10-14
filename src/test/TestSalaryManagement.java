@@ -9,7 +9,9 @@ public class TestSalaryManagement {
     static SalaryManagement sm;
 
     @BeforeAll
-    public static void setUp() {sm = new SalaryManagement();}
+    public static void setUp() {
+        sm = new SalaryManagement();
+    }
 
     @Test
     public void testAddSalary(){
