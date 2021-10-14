@@ -35,12 +35,12 @@ public class UI {
                     String password = sc.nextLine();
                     System.out.println("Enter your salary");
                     int salary = sc.nextInt();
-                    System.out.println("Enter your attandance");
-                    boolean attandance = sc.nextBoolean();
+                    System.out.println("Enter your attendance");
+                    boolean attendance = sc.nextBoolean();
                     System.out.println("Enter your id");
                     sc.nextLine();
                     String id = sc.nextLine();
-                    usc.create(username, password, salary, attandance, id);
+                    usc.create(username, password, salary, attendance, id);
                 } else if (pp == 2){
                     System.out.println("Enter your id");
                     sc.nextLine();
