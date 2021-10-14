@@ -8,11 +8,11 @@ import java.util.Objects;
  * Represents the system of Users
  */
 public class UserManager {
-    public static ArrayList<User> userlist;
 
     /**
      * Creates a UserManager with an empty list of Users
      */
+    public static ArrayList<User> userlist;
     public UserManager(ArrayList<User> userList){
         userlist = userList;
     }

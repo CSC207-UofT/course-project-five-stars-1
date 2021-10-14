@@ -11,7 +11,7 @@ public class Employee extends User{
 
     /**
      * Represents the current Employee by their Username, Salary, Attendance and ID
-     * @return the username, salary, attendance and id of current User
+     * @return a string with the username, salary, attendance and id of current User.
      */
     @Override
     public String toString(){
