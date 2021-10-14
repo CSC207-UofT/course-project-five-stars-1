@@ -2,11 +2,11 @@ package Entity;
 
 public abstract class User{
 
-    public String username;
-    public String password;
-    public int salary;
-    public boolean attendance;
-    public String id;
+    private String username;
+    private String password;
+    private int salary;
+    private boolean attendance;
+    private String id;
 
 
     public User(String username, String password, int salary, boolean attendance, String id){

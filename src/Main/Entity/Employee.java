@@ -9,7 +9,7 @@ public class Employee extends User{
 
     @Override
     public String toString(){
-        return "Employee {" + "username=" + username + ", salary = " + salary + ", Attendance = " + attendance +
-                ", ID = " + id + "}";
+        return "Employee {" + "Username=" + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
+                + getAttendance() + ", ID = " + getID() + "}";
     }
 }
