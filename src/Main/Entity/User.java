@@ -25,7 +25,7 @@ public abstract class User{
         this.username = userid;
     }
 
-    public String getPassword(String password){
+    public String getPassword(){
         return password;
     }
     public void setPassword(String password){
