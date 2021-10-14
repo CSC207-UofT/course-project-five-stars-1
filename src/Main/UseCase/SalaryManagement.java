@@ -27,7 +27,7 @@ public class SalaryManagement {
      * @return false if id exists in SalaryManagement,
      * else adds id as key and salary as value into SalaryManagement.
      */
-    public boolean pullSalary(String id, int salary) {
+    public boolean addSalary(String id, int salary) {
         if (this.sm.containsKey(id)) {
             return false;
         } else {
