@@ -12,11 +12,21 @@ public class UserManager {
     }
     public String getUser(String username, Iterable<? extends User> userList){
         for (User u : userList){
-            if(u.getUsername().equals(username))
+            if (u.getUsername().equals(username))
                 return u.toString();
         }
         return "The user doesn't exist.";
     }
+
+    public String getUserFromId(String id, Iterable<? extends User> userList){
+        for (User u : userList){
+            if (u.getID().equals(id))
+                return id;
+        }
+        return "The user id doesn't exist.";
+    }
+
+
     public boolean verifyUser(String id){
         for (User u : userlist){
             if (Objects.equals(u.getID(), id))

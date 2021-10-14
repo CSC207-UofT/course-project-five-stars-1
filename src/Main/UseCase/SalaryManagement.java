@@ -3,17 +3,21 @@ import Entity.User;
 
 import java.util.HashMap;
 public class SalaryManagement {
-    public HashMap<String, Integer> sm = new HashMap<String, Integer>();
+    private HashMap<String, Integer> sm = new HashMap<String, Integer>();
 
     public SalaryManagement(HashMap<String, Integer> sm){
         this.sm = sm;}
-    public boolean giveSalary(String id, int salary) {
+    public boolean pullSalary(String id, int salary) {
         if (this.sm.containsKey(id)) {
             return false;
         } else {
             this.sm.put(id, salary);
             return true;
         }
+    }
+
+    public HashMap<String, Integer> getSm (){
+        return this.sm;
     }
 
     public int getSalary(String id){
