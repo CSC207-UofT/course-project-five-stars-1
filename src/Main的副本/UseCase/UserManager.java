@@ -2,6 +2,7 @@ package UseCase;
 
 import Entity.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 
 /**
@@ -12,23 +13,20 @@ public class UserManager {
      * Creates a UserManager with an empty list of Users
      */
     public static ArrayList<User> userlist;
+<<<<<<< HEAD
+    public UserManager(){userlist = new ArrayList<User>();
+=======
     public UserManager(){
-        userlist = new ArrayList<User>();
+        userlist = new ArrayList<>();
+>>>>>>> origin/main
     }
 
     /**
-     * Getter for the username as a String
-     * @param username User's username.
-     * @param userList A list with Users.
-     * @return a string of username if the username is the same as the username of User in userlist,
-     * else return 'The user doesn't exist.'
+     * Getter for SalaryManagement in the form of Hashmap.
+     * @return a Hashmap with a string as key and an integer as value.
      */
-    public String getUser(String username, Iterable<? extends User> userList){
-        for (User u : userList){
-            if (u.getUsername().equals(username))
-                return u.toString();
-        }
-        return "The user doesn't exist.";
+    public ArrayList<User> getUm (){
+        return userlist;
     }
 
     /**
