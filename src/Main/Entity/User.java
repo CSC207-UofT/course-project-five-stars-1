@@ -50,8 +50,6 @@ public abstract class User{
         this.id = id;
     }
 
-
-
     @Override
     public String toString(){
         return "Regular User{" + "username=" + username + "}";
