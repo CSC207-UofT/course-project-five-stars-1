@@ -31,8 +31,7 @@ public class SalarySystemController {
      */
     public int showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
-            System.out.println("This is your salary for this month:");
-            System.out.println(salaryManagement.getSalary(id));
+            System.out.println("This is your salary for this month: " + salaryManagement.getSalary(id));
             return salaryManagement.getSalary(id);
         } else {
             System.out.println("Sorry, there does not exist your information");

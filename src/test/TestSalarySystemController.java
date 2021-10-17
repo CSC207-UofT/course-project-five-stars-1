@@ -23,7 +23,7 @@ public class TestSalarySystemController {
 
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        String expected_salary_string = "This is your salary for this month:\r\n" + ssc.showSalary("123");
+        String expected_salary_string = "This is your salary for this month: " + ssc.showSalary("123");
         assertEquals(expected_salary_string, output.toString().trim());
     }
 
