@@ -14,6 +14,15 @@ public class SalarySystemController {
         this.salaryManagement = new SalaryManagement();
     }
 
+    /**
+     * Getter SalaryManagement
+     * @return salaryManagement.
+     */
+
+    public SalaryManagement getSalaryManagement(){
+        return salaryManagement;
+    }
+
 
     /**
      * Print out the salary based on the provided id.
