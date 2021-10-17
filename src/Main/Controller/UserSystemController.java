@@ -1,6 +1,7 @@
 package Controller;
 
 import Entity.User;
+import UseCase.SalaryManagement;
 import UseCase.UserManager;
 
 import java.util.Objects;
@@ -32,6 +33,13 @@ public class UserSystemController {
         System.out.println("Successful!!");
     }
 
+    /**
+     * Getter userManager
+     * @return userManager
+     */
+    public UserManager getUserManager(){
+        return userManager;
+    }
     /**
      * Getter username
      * @param id A unique id for each user.
