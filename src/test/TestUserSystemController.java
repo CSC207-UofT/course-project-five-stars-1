@@ -56,7 +56,7 @@ public class TestUserSystemController {
 
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        usc.create("testEmployee", "imthebest", 100000, true, "0");
+        usc.create("testEmployee", "imthebest", 100000, true, "111");
         String expected_string = "Successful!!";
         assertEquals(expected_string, output.toString().trim());
     }
