@@ -61,9 +61,6 @@ public class TestUserSystemController {
         assertEquals(expected_string, output.toString().trim());
     }
 
-    @Test
-    public void testGetUserManager(){
-    }
 
     @Test
     public void testGetUser(){
