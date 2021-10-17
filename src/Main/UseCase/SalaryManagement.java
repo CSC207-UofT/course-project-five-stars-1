@@ -61,5 +61,4 @@ public class SalaryManagement {
     public int computeYearlySalary(int salary){
         return salary * 12;
     }
-
 }
