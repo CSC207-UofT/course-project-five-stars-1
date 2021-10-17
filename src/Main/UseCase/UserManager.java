@@ -15,6 +15,7 @@ public class UserManager {
     public UserManager(){
         userlist = new ArrayList<User>();
     }
+    public ArrayList<User> getUm() {return userlist;}
 
     /**
      * Getter for the username as a String
