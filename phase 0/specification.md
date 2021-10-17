@@ -8,18 +8,6 @@ Once your group has decided on a domain, your first task is to develop a specifi
 - [x] at least a basic command line interface
 
 
-Running the project that implements an HR system that allows the user in the company to access relevant information and status.
+Running the project that implements an HR system that allows the user in the company to access relevant information and status. Each user is either an employer or an employee. Each of them is associated with a username, a password, salary, attendance, and id. It should be able to get all users in the company and with their corresponding information: username, salary, attendance, and id. An employer should be able to set information for a particular employee, such as salary adjustment.
 
-Each user is either an employer, an employee or an intern. Each of them is associated with a username, a password, salary and attendance.
-
-It should be able to get all users in the company and their corresponding occupation and salary.
-
-An employer should be able to set information for a particular employee or intern, such as salary adjustment or shift change.
-
-While running, the UI program prints an Intellij tab where users can repeatedly type commands that
-1. create the personal profile for new employees
-2. allow the employer to navigate through the directory structure they've built to view and change the profiles of employees he or she has created.
-3. allow employees to check their files(id, salary) including the salary details.
-4. exit the system
-
-In conclusion, we now have three entity classes: Employee, Employer and User. Three use case classes: SalaryManagement, Schedule and Usermanager. Two controllers: SalarySystemController and UserSystemController. And one basic command-line user interface: UI.
+While running, the UI program prints an Intellij tab where users can give the following commands: create the personal profile for new employees, allow the employer to navigate through the directory structure they've built to view and change the profiles of employees he or she has created, allow employees to check their information such as salary and id, exit the system. We now have three entity classes: Employee, Employer and User. Two use case classes: SalaryManagement and Usermanager. Two controllers: SalarySystemController and UserSystemController. And one basic command-line user interface: UI.
