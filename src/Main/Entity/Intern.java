@@ -1,8 +1,8 @@
 package Entity;
 
 public class Intern extends User{
-    public Intern(String username, String password, int salary,  boolean attendance, String id){
-        super(username, password, salary, attendance, id );
+    public Intern(String username, String password, int salary,  boolean attendance, String id, String email){
+        super(username, password, salary, attendance, id, email);
     }
 
     /**
@@ -12,6 +12,6 @@ public class Intern extends User{
     @Override
     public String toString(){
         return "Intern {Username = " + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
-                + getAttendance() + ", ID = " + getID() + "}";
+                + getAttendance() + ", ID = " + getID() + ", Email = " + getEmail() + "}";
     }
 }

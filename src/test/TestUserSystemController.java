@@ -23,19 +23,20 @@ public class TestUserSystemController {
     public void testCreateEmployer(){
         usc = new UserSystemController();
         ArrayList<User> expected = new ArrayList<>();
-        Employer employer = new Employer("testEmployer", "imthebest", 100000, true, "0");
+        Employer employer = new Employer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
         expected.add(employer);
-        usc.getUserManager().createEmployer("testEmployer", "imthebest", 100000, true, "0");
-        usc.create("testEmployer", "imthebest", 100000, true, "0");
+        usc.getUserManager().createEmployer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
+        usc.create("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
         assertEquals(expected.get(0).getUsername(), usc.getUserManager().getUm().get(0).getUsername());
         assertEquals(expected.get(0).getID(), usc.getUserManager().getUm().get(0).getID());
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
         assertEquals(expected.get(0).getSalary(), usc.getUserManager().getUm().get(0).getSalary());
+        assertEquals(expected.get(0).getEmail(), usc.getUserManager().getUm().get(0).getEmail());
 
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        usc.create("testEmployer", "imthebest", 100000, true, "0");
+        usc.create("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
         String expected_string = "Successful!!";
         assertEquals(expected_string, output.toString().trim());
     }
@@ -44,10 +45,10 @@ public class TestUserSystemController {
     public void testCreateEmployee(){
         usc = new UserSystemController();
         ArrayList<User> expected = new ArrayList<>();
-        Employee employee = new Employee("testEmployee", "imthebest", 100000, true, "111");
+        Employee employee = new Employee("testEmployee", "imthebest", 100000, true, "111", "kt@gmail.com");
         expected.add(employee);
-        usc.getUserManager().createEmployee("testEmployee", "imthebest", 100000, true, "111");
-        usc.create("testEmployee", "imthebest", 100000, true, "111");
+        usc.getUserManager().createEmployee("testEmployee", "imthebest", 100000, true, "111", "kt@gmail.com");
+        usc.create("testEmployee", "imthebest", 100000, true, "111", "kt@gmail.com");
         assertEquals(expected.get(0).getUsername(), usc.getUserManager().getUm().get(0).getUsername());
         assertEquals(expected.get(0).getID(), usc.getUserManager().getUm().get(0).getID());
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
@@ -56,7 +57,7 @@ public class TestUserSystemController {
 
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        usc.create("testEmployee", "imthebest", 100000, true, "111");
+        usc.create("testEmployee", "imthebest", 100000, true, "111", "kt@gmail.com");
         String expected_string = "Successful!!";
         assertEquals(expected_string, output.toString().trim());
     }
@@ -65,7 +66,7 @@ public class TestUserSystemController {
     @Test
     public void testGetUser(){
         UserSystemController usc = new UserSystemController();
-        usc.create("testEmployee", "imtheworst", 10000, true, "111");
+        usc.create("testEmployee", "imtheworst", 10000, true, "111", "kt@gmail.com");
         String actual = usc.getUser("111");
         assertEquals("Employee {Username = testEmployee, Salary = 10000, Attendance = true, ID = 111}", actual);
     }
@@ -73,7 +74,7 @@ public class TestUserSystemController {
     @Test
     public void testGetUserNotExists(){
         UserSystemController usc = new UserSystemController();
-        usc.create("testEmployee", "imtheworst", 10000, true, "1");
+        usc.create("testEmployee", "imtheworst", 10000, true, "1", "kt@gmail.com");
         String actual = usc.getUser("111");
         assertEquals( "The user id doesn't exist.", actual);
     }
@@ -81,7 +82,7 @@ public class TestUserSystemController {
     @Test
     public void verifyValidUser(){
         UserSystemController usc = new UserSystemController();
-        usc.create("testEmployee", "imtheworst", 10000, true, "111");
+        usc.create("testEmployee", "imtheworst", 10000, true, "111", "kt@gmail.com");
         boolean actual = usc.verify("111");
         assertEquals(true, actual);
     }
@@ -89,7 +90,7 @@ public class TestUserSystemController {
     @Test
     public void verifyInvalidUser(){
         UserSystemController usc = new UserSystemController();
-        usc.create("testEmployee", "imtheworst", 10000, true, "111");
+        usc.create("testEmployee", "imtheworst", 10000, true, "111", "kt@gmail.com");
         boolean actual = usc.verify("0");
         assertEquals(false, actual);
     }

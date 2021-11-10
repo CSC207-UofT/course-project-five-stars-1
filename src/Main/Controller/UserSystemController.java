@@ -24,11 +24,11 @@ public class UserSystemController {
      * @param attendance User's attendance.
      * @param id A unique id for each user.
      */
-    public void create(String username, String password, int salary, boolean attendance, String id){
+    public void create(String username, String password, int salary, boolean attendance, String id, String email){
         if (Objects.equals(id, "0")){
-            userManager.createEmployer(username, password, salary, attendance, id);
+            userManager.createEmployer(username, password, salary, attendance, id, email);
         } else {
-            userManager.createEmployee(username, password, salary, attendance, id);
+            userManager.createEmployee(username, password, salary, attendance, id, email);
         }
         System.out.println("Successful!!");
     }

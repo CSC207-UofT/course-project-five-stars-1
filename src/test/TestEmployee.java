@@ -9,7 +9,7 @@ public class TestEmployee {
 
     @BeforeAll
     public static void setUp() {employee = new Employee("testEmployee", "abcd9876",
-            20000, true, "123");}
+            20000, true, "123", "kt@gmail.com");}
 
     @Test
     public void testConstructor(){
@@ -18,6 +18,7 @@ public class TestEmployee {
         assertEquals(20000, employee.getSalary());
         assertEquals(true, employee.getAttendance());
         assertEquals("123", employee.getID());
+        assertEquals("kt@gmail.com", employee.getEmail());
     }
 
     @Test
