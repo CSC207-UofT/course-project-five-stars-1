@@ -55,10 +55,45 @@ public class SalaryManagement {
 
     /**
      * Computes the yearly salary.
-     * @param salary User's salary.
+     * @param id User's id.
      * @return an integer.
      */
-    public int computeYearlySalary(int salary){
-        return salary * 12;
+    public int computeYearlySalary(String id){
+        return getSalary(id) * 12;
+    }
+
+    /**
+     * Computes the yearly salary after tax.
+     * @param id User's id.
+     * @return a double represented the User's yearly salary after tax.
+     */
+    public double salaryAfterTax(String id){
+        int salary = getSalary(id);
+        int yearlysalary = salary * 12;
+        if (yearlysalary <= 45152){
+            return yearlysalary * (1 - 0.0505);
+        } else if (yearlysalary <= 90287){
+            double one = (yearlysalary - 45152) * (1 - 0.0915);
+            double two = 45152 * (1 - 0.0505);
+            return one + two;
+        } else if (yearlysalary <= 150000){
+            double one = 45152 * (1 - 0.0505);
+            double two = (90287 - 45152) * (1 - 0.0915);
+            double three = (yearlysalary - 90287) * (1 - 0.1116);
+            return one + two + three;
+        } else if (yearlysalary <= 220000){
+            double one = 45152 * (1 - 0.0505);
+            double two = (90287 - 45152) * (1 - 0.0915);
+            double three = (150000 - 90287) * (1 - 0.1116);
+            double four = (yearlysalary - 150000) * (1 - 0.1216);
+            return one + two + three + four;
+        } else {
+            double one = 45152 * (1 - 0.0505);
+            double two = (90287 - 45152) * (1 - 0.0915);
+            double three = (150000 - 90287) * (1 - 0.1116);
+            double four = (220000 - 150000) * (1 - 0.1216);
+            double five = (yearlysalary - 220000) * (1 - 0.1316);
+            return one + two + three + four + five;
+        }
     }
 }
