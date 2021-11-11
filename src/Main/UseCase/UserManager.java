@@ -82,4 +82,19 @@ public class UserManager {
         userlist.add(user);
     }
 
+    /**
+     * Remove an employee from our userSystem.
+     * @param id employee's id.
+     *
+     */
+    public void fire(String id){
+        for (User user : userlist){
+            if (Objects.equals(user.getID(), id)){
+                userlist.remove(user);
+                System.out.println("Successful! This employee has been removed");
+                break;
+            }
+        }
+        System.out.println("We did not find the employee");
+    }
 }

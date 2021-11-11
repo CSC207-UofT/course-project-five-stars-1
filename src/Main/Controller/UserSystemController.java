@@ -30,10 +30,6 @@ public class UserSystemController {
         }
         System.out.println("Successful!!");
     }
-    public boolean login(String username, String password, String id, String email, String major){
-
-    }
-
     /**
      * Getter userManager
      * @return userManager
@@ -57,5 +53,9 @@ public class UserSystemController {
      */
     public boolean verify(String id){
         return userManager.verifyUser(id);
+    }
+
+    public void fire(String id){
+        this.userManager.fire(id);
     }
 }

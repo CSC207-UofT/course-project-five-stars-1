@@ -18,23 +18,15 @@ public class InternManagement {
         return new Intern(username, password, id, email, major);
     }
 
-    public void registerInformation(String id1, String username, String password, String id2,
+    public void registerInformation(String username, String password, String id,
                                     String email, String major, int grade){
-        if (Objects.equals(id1, "0")){
-            Intern intern = createIntern(username, password, id2, email, major);
-            this.im.put(intern, grade);
-        } else {
-            System.out.println("You can not edit this file");
-        }
+        Intern intern = createIntern(username, password, id, email, major);
+        this.im.put(intern, grade);
     }
 
-    public void updateInformation(String id, int standard){
-        if (Objects.equals(id, "0")){
-            for(Map.Entry<Intern, Integer> ii : this.im.entrySet()){
-                ii.getKey().setAcceptable(ii.getValue() >= standard);
-            }
-        } else {
-            System.out.println("You can not edit this file");
+    public void updateInformation(int standard){
+        for(Map.Entry<Intern, Integer> ii : this.im.entrySet()){
+            ii.getKey().setAcceptable(ii.getValue() >= standard);
         }
     }
 
