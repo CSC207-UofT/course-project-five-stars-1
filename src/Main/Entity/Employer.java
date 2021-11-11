@@ -4,8 +4,8 @@ package Entity;
  * Represents the entire system of Employer(one of the User)
  */
 public class Employer extends User{
-    public Employer(String username, String password, int salary,  boolean attendance, String id, String email){
-        super(username, password, salary, attendance, id, email);
+    public Employer(String username, String password, int salary,  boolean attendance, String id, String email, String major){
+        super(username, password, salary, attendance, id, email, major);
     }
 
     /**
@@ -15,6 +15,6 @@ public class Employer extends User{
     @Override
     public String toString(){
         return "Employer {Username = " + getUsername() + ", Salary = " + getSalary() + ", Attendance = "
-                + getAttendance() + ", ID = " + getID() + ", Email = " + getEmail() + "}";
+                + getAttendance() + ", ID = " + getID() + ", Email = " + getEmail() + ", Major = " + getMajor() +  "}";
     }
 }

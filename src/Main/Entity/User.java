@@ -8,15 +8,17 @@ public abstract class User{
     private boolean attendance;
     private String id;
     private String email;
+    private String major;
 
 
-    public User(String username, String password, int salary, boolean attendance, String id, String email){
+    public User(String username, String password, int salary, boolean attendance, String id, String email, String major){
         this.username = username;
         this.password = password;
         this.attendance = attendance;
         this.salary = salary;
         this.id = id;
         this.email = email;
+        this.major = major;
     }
 
     public String getUsername(){
@@ -49,11 +51,12 @@ public abstract class User{
     public void setID(String id){
         this.id = id;
     }
-    public void setEmail(String email) {this.email = email;}
     public String getEmail() {return email;}
     public boolean verifyCorrectness(String email){
         return email.contains("@") & email.contains(".") ;
     }
+    public String getMajor() {return major;}
+
     @Override
     public String toString(){
         return "Regular User{" + "username=" + username + "}";

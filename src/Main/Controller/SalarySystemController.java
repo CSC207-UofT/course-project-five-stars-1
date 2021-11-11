@@ -40,5 +40,13 @@ public class SalarySystemController {
             return 0;
         }
     }
+    public boolean addSalary(String id, int salary) {
+        if (this.salaryManagement.getSm().containsKey(id)) {
+            return false;
+        } else {
+            this.salaryManagement.getSm().put(id, salary);
+            return true;
+        }
+    }
 
 }

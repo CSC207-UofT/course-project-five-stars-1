@@ -18,7 +18,7 @@ public class TestUserManager {
     public void testCreateEmployer(){
         um = new UserManager();
         ArrayList<User> expected = new ArrayList<>();
-        Employer employer = new Employer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
+        Employer employer = new Employer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com", "computer science");
         expected.add(employer);
         um.createEmployer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com");
         assertEquals(expected.get(0).getUsername(), um.getUm().get(0).getUsername());

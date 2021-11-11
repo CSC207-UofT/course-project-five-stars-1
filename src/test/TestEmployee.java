@@ -9,7 +9,7 @@ public class TestEmployee {
 
     @BeforeAll
     public static void setUp() {employee = new Employee("testEmployee", "abcd9876",
-            20000, true, "123", "kt@gmail.com");}
+            20000, true, "123", "kt@gmail.com", "computer science");}
 
     @Test
     public void testConstructor(){
