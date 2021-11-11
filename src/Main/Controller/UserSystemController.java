@@ -30,9 +30,6 @@ public class UserSystemController {
         }
         System.out.println("Successful!!");
     }
-    public boolean login(String username, String password, String id, String email, String major){
-
-    }
 
     /**
      * Getter userManager

@@ -3,11 +3,12 @@ import Controller.UserSystemController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class Loginsurface extends JFrame {
     private JLabel userLabel;
-    private JTextField useridInput;
+
     private JLabel passwordLabel;
     private JPasswordField passwordInput;
     private JButton rButton;
@@ -29,9 +30,6 @@ public class Loginsurface extends JFrame {
         userLabel = new JLabel("Userid:");
         panel.add(userLabel);
 
-        useridInput = new JTextField(30);
-        panel.add(useridInput);
-
         passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
 
@@ -46,16 +44,19 @@ public class Loginsurface extends JFrame {
 
         majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
+        Random id = new Random();
+        int i = id.nextInt(1000);
+        i += 1;
+        String randomId = String.valueOf(i);
 
         rButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String id = useridInput.getText();
                 String password = passwordInput.getText();
                 String username = nameInput.getText();
                 String email = emailInput.getText();
                 String major = majorInput.getText();
-                userManager.create(id, password, username, email, major);
+                userManager.create(randomId, password, username, email, major);
                 JOptionPane.showMessageDialog(null, "Your registration is successful");
             }
         });
@@ -63,14 +64,24 @@ public class Loginsurface extends JFrame {
         lButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String id = useridInput.getText();
-                String password = passwordInput.getText();
-                String username = nameInput.getText();
-                String email = emailInput.getText();
-                String major = majorInput.getText();
+                if(userManager.verify(randomId) == false)
+                    JOptionPane.showMessageDialog(null,"Please enter an exist user");
+                else{
+                    Loginsurface.this.setVisible(false);
+                    JFrame userinterface = new Userinterface();
+                    userinterface.setVisible(true);
+                }
 
             }
         });
+
+
+        this.setLayout (null);
+        panel.setSize(500,500);
+        panel.setLocation((FRAME_WIDTH-500) / 2, (FRAME_HEIGHT - 500) / 2);
+        this.add (panel);
+        this.setSize (FRAME_WIDTH, FRAME_HEIGHT);
+        this.setTitle ("User Login interface");
 
     }
 }
