@@ -20,17 +20,18 @@ public class UserSystemController {
      * Otherwise, creates an employee in userlist.
      * @param username User's username.
      * @param password User's password.
-     * @param salary User's salary.
-     * @param attendance User's attendance.
      * @param id A unique id for each user.
      */
-    public void create(String username, String password, int salary, boolean attendance, String id, String email, String major){
+    public void create(String username, String password, String id, String email, String major){
         if (Objects.equals(id, "0")){
-            userManager.createEmployer(username, password, salary, attendance, id, email, major);
+            userManager.createEmployer(username, password, id, email, major);
         } else {
-            userManager.createEmployee(username, password, salary, attendance, id, email, major);
+            userManager.createEmployee(username, password, id, email, major);
         }
         System.out.println("Successful!!");
+    }
+    public boolean login(String username, String password, String id, String email, String major){
+
     }
 
     /**

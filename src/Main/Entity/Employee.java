@@ -5,8 +5,8 @@ package Entity;
  */
 public class Employee extends User{
 
-    public Employee(String username, String password, int salary,  boolean attendance, String id, String email, String major){
-        super(username, password, salary, attendance, id, email, major);
+    public Employee(String username, String password, String id, String email, String major){
+        super(username, password, id, email, major);
     }
 
     /**

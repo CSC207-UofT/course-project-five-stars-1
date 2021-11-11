@@ -1,8 +1,8 @@
 package Entity;
 
 public class Intern extends User{
-    public Intern(String username, String password, int salary,  boolean attendance, String id, String email, String major){
-        super(username, password, salary, attendance, id, email, major);
+    public Intern(String username, String password, String id, String email, String major){
+        super(username, password, id, email, major);
     }
 
     /**

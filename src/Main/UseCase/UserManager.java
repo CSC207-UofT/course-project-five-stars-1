@@ -64,12 +64,10 @@ public class UserManager {
      * Adds an employee with username, password, salary, attendance, and id into userlist.
      * @param username User's username.
      * @param password User's password.
-     * @param salary User's salary.
-     * @param attendance User's attendance.
      * @param id A unique String for each User.
      */
-    public void createEmployee(String username, String password, int salary, boolean attendance, String id, String email, String major){
-        User user = new Employee(username, password, salary, attendance, id, email, major);
+    public void createEmployee(String username, String password, String id, String email, String major){
+        User user = new Employee(username, password, id, email, major);
         userlist.add(user);
     }
 
@@ -77,12 +75,10 @@ public class UserManager {
      * Adds an employer with username, password, salary, attendance, and id into userlist.
      * @param username User's username.
      * @param password User's password.
-     * @param salary User's salary.
-     * @param attendance User's attendance.
      * @param id A unique String for each User.
      */
-    public void createEmployer(String username, String password, int salary, boolean attendance, String id, String email, String major){
-        User user = new Employer(username, password, salary, attendance, id, email, major);
+    public void createEmployer(String username, String password, String id, String email, String major){
+        User user = new Employer(username, password, id, email, major);
         userlist.add(user);
     }
 

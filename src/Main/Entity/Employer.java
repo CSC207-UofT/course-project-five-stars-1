@@ -4,8 +4,8 @@ package Entity;
  * Represents the entire system of Employer(one of the User)
  */
 public class Employer extends User{
-    public Employer(String username, String password, int salary,  boolean attendance, String id, String email, String major){
-        super(username, password, salary, attendance, id, email, major);
+    public Employer(String username, String password, String id, String email, String major){
+        super(username, password, id, email, major);
     }
 
     /**

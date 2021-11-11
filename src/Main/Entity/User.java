@@ -4,18 +4,16 @@ public abstract class User{
 
     private String username;
     private String password;
-    private int salary;
-    private boolean attendance;
+    private int salary = 0;
+    private boolean attendance = false;
     private String id;
     private String email;
     private String major;
 
 
-    public User(String username, String password, int salary, boolean attendance, String id, String email, String major){
+    public User(String username, String password, String id, String email, String major){
         this.username = username;
         this.password = password;
-        this.attendance = attendance;
-        this.salary = salary;
         this.id = id;
         this.email = email;
         this.major = major;
