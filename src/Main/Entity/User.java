@@ -1,30 +1,33 @@
 package Entity;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public abstract class User{
 
     private String username;
     private String password;
-    private int salary;
-    private boolean attendance;
+    private int salary = 0;
+    private boolean attendance = false;
     private String id;
+    private final String email;
+    private final String major;
 
 
-    public User(String username, String password, int salary, boolean attendance, String id){
+    public User(String username, String password, String id, String email, String major){
         this.username = username;
         this.password = password;
-        this.attendance = attendance;
-        this.salary = salary;
         this.id = id;
+        this.email = email;
+        this.major = major;
     }
 
     public String getUsername(){
         return username;
     }
-
     public void setUsername(String userid){
         this.username = userid;
     }
-
     public String getPassword(){
         return password;
     }
@@ -49,6 +52,17 @@ public abstract class User{
     public void setID(String id){
         this.id = id;
     }
+    public String getEmail() {return email;}
+
+    public static final Pattern VALID_EMAIL_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean isValidEmail(String email) {
+        Matcher matcher = VALID_EMAIL_REGEX.matcher(email);
+        return matcher.find();
+    }
+
+    public String getMajor() {return major;}
 
     @Override
     public String toString(){

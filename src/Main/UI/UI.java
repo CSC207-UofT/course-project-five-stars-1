@@ -89,7 +89,9 @@ public class UI implements ActionListener {
                                     , "ID", JOptionPane.PLAIN_MESSAGE);
                             sc.nextLine();
                             String id = sc.nextLine();
-                            usc.create(username, password, salary, attendance, id);
+                            sc.nextLine();
+                            String email = sc.nextLine();
+                            usc.create(username, password, salary, attendance, id, email);
                             JOptionPane.showMessageDialog(null, "You have added a new user" +
                                             " successfully"
                                     , "ID", JOptionPane.PLAIN_MESSAGE);

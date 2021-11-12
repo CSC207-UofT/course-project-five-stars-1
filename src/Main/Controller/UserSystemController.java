@@ -20,19 +20,16 @@ public class UserSystemController {
      * Otherwise, creates an employee in userlist.
      * @param username User's username.
      * @param password User's password.
-     * @param salary User's salary.
-     * @param attendance User's attendance.
      * @param id A unique id for each user.
      */
-    public void create(String username, String password, int salary, boolean attendance, String id){
+    public void create(String username, String password, String id, String email, String major){
         if (Objects.equals(id, "0")){
-            userManager.createEmployer(username, password, salary, attendance, id);
+            userManager.createEmployer(username, password, id, email, major);
         } else {
-            userManager.createEmployee(username, password, salary, attendance, id);
+            userManager.createEmployee(username, password, id, email, major);
         }
         System.out.println("Successful!!");
     }
-
     /**
      * Getter userManager
      * @return userManager
@@ -51,10 +48,15 @@ public class UserSystemController {
 
     /**
      * Check valid id.
-     * @param id A unique id for each user.
+     * @param email A unique email for each User.
+     * @param password password for each User.
      * @return true if id is valid, else false.
      */
-    public boolean verify(String id){
-        return userManager.verifyUser(id);
+    public boolean verify(String email, String password){
+        return userManager.verifyUser(email, password);
+    }
+
+    public void fire(String id){
+        this.userManager.fire(id);
     }
 }

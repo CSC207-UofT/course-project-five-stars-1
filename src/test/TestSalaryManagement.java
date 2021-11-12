@@ -42,7 +42,7 @@ public class TestSalaryManagement {
 
     @Test
     public void testComputeYearlySalary() {
-        int salary = sm.computeYearlySalary(123);
+        int salary = sm.computeYearlySalary("123");
         assertEquals(salary, 1476);
     }
 }

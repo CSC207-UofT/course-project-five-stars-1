@@ -29,13 +29,21 @@ public class SalarySystemController {
      * Otherwise, print "Sorry, there does not exist your information"
      * @param id A unique String for each User.
      */
-    public int showSalary(String id){
+    public void showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
             System.out.println("This is your salary for this month: " + salaryManagement.getSalary(id));
-            return salaryManagement.getSalary(id);
+            System.out.println("This is your salary for this year: " + salaryManagement.computeYearlySalary(id));
+            System.out.println("This is your yearly salary after tex: " + salaryManagement.salaryAfterTax(id));
         } else {
             System.out.println("Sorry, there does not exist your information");
-            return 0;
+        }
+    }
+    public boolean addSalary(String id, int salary) {
+        if (this.salaryManagement.getSm().containsKey(id)) {
+            return false;
+        } else {
+            this.salaryManagement.getSm().put(id, salary);
+            return true;
         }
     }
 
