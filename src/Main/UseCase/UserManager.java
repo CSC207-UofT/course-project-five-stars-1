@@ -1,20 +1,26 @@
 package UseCase;
 
 import Entity.*;
+import Gateway.UserReadWriter;
+
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Represents the system of Users
  */
-public class UserManager {
+public class UserManager implements Serializable {
     /**
      * Creates a UserManager with an empty list of Users
      */
     public static ArrayList<User> userlist;
-    public UserManager(ArrayList<User> userList){
-        userlist = userList;
+
+    public UserManager(){
+        userlist = new ArrayList<User>();
     }
+
     public ArrayList<User> getUm() {return userlist;}
 
     /**
