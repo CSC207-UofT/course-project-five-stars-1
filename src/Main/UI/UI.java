@@ -36,7 +36,7 @@ public class UI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         SalarySystemController ssc = new SalarySystemController();
-        UserSystemController usc = new UserSystemController();
+        UserSystemController usc = UserSystemController(); //这里需要找个方法把user system controller里的userList取过来
 
         Scanner sc = new Scanner(System.in);
         if(e.getSource() == b){

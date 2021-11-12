@@ -1,9 +1,11 @@
 package Entity;
 
+import java.io.Serializable;
+
 /**
  * Represents the entire system of Employer(one of the User)
  */
-public class Employer extends User{
+public class Employer extends User implements Serializable {
     public Employer(String username, String password, String id, String email, String major){
         super(username, password, id, email, major);
     }

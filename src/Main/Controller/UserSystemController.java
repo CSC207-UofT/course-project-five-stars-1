@@ -1,18 +1,29 @@
 package Controller;
 
 import Entity.User;
+import Gateway.UserReadWriter;
 import UseCase.SalaryManagement;
 import UseCase.UserManager;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Controls the UserManagement system.
  */
 public class UserSystemController {
+    private final ArrayList<User> userList;
+    UserReadWriter readWriter = new UserReadWriter();
     private UserManager userManager;
     public UserSystemController(){
         this.userManager = new UserManager();
+        userList = userManager.getUm();
+        try {
+            readWriter.saveToFile("users.ser", userList);
+        } catch (IOException e) {
+            System.out.println("User list did not save.");
+        }
     }
 
     /**
