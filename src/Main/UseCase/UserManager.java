@@ -48,13 +48,14 @@ public class UserManager {
 
     /**
      * Verify the id is valid.
-     * @param id A unique String for each User.
+     * @param email A unique email for each User.
+     * @param password password for each User.
      * @return ture if the id is the same as the id of User in userlist,
      * else return false
      */
-    public boolean verifyUser(String id){
+    public boolean verifyUser(String email, String password){
         for (User u : userlist){
-            if (Objects.equals(u.getID(), id))
+            if (Objects.equals(u.getEmail(), email) & Objects.equals(u.getPassword(), password))
                 return true;
         }
         return false;

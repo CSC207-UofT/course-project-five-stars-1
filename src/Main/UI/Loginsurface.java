@@ -64,7 +64,9 @@ public class Loginsurface extends JFrame {
         lButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(userManager.verify(randomId) == false)
+                String password = passwordInput.getText();
+                String email = emailInput.getText();
+                if(userManager.verify(email, password) == false)
                     JOptionPane.showMessageDialog(null,"Please enter an exist user");
                 else{
                     Loginsurface.this.setVisible(false);

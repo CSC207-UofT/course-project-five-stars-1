@@ -48,11 +48,12 @@ public class UserSystemController {
 
     /**
      * Check valid id.
-     * @param id A unique id for each user.
+     * @param email A unique email for each User.
+     * @param password password for each User.
      * @return true if id is valid, else false.
      */
-    public boolean verify(String id){
-        return userManager.verifyUser(id);
+    public boolean verify(String email, String password){
+        return userManager.verifyUser(email, password);
     }
 
     public void fire(String id){

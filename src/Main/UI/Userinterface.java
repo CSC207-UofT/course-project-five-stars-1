@@ -1,8 +1,5 @@
 package UI;
 
-
-import Controller.UserSystemController;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
