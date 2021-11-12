@@ -57,7 +57,7 @@ public class Loginsurface extends JFrame {
                 String email = emailInput.getText();
                 String major = majorInput.getText();
                 userManager.create(randomId, password, username, email, major);
-                JOptionPane.showMessageDialog(null, "Your registration is successful");
+                JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
             }
         });
 
