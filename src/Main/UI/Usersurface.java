@@ -1,12 +1,10 @@
 package UI;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Objects;
 
-public class Userinterface extends JFrame{
+public class Usersurface extends JFrame{
     private JPanel panel;
     private JButton salaryButton;
     private JButton jpButton;
@@ -17,13 +15,13 @@ public class Userinterface extends JFrame{
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
 
-    public Userinterface(){
+    public Usersurface(){
         panel = new JPanel();
 
         salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Userinterface.this.setVisible(false);
+                Usersurface.this.setVisible(false);
                 JFrame salaryinterface = new Salarysurface();
                 salaryinterface.setVisible(true);
             }
@@ -32,25 +30,31 @@ public class Userinterface extends JFrame{
         jpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Userinterface.this.setVisible(false);
+                Usersurface.this.setVisible(false);
+                JFrame jobpinterface = new Jobpsurface();
+                jobpinterface.setVisible(true);
             }
         });
         sdButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Userinterface.this.setVisible(false);
+                Usersurface.this.setVisible(false);
+                JFrame scheduleinterface = new schedulesurface();
+                scheduleinterface.setVisible(true);
             }
         });
         internButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Userinterface.this.setVisible(false);
+                Usersurface.this.setVisible(false);
+                JFrame internsurface = new Internsurface();
+                internsurface.setVisible(true);
             }
         });
         ExistButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Userinterface.this.setVisible(false);
+                Usersurface.this.setVisible(false);
             }
         });
 

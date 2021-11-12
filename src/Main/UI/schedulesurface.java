@@ -1,28 +1,30 @@
 package UI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-import Controller.SalarySystemController;
-public class Salarysurface extends JFrame{
+import Controller.JobpSystemController;
+import Controller.ScheduleSystemController;
+public class schedulesurface extends JFrame{
     private JLabel userId;
     private JTextField useridInput;
     private JPanel panel;
-    private JButton SalaryButton;
-    public Salarysurface(){
+    private JButton scheduleButton;
+    public schedulesurface(){
         panel = new JPanel();
         userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JPasswordField(30);
         panel.add(useridInput);
-        SalaryButton.addActionListener(new ActionListener() {
+        scheduleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SalarySystemController ssc = new SalarySystemController();
+                ScheduleSystemController ssc = new ScheduleSystemController();
                 String id = useridInput.getText();
-                JOptionPane.showMessageDialog(null,  ssc.showSalary(id));
+                int schedule = ssc.checkSchedule(id);
+                JOptionPane.showMessageDialog(null, "Here is your weekly schedule: " + schedule );
             }
         });
     }

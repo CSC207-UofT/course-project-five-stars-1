@@ -2,7 +2,6 @@ package UI;
 import Controller.UserSystemController;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Random;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,15 +37,21 @@ public class Loginsurface extends JFrame {
 
         nameLabel = new JLabel("Username:");
         panel.add(nameLabel);
+        nameInput = new JPasswordField(30);
+        panel.add(nameInput);
 
         emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
+        emailInput = new JPasswordField(30);
+        panel.add(emailInput);
 
         majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
+        majorInput = new JPasswordField(30);
+        panel.add(majorInput);
+
         Random id = new Random();
         int i = id.nextInt(1000);
-        i += 1;
         String randomId = String.valueOf(i);
 
         rButton.addActionListener(new ActionListener() {
@@ -70,7 +75,7 @@ public class Loginsurface extends JFrame {
                     JOptionPane.showMessageDialog(null,"Please enter an exist user");
                 else{
                     Loginsurface.this.setVisible(false);
-                    JFrame userinterface = new Userinterface();
+                    JFrame userinterface = new Usersurface();
                     userinterface.setVisible(true);
                 }
 

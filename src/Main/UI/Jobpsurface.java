@@ -3,26 +3,27 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Controller.JobpSystemController;
 
 
-import Controller.SalarySystemController;
-public class Salarysurface extends JFrame{
+public class Jobpsurface extends JFrame{
     private JLabel userId;
     private JTextField useridInput;
     private JPanel panel;
-    private JButton SalaryButton;
-    public Salarysurface(){
+    private JButton JobpButton;
+    public Jobpsurface(){
         panel = new JPanel();
         userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JPasswordField(30);
         panel.add(useridInput);
-        SalaryButton.addActionListener(new ActionListener() {
+        JobpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SalarySystemController ssc = new SalarySystemController();
+                JobpSystemController jsc = new JobpSystemController();
                 String id = useridInput.getText();
-                JOptionPane.showMessageDialog(null,  ssc.showSalary(id));
+                String major = jsc.getMajor(id);
+                JOptionPane.showMessageDialog(null, "Here is the reference job: " + major );
             }
         });
     }

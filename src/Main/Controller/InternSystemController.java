@@ -13,7 +13,7 @@ public class InternSystemController {
         return internManagement;
     }
 
-    public Object registerInformation(String id1, String id2, String username, String password,
+    public String registerInformation(String id1, String id2, String username, String password,
                                     String email, String major, int grade){
         if (Objects.equals(id1, "0")){
             this.internManagement.registerInformation(username, password, id2, email, major, grade);
@@ -23,7 +23,7 @@ public class InternSystemController {
         }
     }
 
-    public Object updateInformation(String id, int standard){
+    public String updateInformation(String id, int standard){
         if (Objects.equals(id, "0")){
             this.internManagement.updateInformation(standard);
             return "Successful, the file has been edit successfully";
