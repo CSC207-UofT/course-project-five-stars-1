@@ -11,12 +11,14 @@ public class TestUserManager {
 
     @BeforeAll
     public static void setUp() {
-        um = new UserManager();
+        ArrayList userList = new ArrayList<User>();
+        um = new UserManager(userList);
     }
 
     @Test
     public void testCreateEmployer(){
-        um = new UserManager();
+        ArrayList userList = new ArrayList<User>();
+        um = new UserManager(userList);
         ArrayList<User> expected = new ArrayList<>();
         Employer employer = new Employer("testEmployer", "imthebest", 100000, true, "0", "kt@gmail.com", "computer science");
         expected.add(employer);

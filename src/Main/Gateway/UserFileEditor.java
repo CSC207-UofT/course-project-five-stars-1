@@ -3,7 +3,7 @@ package Gateway;
 import java.io.*;
 import java.util.ArrayList;
 
-public class FileEditor {
+public class UserFileEditor {
 
     public void saveUser(ArrayList userList){
         try{

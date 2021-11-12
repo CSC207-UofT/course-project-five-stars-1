@@ -12,8 +12,8 @@ public class UserManager {
      * Creates a UserManager with an empty list of Users
      */
     public static ArrayList<User> userlist;
-    public UserManager(){
-        userlist = new ArrayList<User>();
+    public UserManager(ArrayList<User> userList){
+        userlist = userList;
     }
     public ArrayList<User> getUm() {return userlist;}
 

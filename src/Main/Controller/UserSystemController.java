@@ -4,6 +4,7 @@ import Entity.User;
 import UseCase.SalaryManagement;
 import UseCase.UserManager;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -11,8 +12,8 @@ import java.util.Objects;
  */
 public class UserSystemController {
     private UserManager userManager;
-    public UserSystemController(){
-        this.userManager = new UserManager();
+    public UserSystemController(ArrayList<User> userList){
+        this.userManager = new UserManager(userList);
     }
 
     /**
