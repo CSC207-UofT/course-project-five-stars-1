@@ -24,6 +24,8 @@ public class Userinterface extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Userinterface.this.setVisible(false);
+                JFrame salaryinterface = new Salarysurface();
+                salaryinterface.setVisible(true);
             }
         });
 
