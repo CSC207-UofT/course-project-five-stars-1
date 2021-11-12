@@ -1,5 +1,7 @@
 package Gateway;
 
+import UseCase.UserManager;
+
 import java.io.IOException;
 
 public interface ReadWriter {
@@ -12,5 +14,5 @@ public interface ReadWriter {
     /**
      * @param filepath location of ser file
      */
-     UserList readFromFile(String filepath) throws IOException, ClassNotFoundException;
+     UserManager readFromFile(String filepath) throws IOException, ClassNotFoundException;
 }

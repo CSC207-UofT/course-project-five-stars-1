@@ -1,5 +1,7 @@
 package Gateway;
 
+import UseCase.UserManager;
+
 import java.io.*;
 
 public class UserReadWriter implements ReadWriter {
@@ -28,19 +30,18 @@ public class UserReadWriter implements ReadWriter {
      * Store the users to file at filePath.
      *
      * @param filePath file where the user list is stored
-     * @param o        the object to be serialized
      * @return list of users
      * @throws IOException
      */
     @Override
-    public UserList readFromFile(String filePath) throws IOException, ClassNotFoundException {
+    public UserManager readFromFile(String filePath) throws IOException, ClassNotFoundException {
 
         InputStream file = new FileInputStream(filePath);
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
         // serialize the Map
-        UserList users = (UserList) input.readObject();
+        UserManager users = (UserManager) input.readObject();
         input.close();
         return users;
     }
