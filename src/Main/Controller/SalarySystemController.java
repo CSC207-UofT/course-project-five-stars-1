@@ -29,7 +29,7 @@ public class SalarySystemController {
      * Otherwise, print "Sorry, there does not exist your information"
      * @param id A unique String for each User.
      */
-    public Object showSalary(String id){
+    public String showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
             return "This is your salary for this month: " + salaryManagement.getSalary(id) +
                     "This is your salary for this year: " + salaryManagement.computeYearlySalary(id) +

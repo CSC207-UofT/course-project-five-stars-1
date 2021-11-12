@@ -9,21 +9,21 @@ public class TestEmployee {
 
     @BeforeAll
     public static void setUp() {employee = new Employee("testEmployee", "abcd9876",
-            20000, true, "123", "kt@gmail.com", "computer science");}
+            "123", "kt@gmail.com", "computer science");}
 
     @Test
     public void testConstructor(){
         assertEquals("testEmployee", employee.getUsername());
         assertEquals("abcd9876", employee.getPassword());
-        assertEquals(20000, employee.getSalary());
-        assertEquals(true, employee.getAttendance());
+        assertEquals(0, employee.getSalary());
+        assertEquals(false, employee.getAttendance());
         assertEquals("123", employee.getID());
         assertEquals("kt@gmail.com", employee.getEmail());
     }
 
     @Test
     public void testToString(){
-        String expected = "Employee {Username = testEmployee, Salary = 20000, Attendance = true, ID = 123}";
+        String expected = "Employee {Username = testEmployee, Salary = 0, Attendance = false, ID = 123}";
         assertEquals(expected, employee.toString());
     }
 
