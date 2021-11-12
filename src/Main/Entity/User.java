@@ -1,5 +1,8 @@
 package Entity;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public abstract class User{
 
     private String username;
@@ -7,8 +10,8 @@ public abstract class User{
     private int salary = 0;
     private boolean attendance = false;
     private String id;
-    private String email;
-    private String major;
+    private final String email;
+    private final String major;
 
 
     public User(String username, String password, String id, String email, String major){
@@ -50,9 +53,15 @@ public abstract class User{
         this.id = id;
     }
     public String getEmail() {return email;}
-    public boolean verifyCorrectness(String email){
-        return email.contains("@") & email.contains(".") ;
+
+    public static final Pattern VALID_EMAIL_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean isValidEmail(String email) {
+        Matcher matcher = VALID_EMAIL_REGEX.matcher(email);
+        return matcher.find();
     }
+
     public String getMajor() {return major;}
 
     @Override
