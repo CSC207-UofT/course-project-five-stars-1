@@ -3,6 +3,7 @@ package Controller;
 import UseCase.SalaryManagement;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * Controls the SalaryManagement system.
@@ -29,7 +30,7 @@ public class SalarySystemController {
      * Otherwise, print "Sorry, there does not exist your information"
      * @param id A unique String for each User.
      */
-    public Object showSalary(String id){
+    public String showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
             return "This is your salary for this month: " + salaryManagement.getSalary(id) +
                     "This is your salary for this year: " + salaryManagement.computeYearlySalary(id) +
@@ -38,12 +39,16 @@ public class SalarySystemController {
             return "Sorry, there does not exist your information";
         }
     }
-    public boolean addSalary(String id, int salary) {
-        if (this.salaryManagement.getSm().containsKey(id)) {
-            return false;
+    public String addSalary(String id1, String id2, int salary) {
+        if (this.salaryManagement.getSm().containsKey(id2)) {
+            return "There is no user match";
         } else {
-            this.salaryManagement.getSm().put(id, salary);
-            return true;
+            if (Objects.equals(id1, "0")){
+                this.salaryManagement.getSm().put(id2, salary);
+                return " Employer has added your salary";
+            }else{
+                return "You don't have the authority to add salary.";
+            }
         }
     }
 

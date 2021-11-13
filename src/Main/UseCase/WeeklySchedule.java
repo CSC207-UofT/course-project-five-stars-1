@@ -8,12 +8,12 @@ public class WeeklySchedule {
     public WeeklySchedule(){
         this.scm = new HashMap<String, Integer>();
     }
-    public boolean addSchedule(String id) {
+    public String addSchedule(String id) {
         if (this.scm.containsKey(id)) {
-            return false;
+            return "Cannot add your schedule since there is no id";
         } else {
             this.scm.put(id, 40);
-            return true;
+            return "Add your schedule successfully";
         }
     }
     public HashMap<String, Integer> getSm (){
@@ -23,19 +23,13 @@ public class WeeklySchedule {
         return this.scm.get(id);
     }
 
-    public boolean changeSchdule(String id, int changeHour, boolean add){
+    public String changeSchedule(String id, int changeHour){
         if (this.scm.containsKey(id)){
-            if (add){
-                int hour = this.getHour(id);
-                this.scm.replace(id, hour + changeHour);
-                return true;
-            } else {
-                int hour = this.getHour(id);
-                this.scm.replace(id, hour - changeHour);
-                return true;
-            }
+            int hour = this.getHour(id);
+            this.scm.replace(id, hour + changeHour);
+            return "Update your schedule successfully";
         } else {
-            return false;
+            return "Failed to update your schedule ";
         }
     }
 
