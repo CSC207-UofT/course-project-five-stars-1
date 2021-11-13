@@ -15,28 +15,33 @@ public class TestSalarySystemController {
     }
 
     @Test
-    public void testShowSalaryIDMatch(){
-        ssc.getSalaryManagement().addSalary("123", 123);
-        int expected_salary = ssc.getSalaryManagement().getSalary("123");
-        int actual = ssc.showSalary("123");
-        assertEquals(expected_salary, actual);
-
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-        String expected_salary_string = "This is your salary for this month: " + ssc.showSalary("123");
-        assertEquals(expected_salary_string, output.toString().trim());
+    public void testShowSalary(){
+        ssc.getSalaryManagement().addSalary("123", 100);
+        String actual = ssc.showSalary("123");
+        String expected = "This is your salary for this month: 100. This is your salary for this year: 1200. This is your yearly salary after tax: 1139.4.";
+        assertEquals(expected, actual);
     }
 
+    @Test
+    public void testShowSalaryThatIDNotExist(){
+        String expected = "Sorry, there does not exist your information";
+        String actual = ssc.showSalary("1");
+        assertEquals(expected, actual);
+    }
 
     @Test
-    public void testShowSalaryIDNotMatch(){
-        int expected_salary = ssc.showSalary("1");
-        assertEquals(expected_salary, 0);
+    public void testAddSalary() {
+        String expected = "There is no user match";
+        String actual = ssc.addSalary("0", "111", 1000);
+        assertEquals(expected, actual);
+    }
 
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-        ssc.showSalary("1");
-        String expected_string = "Sorry, there does not exist your information";
-        assertEquals(expected_string, output.toString().trim());
+    @Test
+    public void testAddSalary2(){
+        String expected = " Employer has added your salary";
+        String actual = ssc.addSalary("0", "112", 10000);
+        assertEquals(expected, actual);
+        int actually = ssc.getSalaryManagement().getSalary("112");
+        assertEquals(10000, actually);
     }
 }

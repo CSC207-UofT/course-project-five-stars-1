@@ -40,7 +40,7 @@ public class TestInternSystemController {
     }
 
     @Test
-    public void testUpdateInformationAndCheckInformaion2(){
+    public void testUpdateInformationAndCheckInformation2(){
         String expected = "Sorry, you do not have the authority to edit this file";
         String actual = internSystemController.updateInformation("1122", 70);
         assertEquals(expected, actual);
