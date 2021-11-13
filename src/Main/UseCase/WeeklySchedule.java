@@ -24,14 +24,14 @@ public class WeeklySchedule {
         this.scm = schedules;
 
         try {
-            readWriter.saveToFile("salaries.ser", schedules);
+            readWriter.saveToFile("schedules.ser", schedules);
             System.out.println("Salary list saved!");
         } catch (IOException e) {
             System.out.println("Salary list did not save.");
         }
 
         try {
-            System.out.println(readWriter.readFromFile("salaries.ser"));
+            System.out.println(readWriter.readFromFile("schedules.ser"));
             System.out.println("Salary file read successfully!");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Cannot read.");
