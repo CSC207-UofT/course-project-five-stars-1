@@ -1,7 +1,9 @@
 package Controller;
 
+import Entity.Intern;
 import UseCase.InternManagement;
 
+import java.util.HashMap;
 import java.util.Objects;
 
 public class InternSystemController {
@@ -9,8 +11,8 @@ public class InternSystemController {
 
     public InternSystemController(){this.internManagement = new InternManagement();}
 
-    public InternManagement getInternManagement() {
-        return internManagement;
+    public HashMap<Intern, Integer> getOurMap() {
+        return internManagement.getIm();
     }
 
     public String registerInformation(String id1, String id2, String username, String password,
