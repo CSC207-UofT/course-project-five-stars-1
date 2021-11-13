@@ -3,11 +3,28 @@ package UseCase;
 import java.util.HashMap;
 import java.util.Objects;
 
+/**
+ * Represents the job system
+ */
 public class Jobposition {
+    /**
+     * Creates a Jobposition with an empty Hashmap
+     * (A String as its key and a String as its value)
+     */
     private final HashMap<String, String> majorMap;
 
+    /**
+     * Define a constructor.
+     */
     public Jobposition() { this. majorMap = new HashMap<>();}
 
+    /**
+     * Adds major into Jobposition with id as its key and major as its value
+     * @param id user's ID
+     * @param major user's major
+     * @return empty string if user exists,
+     * else adds id as key and major as value into majorMap and return major
+     */
     public String addMajor(String id, String major){
         if (this.majorMap.containsKey(id)) {
             return "";
@@ -16,12 +33,36 @@ public class Jobposition {
             return major;
         }
     }
+
+    /**
+     * Getter for majorMap
+     * @return majorMap
+     */
     public HashMap<String, String> getMajorMap (){
         return this.majorMap;
     }
+
+    /**
+     * Getter for major
+     * @param id user's ID
+     * @return User's major by its ID
+     */
     public String getMajor(String id){
         return this.majorMap.get(id);
     }
+
+    /**
+     * Getter for reference(IT department, Sale department, HR department, Logistics department)
+     * based on user's major.
+     * @param major user's major
+     * @return IT department if major is computer science;
+     *         sale department if major is finance;
+     *         HR department if major is management;
+     *         Logistics department if major is nursery;
+     *         Our company doesn't have suitable job reference for you based on your id
+     *         and you can think twice to decide a job you would like to do if major is not
+     *         computer science, finance, management, and nursery.
+     */
     public String getReference(String major){
         if (Objects.equals(major, "computer science" ) | Objects.equals(major, "data science")){
             return "IT department";

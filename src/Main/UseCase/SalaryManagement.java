@@ -25,7 +25,7 @@ public class SalaryManagement {
      * @param id A unique String for each User.
      * @param salary User's salary.
      * @return false if id exists in SalaryManagement,
-     * else adds id as key and salary as value into SalaryManagement.
+     * else adds id as key and salary as value into SalaryManagement and return true
      */
     public boolean addSalary(String id, int salary) {
         if (this.sm.containsKey(id)) {
