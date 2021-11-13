@@ -30,7 +30,7 @@ public class Internsurface extends JFrame{
         panel = new JPanel();
         userId = new JLabel("Userid:");
         panel.add(userId);
-        useridInput = new JPasswordField(20);
+        useridInput = new JTextField(20);
         panel.add(useridInput);
         passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
@@ -40,27 +40,27 @@ public class Internsurface extends JFrame{
 
         nameLabel = new JLabel("Username:");
         panel.add(nameLabel);
-        nameInput = new JPasswordField(20);
+        nameInput = new JTextField(20);
         panel.add(nameInput);
 
         emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
-        emailInput = new JPasswordField(20);
+        emailInput = new JTextField(20);
         panel.add(emailInput);
 
         majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
-        majorInput = new JPasswordField(20);
+        majorInput = new JTextField(20);
         panel.add(majorInput);
 
         gradeLabel = new JLabel("Grade:");
         panel.add(gradeLabel);
-        gradeInput = new JPasswordField(20);
+        gradeInput = new JTextField(20);
         panel.add(gradeInput);
 
         standardLabel = new JLabel("Standard:");
         panel.add(standardLabel);
-        standardInput = new JPasswordField(20);
+        standardInput = new JTextField(20);
         panel.add(standardInput);
 
         InternButton = new JButton("Intern");
