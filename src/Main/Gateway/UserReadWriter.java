@@ -1,8 +1,11 @@
 package Gateway;
 
+import Controller.UserSystemController;
+import Entity.User;
 import UseCase.UserManager;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class UserReadWriter implements ReadWriter {
 
@@ -19,7 +22,7 @@ public class UserReadWriter implements ReadWriter {
         OutputStream buffer = new BufferedOutputStream(file);
         ObjectOutput output = new ObjectOutputStream(buffer);
 
-        // serialize the Map
+        // serialize the Object
         output.writeObject(users);
         output.close();
     }
@@ -38,9 +41,12 @@ public class UserReadWriter implements ReadWriter {
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
+        Object user_list = input.readObject();
         // serialize the Map
-        UserManager users = (UserManager) input.readObject();
+
+        ArrayList<User> users = (ArrayList) user_list;
+        UserManager userManager = new UserManager(users);
         input.close();
-        return users;
+        return userManager;
     }
 }
