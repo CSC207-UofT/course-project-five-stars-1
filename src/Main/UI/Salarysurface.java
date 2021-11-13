@@ -17,17 +17,17 @@ public class Salarysurface extends JFrame{
 
         JLabel userId1 = new JLabel("Userid1:");
         panel.add(userId1);
-        useridInput1 = new JPasswordField(20);
+        useridInput1 = new JTextField(20);
         panel.add(useridInput1);
 
         JLabel userId2 = new JLabel("Userid2:");
         panel.add(userId2);
-        useridInput2 = new JPasswordField(20);
+        useridInput2 = new JTextField(20);
         panel.add(useridInput2);
 
         JLabel salary = new JLabel("Salary:");
         panel.add(salary);
-        SalaryInput = new JPasswordField(20);
+        SalaryInput = new JTextField(20);
         panel.add(SalaryInput);
 
         JButton salaryButton = new JButton("Salary");
