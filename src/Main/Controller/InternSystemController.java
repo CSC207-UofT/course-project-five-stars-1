@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class InternSystemController {
-    private InternManagement internManagement;
+    private final InternManagement internManagement;
 
     public InternSystemController(){this.internManagement = new InternManagement();}
 

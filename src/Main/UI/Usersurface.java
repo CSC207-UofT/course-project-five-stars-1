@@ -5,33 +5,27 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Usersurface extends JFrame{
-    private JPanel panel;
-    private JButton salaryButton;
-    private JButton jpButton;
-    private JButton sdButton;
-    private JButton internButton;
-    private JButton ExistButton;
 
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
 
     public Usersurface(){
-        panel = new JPanel();
+        JPanel panel = new JPanel();
 
-        salaryButton = new JButton("Salary");
+        JButton salaryButton = new JButton("Salary");
         panel.add(salaryButton);
 
-        jpButton = new JButton("Jobposition");
+        JButton jpButton = new JButton("Jobposition");
         panel.add(jpButton);
 
-        sdButton = new JButton("Schedule");
+        JButton sdButton = new JButton("Schedule");
         panel.add(sdButton);
 
-        internButton = new JButton("Intern");
+        JButton internButton = new JButton("Intern");
         panel.add(internButton);
 
-        ExistButton = new JButton("Exist");
-        panel.add(ExistButton);
+        JButton existButton = new JButton("Exist");
+        panel.add(existButton);
 
         salaryButton.addActionListener(new ActionListener() {
             @Override
@@ -66,7 +60,7 @@ public class Usersurface extends JFrame{
                 internsurface.setVisible(true);
             }
         });
-        ExistButton.addActionListener(new ActionListener() {
+        existButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Usersurface.this.setVisible(false);

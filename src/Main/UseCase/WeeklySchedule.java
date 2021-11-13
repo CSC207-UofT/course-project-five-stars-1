@@ -1,12 +1,12 @@
 package UseCase;
 
 import java.util.HashMap;
-import java.util.Objects;
+// import java.util.Objects;
 
 public class WeeklySchedule {
-    private HashMap<String, Integer> scm;
+    private final HashMap<String, Integer> scm;
     public WeeklySchedule(){
-        this.scm = new HashMap<String, Integer>();
+        this.scm = new HashMap<>();
     }
     public String addSchedule(String id) {
         if (this.scm.containsKey(id)) {

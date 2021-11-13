@@ -1,37 +1,33 @@
 package UI;
 
 import javax.swing.*;
-import java.awt.*;
+// import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import Controller.JobpSystemController;
+// import Controller.JobpSystemController;
 import Controller.ScheduleSystemController;
 public class schedulesurface extends JFrame{
-    private JLabel userId;
-    private JTextField useridInput;
-    private JLabel Chour;
-    private JTextField ChourInput;
-    private JPanel panel;
-    private JButton scheduleButton;
+    private final JTextField useridInput;
+    private final JTextField ChourInput;
 
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     public schedulesurface(){
-        panel = new JPanel();
+        JPanel panel = new JPanel();
 
-        userId = new JLabel("Userid:");
+        JLabel userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JPasswordField(20);
         panel.add(useridInput);
 
-        Chour = new JLabel("Changehour:");
-        panel.add(Chour);
+        JLabel chour = new JLabel("Changehour:");
+        panel.add(chour);
         ChourInput = new JPasswordField(20);
         panel.add(ChourInput);
 
 
-        scheduleButton = new JButton("Schedule");
+        JButton scheduleButton = new JButton("Schedule");
         panel.add(scheduleButton);
         scheduleButton.addActionListener(new ActionListener() {
             @Override

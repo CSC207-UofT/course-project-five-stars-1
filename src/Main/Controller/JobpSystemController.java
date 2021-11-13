@@ -1,9 +1,9 @@
 package Controller;
 import UseCase.Jobposition;
-import java.util.Objects;
+// import java.util.Objects;
 
 public class JobpSystemController {
-    private Jobposition jobposition;
+    private final Jobposition jobposition;
     public JobpSystemController(){this.jobposition = new Jobposition();}
     public Jobposition getJobposition(){
         return jobposition;

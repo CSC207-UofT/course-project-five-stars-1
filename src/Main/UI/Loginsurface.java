@@ -6,54 +6,46 @@ import java.util.Random;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class Loginsurface extends JFrame {
-    private JLabel userLabel;
 
-    private JLabel passwordLabel;
-    private JPasswordField passwordInput;
-    private JButton rButton;
-    private JButton lButton;
-    private JLabel nameLabel;
-    private JTextField nameInput;
-    private JLabel emailLabel;
-    private JTextField emailInput;
-    private JLabel majorLabel;
-    private JTextField majorInput;
-    private JPanel panel;
+    private final JPasswordField passwordInput;
+    private final JTextField nameInput;
+    private final JTextField emailInput;
+    private final JTextField majorInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     UserSystemController userManager;
 
     public Loginsurface(UserSystemController userManager){
         this.userManager = userManager;
-        panel = new JPanel();
-        userLabel = new JLabel("Userid:");
+        JPanel panel = new JPanel();
+        JLabel userLabel = new JLabel("Userid:");
         panel.add(userLabel);
 
-        passwordLabel = new JLabel("Password: ");
+        JLabel passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
 
         passwordInput = new JPasswordField(20);
         panel.add(passwordInput);
 
-        nameLabel = new JLabel("Username: ");
+        JLabel nameLabel = new JLabel("Username: ");
         panel.add(nameLabel);
         nameInput = new JTextField(20);
         panel.add(nameInput);
 
-        emailLabel = new JLabel("Email:");
+        JLabel emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
         emailInput = new JTextField(20);
         panel.add(emailInput);
 
-        majorLabel = new JLabel("Major:");
+        JLabel majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
         majorInput = new JTextField(20);
         panel.add(majorInput);
 
-        rButton = new JButton("register");
+        JButton rButton = new JButton("register");
         panel.add(rButton);
 
-        lButton = new JButton("login");
+        JButton lButton = new JButton("login");
         panel.add(lButton);
 
         Random id = new Random();

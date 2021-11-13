@@ -8,9 +8,9 @@ import java.util.Objects;
 
 public class InternManagement {
 
-    private HashMap<Intern, Integer> im;
+    private final HashMap<Intern, Integer> im;
 
-    public InternManagement(){this.im = new HashMap<Intern, Integer>();}
+    public InternManagement(){this.im = new HashMap<>();}
 
     public HashMap<Intern, Integer> getIm(){return this.im;}
 
