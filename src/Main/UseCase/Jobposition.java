@@ -59,8 +59,8 @@ public class Jobposition {
      *         sale department if major is finance;
      *         HR department if major is management;
      *         Logistics department if major is nursery;
-     *         Our company doesn't have suitable job reference for you based on your id
-     *         and you can think twice to decide a job you would like to do if major is not
+     *         "Our company doesn't have suitable job reference for you based on your id
+     *         and you can think twice to decide a job you would like to do" if major is not
      *         computer science, finance, management, and nursery.
      */
     public String getReference(String major){
