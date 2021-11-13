@@ -22,12 +22,12 @@ public class schedulesurface extends JFrame{
 
         userId = new JLabel("Userid:");
         panel.add(userId);
-        useridInput = new JPasswordField(20);
+        useridInput = new JTextField(20);
         panel.add(useridInput);
 
         Chour = new JLabel("Changehour:");
         panel.add(Chour);
-        ChourInput = new JPasswordField(20);
+        ChourInput = new JTextField(20);
         panel.add(ChourInput);
 
 
