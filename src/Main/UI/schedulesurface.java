@@ -10,7 +10,7 @@ import Controller.ScheduleSystemController;
 public class schedulesurface extends JFrame{
     private final JTextField useridInput;
     private final JTextField ChourInput;
-
+    private JButton btn1;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     public schedulesurface(){
@@ -43,6 +43,20 @@ public class schedulesurface extends JFrame{
                 JOptionPane.showMessageDialog(null, "Here is your weekly schedule: " + schedule);
             }
         });
+
+        btn1 = new JButton("Back");
+        panel.add(btn1);
+
+        btn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new Usersurface().setVisible(true);
+            }
+        });
+
+
         this.setLayout (null);
         panel.setSize(250,250);
         panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);

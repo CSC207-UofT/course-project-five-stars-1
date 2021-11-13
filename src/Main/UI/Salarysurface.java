@@ -12,6 +12,7 @@ public class Salarysurface extends JFrame{
     private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
+    private JButton btn1;
     public Salarysurface(){
         JPanel panel = new JPanel();
 
@@ -46,6 +47,20 @@ public class Salarysurface extends JFrame{
                 JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
             }
         });
+
+        btn1 = new JButton("Back");
+        panel.add(btn1);
+
+        btn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new Usersurface().setVisible(true);
+            }
+        });
+
+
         this.setLayout (null);
         panel.setSize(250,250);
         panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);
