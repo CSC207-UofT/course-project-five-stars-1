@@ -1,28 +1,24 @@
 package Gateway;
 
-import Entity.User;
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 
-public class UserReadWriter implements ReadWriter {
-
+public class SalaryReadWriter implements ReadWriter{
     /**
      * Writes the users to file at filePath.
      *
      * @param filePath the file to write the records to
-     * @param users    stores the list of users to be serialized
+     * @param salaries    stores the list of users to be serialized
      */
     @Override
-    public void saveToFile(String filePath, Object users) throws IOException {
+    public void saveToFile(String filePath, Object salaries) throws IOException {
 
         OutputStream file = new FileOutputStream(filePath);
         OutputStream buffer = new BufferedOutputStream(file);
         ObjectOutput output = new ObjectOutputStream(buffer);
 
         // serialize the Object
-        output.writeObject(users);
+        output.writeObject(salaries);
         output.close();
     }
 
@@ -34,15 +30,16 @@ public class UserReadWriter implements ReadWriter {
      * @return list of users
      */
     @Override
-    public ArrayList<User> readFromFile(String filePath) throws IOException, ClassNotFoundException {
+    public HashMap<String, Integer> readFromFile(String filePath) throws IOException, ClassNotFoundException {
 
         InputStream file = new FileInputStream(filePath);
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
-        ArrayList<User> user_list = (ArrayList<User>) input.readObject();
+        HashMap<String, Integer> salaries_list = (HashMap<String, Integer>) input.readObject();
         // serialize the Map
         input.close();
-        return user_list;
+        return salaries_list;
     }
+
 }

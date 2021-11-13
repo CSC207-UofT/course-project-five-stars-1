@@ -3,6 +3,7 @@ package Controller;
 import UseCase.SalaryManagement;
 
 // import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Objects;
 
 /**
@@ -11,8 +12,8 @@ import java.util.Objects;
 public class SalarySystemController {
     private final SalaryManagement salaryManagement;
 
-    public SalarySystemController(){
-        this.salaryManagement = new SalaryManagement();
+    public SalarySystemController(HashMap<String, Integer> salaries){
+        this.salaryManagement = new SalaryManagement(salaries);
     }
 
     /**

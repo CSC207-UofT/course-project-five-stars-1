@@ -3,6 +3,7 @@ import javax.swing.*;
 // import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 
 import Controller.SalarySystemController;
@@ -38,7 +39,8 @@ public class Salarysurface extends JFrame{
         salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SalarySystemController ssc = new SalarySystemController();
+                HashMap<String, Integer> salaries = new HashMap<>();
+                SalarySystemController ssc = new SalarySystemController(salaries);
                 String id1 = useridInput1.getText();
                 String id2 = useridInput2.getText();
                 String salary = SalaryInput.getText();

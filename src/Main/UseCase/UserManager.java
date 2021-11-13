@@ -2,17 +2,14 @@ package UseCase;
 
 import Entity.*;
 import Gateway.UserReadWriter;
-
-// import java.io.IOException;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Represents the system of Users
  */
-public class UserManager implements Serializable {
+public class UserManager {
     /**
      * Creates a UserManager with an empty list of Users
      */

@@ -1,7 +1,9 @@
 package UseCase;
 // import Entity.User;
 
+import java.io.IOException;
 import java.util.HashMap;
+import Gateway.SalaryReadWriter;
 
 /**
  * Represents the Salary system of Users.
@@ -14,11 +16,27 @@ public class SalaryManagement {
      */
     private final HashMap<String, Integer> sm;
 
+    SalaryReadWriter readWriter = new SalaryReadWriter();
+
     /**
      * Define a constructor.
      */
-    public SalaryManagement(){
-        this.sm = new HashMap<>();
+    public SalaryManagement(HashMap<String, Integer> salaries){
+        this.sm = salaries;
+
+        try {
+            readWriter.saveToFile("salaries.ser", salaries);
+            System.out.println("Salary list saved!");
+        } catch (IOException e) {
+            System.out.println("Salary list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("salaries.ser"));
+            System.out.println("Salary file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
     }
 
     /**

@@ -1,9 +1,11 @@
 package Entity;
 
+import java.io.Serializable;
+
 /**
  * Represents an intern in the system
  */
-public class Intern extends User{
+public class Intern extends User implements Serializable {
 
     private boolean acceptable;
 

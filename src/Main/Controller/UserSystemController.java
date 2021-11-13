@@ -1,18 +1,15 @@
 package Controller;
 
 import Entity.User;
-import Gateway.UserReadWriter;
 import UseCase.UserManager;
 
-import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Controls the UserManagement system.
  */
-public class UserSystemController implements Serializable {
+public class UserSystemController {
 
     private final UserManager userManager;
 

@@ -1,7 +1,7 @@
 package Gateway;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface ReadWriter {
     /**
@@ -14,5 +14,5 @@ public interface ReadWriter {
      * @param filepath location of ser file
      * @return
      */
-     ArrayList readFromFile(String filepath) throws IOException, ClassNotFoundException;
+     Object readFromFile(String filepath) throws IOException, ClassNotFoundException;
 }
