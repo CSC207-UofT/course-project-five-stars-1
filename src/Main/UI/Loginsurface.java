@@ -78,7 +78,7 @@ public class Loginsurface extends JFrame {
                 String password = passwordInput.getText();
                 String email = emailInput.getText();
                 if(userManager.verify(email, password) == false)
-                    JOptionPane.showMessageDialog(null,"Please enter an exist user");
+                    JOptionPane.showMessageDialog(null,"Wrong password or email.");
                 else{
                     Loginsurface.this.setVisible(false);
                     JFrame userinterface = new Usersurface();

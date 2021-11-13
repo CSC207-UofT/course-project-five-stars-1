@@ -20,12 +20,12 @@ public class Jobpsurface extends JFrame{
 
         userId = new JLabel("Userid:");
         panel.add(userId);
-        useridInput = new JPasswordField(20);
+        useridInput = new JTextField(20);
         panel.add(useridInput);
 
         userMajor = new JLabel("UserMajor:");
         panel.add(userMajor);
-        userMajorInput = new JPasswordField(20);
+        userMajorInput = new JTextField(20);
         panel.add(userMajorInput);
 
         JobpButton = new JButton("Jobposition");
