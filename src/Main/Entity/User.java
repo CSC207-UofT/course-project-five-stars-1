@@ -13,7 +13,15 @@ public abstract class User{
     private final String email;
     private final String major;
 
-
+    /**
+     * Creates a new user with username, password, id, email, and major
+     *
+     * @param username user's username.
+     * @param password user's password.
+     * @param id user's id.
+     * @param email user's email.
+     * @param major user's major.
+     */
     public User(String username, String password, String id, String email, String major){
         this.username = username;
         this.password = password;
@@ -22,9 +30,18 @@ public abstract class User{
         this.major = major;
     }
 
+    /**
+     * Getter for the username as a string
+     * @return username as a String
+     */
     public String getUsername(){
         return username;
     }
+
+    /**
+     *
+     * @param userid
+     */
     public void setUsername(String userid){
         this.username = userid;
     }

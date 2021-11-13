@@ -7,7 +7,6 @@ public class Intern extends User{
         super(username, password, id, email, major);
         this.acceptable = false;
     }
-
     public boolean isAcceptable(){return this.acceptable;}
 
     public void setAcceptable(boolean acceptable) {
