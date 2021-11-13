@@ -1,12 +1,13 @@
 package Entity;
 
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * Represents a User in the system.
  */
-public abstract class User{
+public abstract class User implements Serializable {
 
     private String username;
     private String password;
