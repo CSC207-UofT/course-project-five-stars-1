@@ -15,13 +15,20 @@ public class UserSystemController {
     UserReadWriter readWriter = new UserReadWriter();
     private final UserManager userManager;
 
-    public UserSystemController(){
-        this.userManager = new UserManager();
-        ArrayList<User> userList = userManager.getUm();
+    public UserSystemController(ArrayList<User> userList){
+        this.userManager = new UserManager(userList);
         try {
             readWriter.saveToFile("users.ser", userList);
+            System.out.println("User list saved!");
         } catch (IOException e) {
             System.out.println("User list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("users.ser"));
+            System.out.println("User file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
         }
     }
 

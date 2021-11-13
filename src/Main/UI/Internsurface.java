@@ -8,65 +8,56 @@ import java.util.Random;
 import javax.swing.*;
 
 public class Internsurface extends JFrame{
-    private JLabel userId;
-    private JTextField useridInput;
-    private JLabel passwordLabel;
-    private JPasswordField passwordInput;
-    private JLabel nameLabel;
-    private JTextField nameInput;
-    private JLabel emailLabel;
-    private JTextField emailInput;
-    private JLabel majorLabel;
-    private JTextField majorInput;
-    private JLabel gradeLabel;
-    private JTextField gradeInput;
-    private JLabel standardLabel;
-    private JTextField standardInput;
-    private JButton InternButton;
-    private JPanel panel;
+    private final JTextField useridInput;
+    private final JPasswordField passwordInput;
+    private final JTextField nameInput;
+    private final JTextField emailInput;
+    private final JTextField majorInput;
+    private final JTextField gradeInput;
+    private final JTextField standardInput;
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
     public Internsurface(){
-        panel = new JPanel();
-        userId = new JLabel("Userid:");
+        JPanel panel = new JPanel();
+        JLabel userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JTextField(20);
         panel.add(useridInput);
-        passwordLabel = new JLabel("Password: ");
+        JLabel passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
 
         passwordInput = new JPasswordField(20);
         panel.add(passwordInput);
 
-        nameLabel = new JLabel("Username:");
+        JLabel nameLabel = new JLabel("Username:");
         panel.add(nameLabel);
         nameInput = new JTextField(20);
         panel.add(nameInput);
 
-        emailLabel = new JLabel("Email:");
+        JLabel emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
         emailInput = new JTextField(20);
         panel.add(emailInput);
 
-        majorLabel = new JLabel("Major:");
+        JLabel majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
         majorInput = new JTextField(20);
         panel.add(majorInput);
 
-        gradeLabel = new JLabel("Grade:");
+        JLabel gradeLabel = new JLabel("Grade:");
         panel.add(gradeLabel);
         gradeInput = new JTextField(20);
         panel.add(gradeInput);
 
-        standardLabel = new JLabel("Standard:");
+        JLabel standardLabel = new JLabel("Standard:");
         panel.add(standardLabel);
         standardInput = new JTextField(20);
         panel.add(standardInput);
 
-        InternButton = new JButton("Intern");
-        panel.add(InternButton);
+        JButton internButton = new JButton("Intern");
+        panel.add(internButton);
 
-        InternButton.addActionListener(new ActionListener() {
+        internButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 InternSystemController isc = new InternSystemController();
