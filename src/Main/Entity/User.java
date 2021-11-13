@@ -1,17 +1,19 @@
 package Entity;
 
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class User{
+public abstract class User implements Serializable {
 
     private String username;
     private String password;
     private int salary = 0;
     private boolean attendance = false;
     private String id;
-    private final String email;
-    private final String major;
+    private String email;
+    private String major;
 
     /**
      * Creates a new user with username, password, id, email, and major
@@ -80,6 +82,25 @@ public abstract class User{
     }
 
     public String getMajor() {return major;}
+
+    private void writeObject(java.io.ObjectOutputStream stream)
+            throws IOException {
+        stream.writeObject(username);
+        stream.writeObject(password);
+        stream.writeObject(id);
+        stream.writeObject(email);
+        stream.writeObject(major);
+
+    }
+
+    private void readObject(java.io.ObjectInputStream stream)
+            throws IOException, ClassNotFoundException {
+        username = (String) stream.readObject();
+        password = (String) stream.readObject();
+        id = (String) stream.readObject();
+        email = (String) stream.readObject();
+        major = (String) stream.readObject();
+    }
 
     @Override
     public String toString(){

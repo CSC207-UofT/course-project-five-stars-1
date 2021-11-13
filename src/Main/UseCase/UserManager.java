@@ -18,8 +18,23 @@ public class UserManager implements Serializable {
      */
     public static ArrayList<User> userlist;
 
+    UserReadWriter readWriter = new UserReadWriter();
+
     public UserManager(ArrayList<User> userList){
         userlist = userList;
+        try {
+            readWriter.saveToFile("users.ser", userList);
+            System.out.println("User list saved!");
+        } catch (IOException e) {
+            System.out.println("User list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("users.ser"));
+            System.out.println("User file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
     }
 
     public ArrayList<User> getUm() {return userlist;}
@@ -77,6 +92,19 @@ public class UserManager implements Serializable {
     public void createEmployee(String username, String password, String id, String email, String major){
         User user = new Employee(username, password, id, email, major);
         userlist.add(user);
+        try {
+            readWriter.saveToFile("users.ser", userlist);
+            System.out.println("User list saved!");
+        } catch (IOException e) {
+            System.out.println("User list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("users.ser"));
+            System.out.println("User file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
     }
 
     /**
@@ -88,6 +116,19 @@ public class UserManager implements Serializable {
     public void createEmployer(String username, String password, String id, String email, String major){
         User user = new Employer(username, password, id, email, major);
         userlist.add(user);
+        try {
+            readWriter.saveToFile("users.ser", userlist);
+            System.out.println("User list saved!");
+        } catch (IOException e) {
+            System.out.println("User list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("users.ser"));
+            System.out.println("User file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
     }
 
     /**
