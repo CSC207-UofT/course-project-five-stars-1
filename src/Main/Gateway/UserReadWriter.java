@@ -40,12 +40,9 @@ public class UserReadWriter implements ReadWriter {
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
-        Object user_list = input.readObject();
+        ArrayList<User> user_list = (ArrayList<User>) input.readObject();
         // serialize the Map
-
-        ArrayList<User> users = (ArrayList) user_list;
-        UserManager userManager = new UserManager(users);
         input.close();
-        return userManager.getUm();
+        return user_list;
     }
 }

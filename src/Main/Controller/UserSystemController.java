@@ -5,31 +5,19 @@ import Gateway.UserReadWriter;
 import UseCase.UserManager;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Controls the UserManagement system.
  */
-public class UserSystemController {
-    UserReadWriter readWriter = new UserReadWriter();
+public class UserSystemController implements Serializable {
+
     private final UserManager userManager;
 
     public UserSystemController(ArrayList<User> userList){
         this.userManager = new UserManager(userList);
-        try {
-            readWriter.saveToFile("users.ser", userList);
-            System.out.println("User list saved!");
-        } catch (IOException e) {
-            System.out.println("User list did not save.");
-        }
-
-        try {
-            System.out.println(readWriter.readFromFile("users.ser"));
-            System.out.println("User file read successfully!");
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Cannot read.");
-        }
     }
 
     /**
