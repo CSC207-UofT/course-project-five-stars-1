@@ -8,12 +8,12 @@ public class Jobposition {
 
     public Jobposition() { this. majorMap = new HashMap<>();}
 
-    public boolean addMajor(String id, String major){
+    public String addMajor(String id, String major){
         if (this.majorMap.containsKey(id)) {
-            return false;
+            return "";
         }else{
             this.majorMap.put(id, major);
-            return true;
+            return major;
         }
     }
     public HashMap<String, String> getMajorMap (){

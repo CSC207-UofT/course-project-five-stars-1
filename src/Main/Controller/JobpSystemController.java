@@ -8,7 +8,7 @@ public class JobpSystemController {
     public Jobposition getJobposition(){
         return jobposition;
     }
-    public boolean addMajor(String id, String major){
+    public String addMajor(String id, String major){
         return jobposition.addMajor(id, major);
     }
     public String getMajor(String id){

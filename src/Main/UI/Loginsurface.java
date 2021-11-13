@@ -19,8 +19,8 @@ public class Loginsurface extends JFrame {
     private JLabel majorLabel;
     private JTextField majorInput;
     private JPanel panel;
-    final int FRAME_WIDTH = 1000;
-    final int FRAME_HEIGHT = 1000;
+    final int FRAME_WIDTH = 500;
+    final int FRAME_HEIGHT = 500;
     UserSystemController userManager;
 
     public Loginsurface(UserSystemController userManager){
@@ -32,26 +32,32 @@ public class Loginsurface extends JFrame {
         passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
 
-        passwordInput = new JPasswordField(30);
+        passwordInput = new JPasswordField(20);
         panel.add(passwordInput);
 
-        nameLabel = new JLabel("Username:");
+        nameLabel = new JLabel("Username: ");
         panel.add(nameLabel);
-        nameInput = new JPasswordField(30);
+        nameInput = new JPasswordField(20);
         panel.add(nameInput);
 
         emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
-        emailInput = new JPasswordField(30);
+        emailInput = new JPasswordField(20);
         panel.add(emailInput);
 
         majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
-        majorInput = new JPasswordField(30);
+        majorInput = new JPasswordField(20);
         panel.add(majorInput);
 
+        rButton = new JButton("register");
+        panel.add(rButton);
+
+        lButton = new JButton("login");
+        panel.add(lButton);
+
         Random id = new Random();
-        int i = id.nextInt(1000);
+        int i = id.nextInt(10);
         String randomId = String.valueOf(i);
 
         rButton.addActionListener(new ActionListener() {
@@ -84,8 +90,8 @@ public class Loginsurface extends JFrame {
 
 
         this.setLayout (null);
-        panel.setSize(500,500);
-        panel.setLocation((FRAME_WIDTH-500) / 2, (FRAME_HEIGHT - 500) / 2);
+        panel.setSize(250,250);
+        panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);
         this.add (panel);
         this.setSize (FRAME_WIDTH, FRAME_HEIGHT);
         this.setTitle ("User Login interface");

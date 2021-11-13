@@ -70,4 +70,5 @@ public class UserSystemController {
     public void fire(String id){
         this.userManager.fire(id);
     }
+
 }

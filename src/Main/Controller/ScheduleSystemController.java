@@ -11,7 +11,7 @@ public class ScheduleSystemController {
         return this.weeklySchedule;
     }
 
-    public boolean addSchedule(String id){
+    public String addSchedule(String id){
         return this.weeklySchedule.addSchedule(id);
     }
 
@@ -19,7 +19,7 @@ public class ScheduleSystemController {
         return this.weeklySchedule.getHour(id);
     }
 
-    public boolean changeSchedule(String id, int changeHour, boolean add){
-        return this.weeklySchedule.changeSchdule(id, changeHour, add);
+    public String changeSchedule(String id, int changeHour){
+        return this.weeklySchedule.changeSchedule(id, changeHour);
     }
 }

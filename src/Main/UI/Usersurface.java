@@ -18,6 +18,21 @@ public class Usersurface extends JFrame{
     public Usersurface(){
         panel = new JPanel();
 
+        salaryButton = new JButton("Salary");
+        panel.add(salaryButton);
+
+        jpButton = new JButton("Jobposition");
+        panel.add(jpButton);
+
+        sdButton = new JButton("Schedule");
+        panel.add(sdButton);
+
+        internButton = new JButton("Intern");
+        panel.add(internButton);
+
+        ExistButton = new JButton("Exist");
+        panel.add(ExistButton);
+
         salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,8 +76,8 @@ public class Usersurface extends JFrame{
 
 
         this.setLayout (null);
-        panel.setSize(500,500);
-        panel.setLocation((FRAME_WIDTH-500) / 2, (FRAME_HEIGHT - 500) / 2);
+        panel.setSize(250,250);
+        panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);
         this.add (panel);
         this.setSize (FRAME_WIDTH, FRAME_HEIGHT);
         this.setTitle ("User interface");
