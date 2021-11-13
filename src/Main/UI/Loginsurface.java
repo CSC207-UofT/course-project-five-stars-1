@@ -37,17 +37,17 @@ public class Loginsurface extends JFrame {
 
         nameLabel = new JLabel("Username: ");
         panel.add(nameLabel);
-        nameInput = new JPasswordField(20);
+        nameInput = new JTextField(20);
         panel.add(nameInput);
 
         emailLabel = new JLabel("Email:");
         panel.add(emailLabel);
-        emailInput = new JPasswordField(20);
+        emailInput = new JTextField(20);
         panel.add(emailInput);
 
         majorLabel = new JLabel("Major:");
         panel.add(majorLabel);
-        majorInput = new JPasswordField(20);
+        majorInput = new JTextField(20);
         panel.add(majorInput);
 
         rButton = new JButton("register");
@@ -78,7 +78,7 @@ public class Loginsurface extends JFrame {
                 String password = passwordInput.getText();
                 String email = emailInput.getText();
                 if(userManager.verify(email, password) == false)
-                    JOptionPane.showMessageDialog(null,"Please enter an exist user");
+                    JOptionPane.showMessageDialog(null,"Wrong password or email.");
                 else{
                     Loginsurface.this.setVisible(false);
                     JFrame userinterface = new Usersurface();
