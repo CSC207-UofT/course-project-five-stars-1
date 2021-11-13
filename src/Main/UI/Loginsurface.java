@@ -19,6 +19,7 @@ public class Loginsurface extends JFrame {
     private JLabel majorLabel;
     private JTextField majorInput;
     private JPanel panel;
+
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     UserSystemController userManager;
@@ -87,6 +88,7 @@ public class Loginsurface extends JFrame {
 
             }
         });
+
 
 
         this.setLayout (null);

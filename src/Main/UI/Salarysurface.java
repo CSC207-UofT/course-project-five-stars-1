@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 
 
 import Controller.SalarySystemController;
+import Entity.User;
+
 public class Salarysurface extends JFrame{
     private JLabel userId1;
     private JTextField useridInput1;
@@ -15,10 +17,14 @@ public class Salarysurface extends JFrame{
     private JTextField SalaryInput;
     private JPanel panel;
     private JButton SalaryButton;
+    private  JButton btn1;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
+
+
     public Salarysurface(){
         panel = new JPanel();
+
 
         userId1 = new JLabel("Userid1:");
         panel.add(userId1);
@@ -38,7 +44,6 @@ public class Salarysurface extends JFrame{
         SalaryButton = new JButton("Salary");
         panel.add(SalaryButton);
 
-
         SalaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,6 +56,27 @@ public class Salarysurface extends JFrame{
                 JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
             }
         });
+
+
+        btn1 = new JButton("Back");
+        panel.add(btn1);
+
+        btn1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+
+                new Usersurface().setVisible(true);
+            }
+        });
+
+
+
+
+
+
+
+
         this.setLayout (null);
         panel.setSize(250,250);
         panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);
