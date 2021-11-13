@@ -1,36 +1,31 @@
 package UI;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Controller.JobpSystemController;
 
 
 public class Jobpsurface extends JFrame{
-    private JLabel userId;
-    private JTextField useridInput;
-    private JLabel userMajor;
-    private JTextField userMajorInput;
-    private JPanel panel;
-    private JButton JobpButton;
+    private final JTextField useridInput;
+    private final JTextField userMajorInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     public Jobpsurface(){
-        panel = new JPanel();
+        JPanel panel = new JPanel();
 
-        userId = new JLabel("Userid:");
+        JLabel userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JPasswordField(20);
         panel.add(useridInput);
 
-        userMajor = new JLabel("UserMajor:");
+        JLabel userMajor = new JLabel("UserMajor:");
         panel.add(userMajor);
         userMajorInput = new JPasswordField(20);
         panel.add(userMajorInput);
 
-        JobpButton = new JButton("Jobposition");
-        panel.add(JobpButton);
-        JobpButton.addActionListener(new ActionListener() {
+        JButton jobpButton = new JButton("Jobposition");
+        panel.add(jobpButton);
+        jobpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JobpSystemController jsc = new JobpSystemController();

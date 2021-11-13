@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class Jobposition {
-    private HashMap<String, String> majorMap;
+    private final HashMap<String, String> majorMap;
 
     public Jobposition() { this. majorMap = new HashMap<>();}
 

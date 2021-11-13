@@ -3,7 +3,7 @@ package Controller;
 import UseCase.WeeklySchedule;
 
 public class ScheduleSystemController {
-    private WeeklySchedule weeklySchedule;
+    private final WeeklySchedule weeklySchedule;
 
     public ScheduleSystemController(){this.weeklySchedule = new WeeklySchedule();}
 

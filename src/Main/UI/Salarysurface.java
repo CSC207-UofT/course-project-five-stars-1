@@ -1,45 +1,40 @@
 package UI;
 import javax.swing.*;
-import java.awt.*;
+// import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 import Controller.SalarySystemController;
 public class Salarysurface extends JFrame{
-    private JLabel userId1;
-    private JTextField useridInput1;
-    private JLabel userId2;
-    private JTextField useridInput2;
-    private JLabel Salary;
-    private JTextField SalaryInput;
-    private JPanel panel;
-    private JButton SalaryButton;
+    private final JTextField useridInput1;
+    private final JTextField useridInput2;
+    private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     public Salarysurface(){
-        panel = new JPanel();
+        JPanel panel = new JPanel();
 
-        userId1 = new JLabel("Userid1:");
+        JLabel userId1 = new JLabel("Userid1:");
         panel.add(userId1);
         useridInput1 = new JPasswordField(20);
         panel.add(useridInput1);
 
-        userId2 = new JLabel("Userid2:");
+        JLabel userId2 = new JLabel("Userid2:");
         panel.add(userId2);
         useridInput2 = new JPasswordField(20);
         panel.add(useridInput2);
 
-        Salary = new JLabel("Salary:");
-        panel.add(Salary);
+        JLabel salary = new JLabel("Salary:");
+        panel.add(salary);
         SalaryInput = new JPasswordField(20);
         panel.add(SalaryInput);
 
-        SalaryButton = new JButton("Salary");
-        panel.add(SalaryButton);
+        JButton salaryButton = new JButton("Salary");
+        panel.add(salaryButton);
 
 
-        SalaryButton.addActionListener(new ActionListener() {
+        salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SalarySystemController ssc = new SalarySystemController();

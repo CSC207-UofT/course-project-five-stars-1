@@ -1,5 +1,5 @@
 package UseCase;
-import Entity.User;
+// import Entity.User;
 
 import java.util.HashMap;
 
@@ -11,13 +11,13 @@ public class SalaryManagement {
     /**
      * Creates a SalaryManagement with an empty Hashmap (A string as its key and an integer as its value)
      */
-    private HashMap<String, Integer> sm;
+    private final HashMap<String, Integer> sm;
 
     /**
      * Define a constructor.
      */
     public SalaryManagement(){
-        this.sm = new HashMap<String, Integer>();
+        this.sm = new HashMap<>();
     }
 
     /**
