@@ -1,5 +1,8 @@
 package UseCase;
 
+import Gateway.SalaryReadWriter;
+
+import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -12,11 +15,27 @@ public class WeeklySchedule {
      */
     private final HashMap<String, Integer> scm;
 
+    SalaryReadWriter readWriter = new SalaryReadWriter();
+
     /**
      * Define a constructor.
      */
-    public WeeklySchedule(){
-        this.scm = new HashMap<>();
+    public WeeklySchedule(HashMap<String, Integer> schedules){
+        this.scm = schedules;
+
+        try {
+            readWriter.saveToFile("salaries.ser", schedules);
+            System.out.println("Salary list saved!");
+        } catch (IOException e) {
+            System.out.println("Salary list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("salaries.ser"));
+            System.out.println("Salary file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
     }
 
     /**

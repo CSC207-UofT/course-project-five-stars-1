@@ -1,6 +1,7 @@
 package UI;
 
 import Controller.SalarySystemController;
+import Controller.ScheduleSystemController;
 import Controller.UserSystemController;
 import Entity.Employee;
 import Entity.User;
@@ -30,6 +31,10 @@ public class main {
 
 
         //test database
+        HashMap<String, Integer> z = new HashMap<>();
+        z.put("0", 40);
+        z.put("1", 30);
+        ScheduleSystemController Schedule = new ScheduleSystemController(z);
 
         Loginsurface frame = new Loginsurface(userManager);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);

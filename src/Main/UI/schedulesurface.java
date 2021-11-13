@@ -4,6 +4,7 @@ import javax.swing.*;
 // import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 // import Controller.JobpSystemController;
 import Controller.ScheduleSystemController;
@@ -32,7 +33,8 @@ public class schedulesurface extends JFrame{
         scheduleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ScheduleSystemController ssc = new ScheduleSystemController();
+                HashMap<String, Integer> schedules = new HashMap<>();
+                ScheduleSystemController ssc = new ScheduleSystemController(schedules);
                 String id = useridInput.getText();
                 String changeh = ChourInput.getText();
                 String add = ssc.addSchedule(id);

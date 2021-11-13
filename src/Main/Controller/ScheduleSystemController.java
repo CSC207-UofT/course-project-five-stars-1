@@ -2,10 +2,15 @@ package Controller;
 
 import UseCase.WeeklySchedule;
 
+import java.util.HashMap;
+
 public class ScheduleSystemController {
     private final WeeklySchedule weeklySchedule;
 
-    public ScheduleSystemController(){this.weeklySchedule = new WeeklySchedule();}
+
+    public ScheduleSystemController(HashMap<String, Integer> schedules){
+        this.weeklySchedule = new WeeklySchedule(schedules);
+    }
 
     public WeeklySchedule getWeeklySchedule() {
         return this.weeklySchedule;
