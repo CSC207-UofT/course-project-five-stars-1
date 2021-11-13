@@ -1,6 +1,5 @@
 package Gateway;
 
-import Controller.UserSystemController;
 import Entity.User;
 import UseCase.UserManager;
 
@@ -35,7 +34,7 @@ public class UserReadWriter implements ReadWriter {
      * @return list of users
      */
     @Override
-    public UserManager readFromFile(String filePath) throws IOException, ClassNotFoundException {
+    public ArrayList<?> readFromFile(String filePath) throws IOException, ClassNotFoundException {
 
         InputStream file = new FileInputStream(filePath);
         InputStream buffer = new BufferedInputStream(file);
@@ -47,6 +46,6 @@ public class UserReadWriter implements ReadWriter {
         ArrayList<User> users = (ArrayList) user_list;
         UserManager userManager = new UserManager(users);
         input.close();
-        return userManager;
+        return userManager.getUm();
     }
 }
