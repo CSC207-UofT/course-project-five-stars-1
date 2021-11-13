@@ -32,9 +32,9 @@ public class SalarySystemController {
      */
     public String showSalary(String id){
         if (salaryManagement.getSm().containsKey(id)){
-            return "This is your salary for this month: " + salaryManagement.getSalary(id) +
-                    "This is your salary for this year: " + salaryManagement.computeYearlySalary(id) +
-                    "This is your yearly salary after tex: " + salaryManagement.salaryAfterTax(id);
+            return "This is your salary for this month: " + salaryManagement.getSalary(id) + ". " +
+                    "This is your salary for this year: " + salaryManagement.computeYearlySalary(id) + ". " +
+                    "This is your yearly salary after tax: " + salaryManagement.salaryAfterTax(id) + ".";
         } else {
             return "Sorry, there does not exist your information";
         }
