@@ -16,7 +16,7 @@ public class main {
         x.add(bob);
         x.add(bobby);
         UserSystemController userManager = new UserSystemController(x);
-        userManager.create("pig", "pork", "2", "iloveu@gmail.com", "sleep");
+        userManager.create("fuck", "shit", "1", "test2@gmail.com", "MATH");
         Loginsurface frame = new Loginsurface(userManager);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
