@@ -3,6 +3,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import Entity.*;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -46,16 +48,25 @@ public class TestUserManager {
         assertEquals(expected.get(0).getPassword(), um.getUm().get(0).getPassword());
         assertEquals(expected.get(0).getMajor(), um.getUm().get(0).getMajor());
         assertEquals(expected.get(0).getEmail(), um.getUm().get(0).getEmail());
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
     }
 
     @Test
     public void testVerifyUser(){
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
         um.createEmployee("testEmployee",
                 "imtheworst", "111", "gb@gmail.com", "computer science");
         boolean expected = um.verifyUser("123@gmail.com", "imtheworst");
         assertEquals(expected, false);
         boolean expected2 = um.verifyUser("gb@gmail.com", "imtheworst");
         assertEquals(expected2, true);
+        String expected_string = "User list saved!\r\n" +
+                "[Employee {Username = testEmployee, Salary = 0, Attendance = false, ID = 111, Email = gb@gmail.com, " +
+                "Major = computer science}]\r\n" +
+                "User file read successfully!";
+        assertEquals(expected_string, output.toString().trim());
     }
 
     @Test
@@ -66,6 +77,29 @@ public class TestUserManager {
         String actual = "Employee {Username = testEmployee, Salary = 0, Attendance = false, " +
                 "ID = 111, Email = gb@gmail.com, Major = computer science}";
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFire(){
+        ArrayList userList = new ArrayList<User>();
+        um = new UserManager(userList);
+        um.createEmployee("testEmployee",
+                "imtheworst", "111", "gb@gmail.com", "computer science");
+        boolean actual = um.fire("111");
+        assertEquals(true, actual);
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        um.createEmployee("testEmployee",
+                "imtheworst", "121", "gb@gmail.com", "computer science");
+        um.fire("121");
+        String expected_string = "User list saved!\r\n" +
+                "[Employee {Username = testEmployee, Salary = 0, Attendance = false, ID = 121, Email = gb@gmail.com, " +
+                "Major = computer science}]\r\n" +
+                "User file read successfully!\r\n" +
+                "Successful! This employee has been removed";
+        assertEquals(expected_string, output.toString().trim());
+
     }
 
 
