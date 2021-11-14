@@ -1,5 +1,4 @@
 import UseCase.Jobposition;
-import UseCase.SalaryManagement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
