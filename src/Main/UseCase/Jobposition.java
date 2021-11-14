@@ -18,7 +18,6 @@ public class Jobposition {
     private final HashMap<String, String> majorMap;
 
     JobReadWriter readWriter = new JobReadWriter();
-
     /**
      * Define a constructor.
      */

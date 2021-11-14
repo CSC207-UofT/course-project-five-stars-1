@@ -17,7 +17,6 @@ public class InternManagement {
      * (Intern as its key and an integer as its value)
      */
     private final HashMap<Intern, Integer> im;
-
     /**
      * Define a constructor.
      */
