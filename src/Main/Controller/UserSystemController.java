@@ -58,6 +58,10 @@ public class UserSystemController {
         return userManager.verifyUser(email, password);
     }
 
+    /**
+     * Remove user from system.
+     * @param id user's ID
+     */
     public void fire(String id){
         this.userManager.fire(id);
     }
