@@ -1,5 +1,9 @@
 package UseCase;
 
+import Gateway.JobReadWriter;
+import Gateway.SalaryReadWriter;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -13,10 +17,28 @@ public class Jobposition {
      */
     private final HashMap<String, String> majorMap;
 
+    JobReadWriter readWriter = new JobReadWriter();
+
     /**
      * Define a constructor.
      */
-    public Jobposition() { this. majorMap = new HashMap<>();}
+    public Jobposition(HashMap<String, String> jobs) {
+        this.majorMap = new HashMap<>();
+
+        try {
+            readWriter.saveToFile("jobs.ser", jobs);
+            System.out.println("Salary list saved!");
+        } catch (IOException e) {
+            System.out.println("Salary list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("jobs.ser"));
+            System.out.println("Salary file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }
+    }
 
     /**
      * Adds major into Jobposition with id as its key and major as its value

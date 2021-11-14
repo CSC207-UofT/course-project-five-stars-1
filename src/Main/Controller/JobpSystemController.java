@@ -1,10 +1,14 @@
 package Controller;
 import UseCase.Jobposition;
+
+import java.util.HashMap;
 // import java.util.Objects;
 
 public class JobpSystemController {
     private final Jobposition jobposition;
-    public JobpSystemController(){this.jobposition = new Jobposition();}
+    public JobpSystemController(HashMap<String, String> jobs){
+        this.jobposition = new Jobposition(jobs);
+    }
     public Jobposition getJobposition(){
         return jobposition;
     }

@@ -1,7 +1,9 @@
 package UseCase;
 
 import Entity.Intern;
+import Gateway.InternReadWriter;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +21,24 @@ public class InternManagement {
     /**
      * Define a constructor.
      */
-    public InternManagement(){this.im = new HashMap<>();}
+    public InternManagement(HashMap<Intern, Integer> intern){
+        this.im = new HashMap<>();
+
+        InternReadWriter readWriter = new InternReadWriter();
+
+        try {
+            readWriter.saveToFile("intern.ser", intern);
+            System.out.println("Salary list saved!");
+        } catch (IOException e) {
+            System.out.println("Salary list did not save.");
+        }
+
+        try {
+            System.out.println(readWriter.readFromFile("intern.ser"));
+            System.out.println("Salary file read successfully!");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Cannot read.");
+        }}
 
     /**
      * Getter for InternManagement in the form of Hashmap.

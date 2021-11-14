@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Controller.InternSystemController;
+import Entity.Intern;
+
+import java.util.HashMap;
 import java.util.Random;
 
 import javax.swing.*;
@@ -61,7 +64,8 @@ public class Internsurface extends JFrame{
         internButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InternSystemController isc = new InternSystemController();
+                HashMap<Intern, Integer> intern = new HashMap<>();
+                InternSystemController isc = new InternSystemController(intern);
                 String id1 = useridInput.getText();
                 String username = nameInput.getText();
                 String password = passwordInput.getText();

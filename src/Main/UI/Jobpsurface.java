@@ -2,6 +2,8 @@ package UI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+
 import Controller.JobpSystemController;
 
 
@@ -29,7 +31,8 @@ public class Jobpsurface extends JFrame{
         jobpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JobpSystemController jsc = new JobpSystemController();
+                HashMap<String, String> jobs = new HashMap<>();
+                JobpSystemController jsc = new JobpSystemController(jobs);
                 String id = useridInput.getText();
                 String inputMajor = userMajorInput.getText();
                 String addMajor = jsc.addMajor(id, inputMajor);

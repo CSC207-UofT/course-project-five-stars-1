@@ -1,15 +1,21 @@
 package Controller;
 
 import Entity.Intern;
+import Gateway.InternReadWriter;
 import UseCase.InternManagement;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Objects;
 
 public class InternSystemController {
     private final InternManagement internManagement;
 
-    public InternSystemController(){this.internManagement = new InternManagement();}
+    InternReadWriter readWriter = new InternReadWriter();
+
+    public InternSystemController(HashMap<Intern, Integer> intern){
+        this.internManagement = new InternManagement(intern);
+    }
 
     public HashMap<Intern, Integer> getOurMap() {
         return internManagement.getIm();

@@ -1,11 +1,9 @@
 package UI;
 
-import Controller.SalarySystemController;
-import Controller.ScheduleSystemController;
-import Controller.UserSystemController;
+import Controller.*;
 import Entity.Employee;
+import Entity.Intern;
 import Entity.User;
-import UseCase.UserManager;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -30,11 +28,25 @@ public class main {
         SalarySystemController salaryManager = new SalarySystemController(y);
 
 
-        //test database
+        //test database for Schedule
         HashMap<String, Integer> z = new HashMap<>();
         z.put("0", 40);
         z.put("1", 30);
         ScheduleSystemController Schedule = new ScheduleSystemController(z);
+
+        //test database for Jobs
+        HashMap<String, String> jobs = new HashMap<>();
+        jobs.put("0", "CEO");
+        jobs.put("1", "CS");
+        JobpSystemController jobPositions = new JobpSystemController(jobs);
+
+        //test database for Intern
+        HashMap<Intern, Integer> intern = new HashMap<>();
+        Intern aaron = new Intern("hello", "123", "0", "test@gmail.com", "CS");
+        Intern aaaaaron = new Intern("hi", "456", "1", "test2@gmail.com", "MATH");
+        intern.put(aaron, 60);
+        intern.put(aaaaaron, 80);
+        InternSystemController internManagement = new InternSystemController(intern);
 
         Loginsurface frame = new Loginsurface(userManager);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
