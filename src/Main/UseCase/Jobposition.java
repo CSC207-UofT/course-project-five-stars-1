@@ -34,7 +34,7 @@ public class Jobposition {
 
         try {
             System.out.println(readWriter.readFromFile("jobs.ser"));
-            System.out.println("Jobs file read successfully!");
+            System.out.println("Jobs  file read successfully!");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Cannot read.");
         }
@@ -77,9 +77,9 @@ public class Jobposition {
      * Getter for reference(IT department, Sale department, HR department, Logistics department)
      * based on user's major.
      * @param major user's major
-     * @return IT department if major is computer science;
-     *         sale department if major is finance;
-     *         HR department if major is management;
+     * @return IT department if major is computer science or data science;
+     *         sale department if major is finance or economic;
+     *         HR department if major is management or social science;
      *         Logistics department if major is nursery;
      *         "Our company doesn't have suitable job reference for you based on your id
      *         and you can think twice to decide a job you would like to do" if major is not
@@ -95,8 +95,8 @@ public class Jobposition {
         }else if (Objects.equals(major, "nursery")){
             return "Logistics department";
         }else{
-            return " Our company doesn't have suitable job reference for you based on your id and you can think twice" +
-                    " to decide a job you would like to do ";
+            return "Our company doesn't have suitable job reference for you based on your id and you can think twice" +
+                    " to decide a job you would like to do.";
         }
 
     }
