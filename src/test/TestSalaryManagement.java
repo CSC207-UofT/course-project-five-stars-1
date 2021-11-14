@@ -10,7 +10,7 @@ public class TestSalaryManagement {
 
     @BeforeAll
     public static void setUp() {
-        sm = new SalaryManagement();
+        sm = new SalaryManagement(new HashMap<String, Integer>());
     }
 
     @Test

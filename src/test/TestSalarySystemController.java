@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestSalarySystemController {
@@ -11,7 +13,8 @@ public class TestSalarySystemController {
 
     @BeforeAll
     public static void setUpSalarySystemController(){
-        ssc = new SalarySystemController();
+
+        ssc = new SalarySystemController(new HashMap<String, Integer>());
     }
 
     @Test
