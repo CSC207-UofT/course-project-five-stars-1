@@ -3,13 +3,15 @@ import UseCase.InternManagement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestInternManagement {
     static InternManagement internManagement;
 
     @BeforeAll
-    public static void setUp(){internManagement = new InternManagement();}
+    public static void setUp(){internManagement = new InternManagement(new HashMap<Intern, Integer>());}
 
     @Test
     public void testCreateIntern(){

@@ -18,6 +18,7 @@ public class Jobposition {
     private final HashMap<String, String> majorMap;
 
     JobReadWriter readWriter = new JobReadWriter();
+
     /**
      * Define a constructor.
      */
@@ -26,14 +27,14 @@ public class Jobposition {
 
         try {
             readWriter.saveToFile("jobs.ser", jobs);
-            System.out.println("Job list saved!");
+            System.out.println("Jobs list saved!");
         } catch (IOException e) {
-            System.out.println("Job list did not save.");
+            System.out.println("Jobs list did not save.");
         }
 
         try {
             System.out.println(readWriter.readFromFile("jobs.ser"));
-            System.out.println("Job file read successfully!");
+            System.out.println("Jobs file read successfully!");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Cannot read.");
         }
