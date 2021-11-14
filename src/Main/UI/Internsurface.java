@@ -22,6 +22,12 @@ public class Internsurface extends JFrame{
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
     public Internsurface(){
+        /**
+         * @code {panel}
+         * Use the panel to create enter fields for the Internsurface
+         * including userid, password, username, email, major. grade. standard
+         * creating buttons: intern and back
+         */
         JPanel panel = new JPanel();
         JLabel userId = new JLabel("Userid:");
         panel.add(userId);
@@ -61,6 +67,12 @@ public class Internsurface extends JFrame{
         JButton internButton = new JButton("Intern");
         panel.add(internButton);
 
+
+        /**
+         * A helper function for {@code addActionListener}.
+         * It searches and checks the {@code Intern} exist or not
+         * If the Intern does not exist, it gives the intern a new id.
+         */
         internButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -82,6 +94,11 @@ public class Internsurface extends JFrame{
             }
         });
 
+        /**
+         * A helper function for {@code addActionListener}.
+         * It is activated when you click back button
+         * And you can go back to the last page you viewed
+         */
         btn1 = new JButton("Back");
         panel.add(btn1);
 
@@ -93,7 +110,12 @@ public class Internsurface extends JFrame{
                 new Usersurface().setVisible(true);
             }
         });
-
+        /**
+         * A helper method for the constructor.
+         * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
+         *
+         * @see #Intersurface(main)
+         */
         this.setLayout (null);
         panel.setSize(635,500);
         panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);
