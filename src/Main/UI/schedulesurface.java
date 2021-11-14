@@ -11,12 +11,11 @@ import Controller.ScheduleSystemController;
 public class schedulesurface extends JFrame{
     private final JTextField useridInput;
     private final JTextField ChourInput;
-    private JButton btn1;
     // set window size
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
     public schedulesurface(){
-        /**
+        /*
          * @code {panel}
          * Use the panel to create enter fields for the schedulesurface
          * including Userid, changehour
@@ -56,12 +55,12 @@ public class schedulesurface extends JFrame{
             }
         });
 
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click back button
          * And you can go back to the last page you viewed
          */
-        btn1 = new JButton("Back");
+        JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
         btn1.addActionListener(new ActionListener() {
@@ -73,7 +72,7 @@ public class schedulesurface extends JFrame{
             }
         });
 
-        /**
+        /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *

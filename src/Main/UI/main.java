@@ -53,7 +53,7 @@ public class main {
         intern.put(aaaaaron, 80);
         InternSystemController internManagement = new InternSystemController(intern);
 
-        /**
+        /*
          * Make login frame visible
          *
          * @param frame the frame that is currently viewing

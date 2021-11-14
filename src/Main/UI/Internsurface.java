@@ -1,5 +1,4 @@
 package UI;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Controller.InternSystemController;
@@ -18,11 +17,10 @@ public class Internsurface extends JFrame{
     private final JTextField majorInput;
     private final JTextField gradeInput;
     private final JTextField standardInput;
-    private JButton btn1;
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
     public Internsurface(){
-        /**
+        /*
          * @code {panel}
          * Use the panel to create enter fields for the Internsurface
          * including userid, password, username, email, major. grade. standard
@@ -68,7 +66,7 @@ public class Internsurface extends JFrame{
         panel.add(internButton);
 
 
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It searches and checks the {@code Intern} exist or not
          * If the Intern does not exist, it gives the intern a new id.
@@ -94,12 +92,12 @@ public class Internsurface extends JFrame{
             }
         });
 
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click back button
          * And you can go back to the last page you viewed
          */
-        btn1 = new JButton("Back");
+        JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
         btn1.addActionListener(new ActionListener() {
@@ -110,7 +108,7 @@ public class Internsurface extends JFrame{
                 new Usersurface().setVisible(true);
             }
         });
-        /**
+        /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *

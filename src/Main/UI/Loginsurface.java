@@ -16,7 +16,7 @@ public class Loginsurface extends JFrame {
     UserSystemController userManager;
 
     public Loginsurface(UserSystemController userManager){
-        /**
+        /*
          * @code {panel}
          * Use the panel to create enter fields for the Loginsurface
          * including userid, userid, password, username, email, major
@@ -58,7 +58,7 @@ public class Loginsurface extends JFrame {
         int i = id.nextInt(10);
         String randomId = String.valueOf(i);
 
-        /**
+        /*
          * A helper function for {@code ActionListener} in Loginsurface
          * Check and return whether a user is registered successfully.
          * It restores the data we entered
@@ -76,7 +76,7 @@ public class Loginsurface extends JFrame {
                 JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
             }
         });
-        /**
+        /*
          * A helper function for {@code ActionListener} in Loginsurface
          * Check and return whether a user is registered successfully.
          *
@@ -100,7 +100,7 @@ public class Loginsurface extends JFrame {
             }
         });
 
-        /**
+        /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
