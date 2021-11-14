@@ -48,8 +48,6 @@ public class TestUserManager {
         assertEquals(expected.get(0).getPassword(), um.getUm().get(0).getPassword());
         assertEquals(expected.get(0).getMajor(), um.getUm().get(0).getMajor());
         assertEquals(expected.get(0).getEmail(), um.getUm().get(0).getEmail());
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
     }
 
     @Test
