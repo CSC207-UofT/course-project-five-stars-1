@@ -41,15 +41,16 @@ public class SalarySystemController {
         }
     }
     public String addSalary(String id1, String id2, int salary) {
-        if (this.salaryManagement.getSm().containsKey(id2)) {
-            return "There is no user match";
-        } else {
+        if (this.salaryManagement.getSm().containsKey(id2)){
             if (Objects.equals(id1, "0")){
                 this.salaryManagement.getSm().put(id2, salary);
-                return " Employer has added your salary";
+                return "Added salary of employee(id: " + id2 + ") successfully";
             }else{
                 return "You don't have the authority to add salary.";
             }
+        }else{
+            this.salaryManagement.getSm().put(id2, 0);
+            return "User information added successfully.";
         }
     }
 
