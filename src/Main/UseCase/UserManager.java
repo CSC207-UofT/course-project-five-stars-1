@@ -35,6 +35,10 @@ public class UserManager {
         }
     }
 
+    /**
+     * Getter for userlist
+     * @return userlist
+     */
     public ArrayList<User> getUm() {return userlist;}
 
     /**
@@ -122,8 +126,7 @@ public class UserManager {
 
     /**
      * Remove an employee from our userSystem.
-     * @param id employee's id.
-     *
+     * @param id User's id.
      */
     public void fire(String id){
         for (User user : userlist){

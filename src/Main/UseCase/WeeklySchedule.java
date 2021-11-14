@@ -25,14 +25,14 @@ public class WeeklySchedule {
 
         try {
             readWriter.saveToFile("schedules.ser", schedules);
-            System.out.println("Salary list saved!");
+            System.out.println("Schedule list saved!");
         } catch (IOException e) {
-            System.out.println("Salary list did not save.");
+            System.out.println("Schedule list did not save.");
         }
 
         try {
             System.out.println(readWriter.readFromFile("schedules.ser"));
-            System.out.println("Salary file read successfully!");
+            System.out.println("Schedule file read successfully!");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Cannot read.");
         }

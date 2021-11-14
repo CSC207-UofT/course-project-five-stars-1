@@ -28,14 +28,14 @@ public class InternManagement {
 
         try {
             readWriter.saveToFile("intern.ser", intern);
-            System.out.println("Salary list saved!");
+            System.out.println("Intern list saved!");
         } catch (IOException e) {
-            System.out.println("Salary list did not save.");
+            System.out.println("Intern list did not save.");
         }
 
         try {
             System.out.println(readWriter.readFromFile("intern.ser"));
-            System.out.println("Salary file read successfully!");
+            System.out.println("Intern file read successfully!");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Cannot read.");
         }}

@@ -85,7 +85,7 @@ public class TestUserSystemController {
         UserSystemController usc = new UserSystemController(new ArrayList<User>());
         usc.create("testEmployee",
                 "imtheworst", "111", "gb@gmail.com", "computer science");
-        String actual = usc.getUser("111");
+        String actual = usc.getUser("11");
         assertEquals( "The user id doesn't exist.", actual);
     }
 

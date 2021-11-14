@@ -3,13 +3,15 @@ import Entity.Intern;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestInternSystemController {
     private static InternSystemController internSystemController;
 
     @BeforeAll
-    public static void setUp(){internSystemController = new InternSystemController();}
+    public static void setUp(){internSystemController = new InternSystemController(new HashMap<Intern, Integer>());}
 
     @Test
     public void testRegisterInformation1(){
