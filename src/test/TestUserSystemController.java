@@ -35,13 +35,6 @@ public class TestUserSystemController {
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
         assertEquals(expected.get(0).getSalary(), usc.getUserManager().getUm().get(0).getSalary());
         assertEquals(expected.get(0).getEmail(), usc.getUserManager().getUm().get(0).getEmail());
-
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-        usc.create("testEmployer",
-                "imthebest", "0", "kt@gmail.com", "computer science");
-        String expected_string = "Successful!!";
-        assertEquals(expected_string, output.toString().trim());
     }
 
     @Test
@@ -60,15 +53,7 @@ public class TestUserSystemController {
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
         assertEquals(expected.get(0).getPassword(), usc.getUserManager().getUm().get(0).getPassword());
         assertEquals(expected.get(0).getSalary(), usc.getUserManager().getUm().get(0).getSalary());
-
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-        usc.create("testEmployee",
-                "imtheworst", "111", "gb@gmail.com", "computer science");
-        String expected_string = "Successful!!";
-        assertEquals(expected_string, output.toString().trim());
     }
-
 
     @Test
     public void testGetUser(){
@@ -105,5 +90,60 @@ public class TestUserSystemController {
                 "imtheworst", "111", "gb@gmail.com", "computer science");
         boolean actual = usc.verify("hoo@gmail.com", "imtheworst");
         assertEquals(false, actual);
+    }
+
+    @Test
+    public void testFireUExist(){
+        usc = new UserSystemController(new ArrayList<User>());
+        UserSystemController expected = new UserSystemController(new ArrayList<User>());
+        expected.create("testEmployee",
+                "imtheworst", "111", "gb@gmail.com", "computer science");
+        expected.create("testEmployee",
+                "imtheworst", "121", "gb@gmail.com", "computer science");
+        usc.create("testEmployee",
+                "imtheworst", "111", "gb@gmail.com", "computer science");
+        usc.create("testEmployee",
+                "imtheworst", "121", "gb@gmail.com", "computer science");
+        expected.fire("111");
+        usc.fire("111");
+        assertEquals(expected.getUserManager().getUm().get(0).getUsername(),
+                usc.getUserManager().getUm().get(0).getUsername());
+        assertEquals(expected.getUserManager().getUm().get(0).getID(),
+                usc.getUserManager().getUm().get(0).getID());
+        assertEquals(expected.getUserManager().getUm().get(0).getPassword(),
+                usc.getUserManager().getUm().get(0).getPassword());
+        assertEquals(expected.getUserManager().getUm().get(0).getPassword(),
+                usc.getUserManager().getUm().get(0).getPassword());
+        assertEquals(expected.getUserManager().getUm().get(0).getSalary(),
+                usc.getUserManager().getUm().get(0).getSalary());
+    }
+
+    @Test
+    public void testFireNotExist(){
+
+        usc = new UserSystemController(new ArrayList<User>());
+        UserSystemController expected = new UserSystemController(new ArrayList<User>());
+        expected.create("testEmployee",
+                "imtheworst", "111", "gb@gmail.com", "computer science");
+        usc.create("testEmployee",
+                "imtheworst", "111", "gb@gmail.com", "computer science");
+        expected.fire("113");
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+        String expected_string = "We did not find the employee";
+        usc.fire("113");
+        assertEquals(expected_string, output.toString().trim());
+        assertEquals(expected.getUserManager().getUm().get(0).getUsername(),
+                usc.getUserManager().getUm().get(0).getUsername());
+        assertEquals(expected.getUserManager().getUm().get(0).getID(),
+                usc.getUserManager().getUm().get(0).getID());
+        assertEquals(expected.getUserManager().getUm().get(0).getPassword(),
+                usc.getUserManager().getUm().get(0).getPassword());
+        assertEquals(expected.getUserManager().getUm().get(0).getPassword(),
+                usc.getUserManager().getUm().get(0).getPassword());
+        assertEquals(expected.getUserManager().getUm().get(0).getSalary(),
+                usc.getUserManager().getUm().get(0).getSalary());
+
+
     }
 }

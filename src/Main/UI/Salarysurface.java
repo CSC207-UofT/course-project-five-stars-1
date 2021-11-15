@@ -13,8 +13,14 @@ public class Salarysurface extends JFrame{
     private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
-    private JButton btn1;
+
     public Salarysurface(){
+        /*
+         * @code {panel}
+         * Use the panel to create enter fields for the Salary
+         * including userid1, userid2
+         * creating buttons: salary and back
+         */
         JPanel panel = new JPanel();
 
         JLabel userId1 = new JLabel("Userid1:");
@@ -35,7 +41,11 @@ public class Salarysurface extends JFrame{
         JButton salaryButton = new JButton("Salary");
         panel.add(salaryButton);
 
-
+        /*
+         * A helper function for {@code addActionListener}.
+         * It searches and checks the salary of userid1 and userid2.
+         * It can store the salary we entered.
+         */
         salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,8 +59,12 @@ public class Salarysurface extends JFrame{
                 JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
             }
         });
-
-        btn1 = new JButton("Back");
+        /*
+         * A helper function for {@code addActionListener}.
+         * It is activated when you click back button
+         * And you can go back to the last page you viewed
+         */
+        JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
         btn1.addActionListener(new ActionListener() {
@@ -61,8 +75,12 @@ public class Salarysurface extends JFrame{
                 new Usersurface().setVisible(true);
             }
         });
-
-
+        /*
+         * A helper method for the constructor.
+         * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
+         *
+         * @see #Salarysurface(main)
+         */
         this.setLayout (null);
         panel.setSize(250,250);
         panel.setLocation((FRAME_WIDTH-250) / 2, (FRAME_HEIGHT - 250) / 2);

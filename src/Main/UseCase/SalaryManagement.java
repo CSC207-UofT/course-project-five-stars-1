@@ -73,6 +73,7 @@ public class SalaryManagement {
     }
 
     /**
+     *
      * Computes the yearly salary.
      * @param id User's id.
      * @return an integer.

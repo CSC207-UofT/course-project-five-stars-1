@@ -107,6 +107,10 @@ public class UserManager {
         createEmployeeEmployer(user);
     }
 
+    /**
+     * Adds user into userlist.
+     * @param user user
+     */
     private void createEmployeeEmployer(User user) {
         userlist.add(user);
         try {
@@ -125,17 +129,20 @@ public class UserManager {
     }
 
     /**
-     * Remove an employee from our userSystem.
-     * @param id User's id.
+     * Fire a User from system
+     * @param id user's ID
+     * @return false if ID does not match, else return true
      */
-    public void fire(String id){
+    public boolean fire(String id){
         for (User user : userlist){
             if (Objects.equals(user.getID(), id)){
                 userlist.remove(user);
                 System.out.println("Successful! This employee has been removed");
-                break;
+                return true;
             }
         }
         System.out.println("We did not find the employee");
+        return false;
     }
+
 }

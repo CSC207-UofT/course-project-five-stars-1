@@ -40,12 +40,12 @@ public class WeeklySchedule {
     /**
      * Adds schedule into WeeklySchedule(scm) with ID as its key and fixed value 40 as its value.
      * @param id user's ID
-     * @return "Cannot add your schedule since there is no id" if ID does not match,
+     * @return "Cannot add your schedule since your information exists" if ID does not match,
      *         else add id as key and 40 as value into scm and return "Add your schedule successfully"
      */
     public String addSchedule(String id) {
         if (this.scm.containsKey(id)) {
-            return "Cannot add your schedule since there is no id";
+            return "Cannot add your schedule since your information exists";
         } else {
             this.scm.put(id, 40);
             return "Add your schedule successfully";
