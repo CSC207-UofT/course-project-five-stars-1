@@ -13,9 +13,9 @@ public class Salarysurface extends JFrame{
     private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
-    private JButton btn1;
+
     public Salarysurface(){
-        /**
+        /*
          * @code {panel}
          * Use the panel to create enter fields for the Salary
          * including userid1, userid2
@@ -41,7 +41,7 @@ public class Salarysurface extends JFrame{
         JButton salaryButton = new JButton("Salary");
         panel.add(salaryButton);
 
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It searches and checks the salary of userid1 and userid2.
          * It can store the salary we entered.
@@ -59,12 +59,12 @@ public class Salarysurface extends JFrame{
                 JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
             }
         });
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click back button
          * And you can go back to the last page you viewed
          */
-        btn1 = new JButton("Back");
+        JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
         btn1.addActionListener(new ActionListener() {
@@ -75,8 +75,7 @@ public class Salarysurface extends JFrame{
                 new Usersurface().setVisible(true);
             }
         });
-
-        /**
+        /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *

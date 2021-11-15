@@ -10,7 +10,7 @@ public class Usersurface extends JFrame{
     final int FRAME_HEIGHT = 1000;
 
     public Usersurface(){
-        /**
+        /*
          * @code {panel}
          * Use the panel to create buttons for the Usersurface
          * creating buttons: salary, Jobposition, Schedule, Intern, Exist
@@ -32,7 +32,7 @@ public class Usersurface extends JFrame{
         JButton existButton = new JButton("Exist");
         panel.add(existButton);
 
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Salary button
          * And you can go to Salarysurface
@@ -45,7 +45,7 @@ public class Usersurface extends JFrame{
                 salaryinterface.setVisible(true);
             }
         });
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Jobposition button
          * And you can go back to Jobsurface
@@ -58,7 +58,7 @@ public class Usersurface extends JFrame{
                 jobpinterface.setVisible(true);
             }
         });
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Schedule button
          * And you can go back to schedulesurface
@@ -71,7 +71,7 @@ public class Usersurface extends JFrame{
                 scheduleinterface.setVisible(true);
             }
         });
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click intern button
          * And you can go back to Internsurface
@@ -84,7 +84,7 @@ public class Usersurface extends JFrame{
                 internsurface.setVisible(true);
             }
         });
-        /**
+        /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click exit button
          * And you can exit the window
@@ -97,7 +97,7 @@ public class Usersurface extends JFrame{
         });
 
 
-        /**
+        /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *

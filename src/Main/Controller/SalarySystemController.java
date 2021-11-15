@@ -40,6 +40,13 @@ public class SalarySystemController {
             return "Sorry, there does not exist your information";
         }
     }
+    /**
+     * Print out the salary based on the provided id.
+     * Otherwise, print "Sorry, there does not exist your information"
+     * @param id1 A unique String for each User.
+     * @param id2 A unique String for each User.
+     * @param salary A unique int to represent salary.
+     */
     public String addSalary(String id1, String id2, int salary) {
         if (this.salaryManagement.getSm().containsKey(id2)){
             if (Objects.equals(id1, "0")){
