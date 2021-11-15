@@ -6,9 +6,11 @@ import java.util.HashMap;
 
 public class JobpSystemController {
     private final Jobposition jobposition;
+
     public JobpSystemController(HashMap<String, String> jobs){
         this.jobposition = new Jobposition(jobs);
     }
+
     public Jobposition getJobposition(){
         return jobposition;
     }
