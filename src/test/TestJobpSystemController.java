@@ -64,7 +64,6 @@ public class TestJobpSystemController {
         assertEquals(expected_string, output.toString().trim());
     }
 
-
     @Test
     public void testGetReferenceDS(){
         ByteArrayOutputStream output = new ByteArrayOutputStream();
