@@ -1,16 +1,16 @@
-import UseCase.SalaryManagement;
+import UseCase.SalaryManager;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestSalaryManagement {
-    static SalaryManagement sm;
+public class TestSalaryManager {
+    static SalaryManager sm;
 
     @BeforeAll
     public static void setUp() {
-        sm = new SalaryManagement(new HashMap<String, Integer>());
+        sm = new SalaryManager(new HashMap<String, Integer>());
     }
 
     @Test

@@ -1,6 +1,6 @@
 package Controller;
 
-import UseCase.SalaryManagement;
+import UseCase.SalaryManager;
 
 // import java.util.HashMap;
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import java.util.Objects;
  * Controls the SalaryManagement system.
  */
 public class SalarySystemController {
-    private final SalaryManagement salaryManagement;
+    private final SalaryManager salaryManagement;
 
     public SalarySystemController(HashMap<String, Integer> salaries){
-        this.salaryManagement = new SalaryManagement(salaries);
+        this.salaryManagement = new SalaryManager(salaries);
     }
 
     /**
@@ -21,7 +21,7 @@ public class SalarySystemController {
      * @return salaryManagement.
      */
 
-    public SalaryManagement getSalaryManagement(){
+    public SalaryManager getSalaryManagement(){
         return salaryManagement;
     }
 

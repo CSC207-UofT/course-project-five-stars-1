@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.util.Random;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-public class Loginsurface extends JFrame {
+public class LoginSurface extends JFrame {
 
     private final JPasswordField passwordInput;
     private final JTextField nameInput;
@@ -15,10 +15,10 @@ public class Loginsurface extends JFrame {
     final int FRAME_HEIGHT = 500;
     UserSystemController userManager;
 
-    public Loginsurface(UserSystemController userManager){
+    public LoginSurface(UserSystemController userManager){
         /*
          * @code {panel}
-         * Use the panel to create enter fields for the Loginsurface
+         * Use the panel to create enter fields for the LoginSurface
          * including userid, userid, password, username, email, major
          * creating buttons: register, login and back
          */
@@ -59,7 +59,7 @@ public class Loginsurface extends JFrame {
         String randomId = String.valueOf(i);
 
         /*
-         * A helper function for {@code ActionListener} in Loginsurface
+         * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          * It restores the data we entered
          * Including password, name, email, major
@@ -77,7 +77,7 @@ public class Loginsurface extends JFrame {
             }
         });
         /*
-         * A helper function for {@code ActionListener} in Loginsurface
+         * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          *
          * @param email the {@code char[]} whose email is waiting to be checked
@@ -92,8 +92,8 @@ public class Loginsurface extends JFrame {
                 if(userManager.verify(email, password) == false)
                     JOptionPane.showMessageDialog(null,"Please enter an exist user");
                 else{
-                    Loginsurface.this.setVisible(false);
-                    JFrame userinterface = new Usersurface();
+                    LoginSurface.this.setVisible(false);
+                    JFrame userinterface = new UserSurface();
                     userinterface.setVisible(true);
                 }
 
@@ -104,7 +104,7 @@ public class Loginsurface extends JFrame {
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #Loginsurface(main)
+         * @see #LoginSurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

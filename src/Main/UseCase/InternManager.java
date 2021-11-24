@@ -11,9 +11,9 @@ import java.util.Objects;
 /**
  * Represents the intern system
  */
-public class InternManagement {
+public class InternManager {
     /**
-     * Creates a InternManagement with an empty Hashmap
+     * Creates a InternManager with an empty Hashmap
      * (Intern as its key and an integer as its value)
      */
     private final HashMap<Intern, Integer> im;
@@ -21,7 +21,7 @@ public class InternManagement {
     /**
      * Define a constructor.
      */
-    public InternManagement(HashMap<Intern, Integer> intern){
+    public InternManager(HashMap<Intern, Integer> intern){
         this.im = new HashMap<>();
 
         InternReadWriter readWriter = new InternReadWriter();
@@ -41,7 +41,7 @@ public class InternManagement {
         }}
 
     /**
-     * Getter for InternManagement in the form of Hashmap.
+     * Getter for InternManager in the form of Hashmap.
      * @return a Hashmap with Intern as key and an integer as value.
      */
     public HashMap<Intern, Integer> getIm(){return this.im;}
@@ -61,7 +61,7 @@ public class InternManagement {
     }
 
     /**
-     * Adds intern's register information into InternManagement with Intern as key, grade as value.
+     * Adds intern's register information into InternManager with Intern as key, grade as value.
      * @param username intern's username
      * @param password intern's password
      * @param id intern's ID

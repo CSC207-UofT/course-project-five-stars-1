@@ -1,21 +1,21 @@
-import UseCase.Jobposition;
+import UseCase.JobPositions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestJobposition {
-    static Jobposition jp;
+public class TestJobPositions {
+    static JobPositions jp;
 
     @BeforeAll
     public static void setUp() {
-        jp = new Jobposition(new HashMap<String, String>());
+        jp = new JobPositions(new HashMap<String, String>());
     }
 
     @Test
     public void testAddMajorUNotExist(){
-        jp = new Jobposition(new HashMap<String, String>());
+        jp = new JobPositions(new HashMap<String, String>());
         String actual = jp.addMajor("234", "computer science");
         String expected = "computer science";
         assertEquals(expected, actual);
@@ -38,7 +38,7 @@ public class TestJobposition {
 
     @Test
     public void testGetMajor(){
-        jp = new Jobposition(new HashMap<String, String>());
+        jp = new JobPositions(new HashMap<String, String>());
         jp.addMajor("234", "computer science");
         String actual = jp.getMajor("234");
         String expected = "computer science";

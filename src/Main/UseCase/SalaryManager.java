@@ -8,10 +8,10 @@ import Gateway.SalaryReadWriter;
 /**
  * Represents the Salary system of Users.
  */
-public class SalaryManagement {
+public class SalaryManager {
 
     /**
-     * Creates a SalaryManagement with an empty Hashmap
+     * Creates a SalaryManager with an empty Hashmap
      * (A string as its key and an integer as its value)
      */
     private final HashMap<String, Integer> sm;
@@ -21,7 +21,7 @@ public class SalaryManagement {
     /**
      * Define a constructor.
      */
-    public SalaryManagement(HashMap<String, Integer> salaries){
+    public SalaryManager(HashMap<String, Integer> salaries){
         this.sm = salaries;
 
         try {
@@ -40,11 +40,11 @@ public class SalaryManagement {
     }
 
     /**
-     * Adds salary info into SalaryManagement with id as key and salary as value.
+     * Adds salary info into SalaryManager with id as key and salary as value.
      * @param id A unique String for each User.
      * @param salary User's salary.
-     * @return false if id exists in SalaryManagement,
-     *         else adds id as key and salary as value into SalaryManagement and return true
+     * @return false if id exists in SalaryManager,
+     *         else adds id as key and salary as value into SalaryManager and return true
      */
     public boolean addSalary(String id, int salary) {
         if (this.sm.containsKey(id)) {
@@ -56,7 +56,7 @@ public class SalaryManagement {
     }
 
     /**
-     * Getter for SalaryManagement in the form of Hashmap.
+     * Getter for SalaryManager in the form of Hashmap.
      * @return a Hashmap with a string as key and an integer as value.
      */
     public HashMap<String, Integer> getSm (){
