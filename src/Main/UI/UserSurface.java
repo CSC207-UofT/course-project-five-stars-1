@@ -4,23 +4,23 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Usersurface extends JFrame{
+public class UserSurface extends JFrame{
 
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
 
-    public Usersurface(){
+    public UserSurface(){
         /*
          * @code {panel}
-         * Use the panel to create buttons for the Usersurface
-         * creating buttons: salary, Jobposition, Schedule, Intern, Exist
+         * Use the panel to create buttons for the UserSurface
+         * creating buttons: salary, JobPositions, Schedule, Intern, Exist
          */
         JPanel panel = new JPanel();
 
         JButton salaryButton = new JButton("Salary");
         panel.add(salaryButton);
 
-        JButton jpButton = new JButton("Jobposition");
+        JButton jpButton = new JButton("JobPositions");
         panel.add(jpButton);
 
         JButton sdButton = new JButton("Schedule");
@@ -35,52 +35,52 @@ public class Usersurface extends JFrame{
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Salary button
-         * And you can go to Salarysurface
+         * And you can go to SalarySurface
          */
         salaryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usersurface.this.setVisible(false);
-                JFrame salaryinterface = new Salarysurface();
+                UserSurface.this.setVisible(false);
+                JFrame salaryinterface = new SalarySurface();
                 salaryinterface.setVisible(true);
             }
         });
         /*
          * A helper function for {@code addActionListener}.
-         * It is activated when you click Jobposition button
+         * It is activated when you click JobPositions button
          * And you can go back to Jobsurface
          */
         jpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usersurface.this.setVisible(false);
-                JFrame jobpinterface = new Jobpsurface();
+                UserSurface.this.setVisible(false);
+                JFrame jobpinterface = new JobSurface();
                 jobpinterface.setVisible(true);
             }
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Schedule button
-         * And you can go back to schedulesurface
+         * And you can go back to ScheduleSurface
          */
         sdButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usersurface.this.setVisible(false);
-                JFrame scheduleinterface = new schedulesurface();
+                UserSurface.this.setVisible(false);
+                JFrame scheduleinterface = new ScheduleSurface();
                 scheduleinterface.setVisible(true);
             }
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click intern button
-         * And you can go back to Internsurface
+         * And you can go back to InternSurface
          */
         internButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usersurface.this.setVisible(false);
-                JFrame internsurface = new Internsurface();
+                UserSurface.this.setVisible(false);
+                JFrame internsurface = new InternSurface();
                 internsurface.setVisible(true);
             }
         });
@@ -92,7 +92,7 @@ public class Usersurface extends JFrame{
         existButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usersurface.this.setVisible(false);
+                UserSurface.this.setVisible(false);
             }
         });
 
@@ -101,7 +101,7 @@ public class Usersurface extends JFrame{
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #Usersurface(main)
+         * @see #UserSurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

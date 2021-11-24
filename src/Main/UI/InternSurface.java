@@ -9,7 +9,7 @@ import java.util.Random;
 
 import javax.swing.*;
 
-public class Internsurface extends JFrame{
+public class InternSurface extends JFrame{
     private final JTextField useridInput;
     private final JPasswordField passwordInput;
     private final JTextField nameInput;
@@ -19,10 +19,10 @@ public class Internsurface extends JFrame{
     private final JTextField standardInput;
     final int FRAME_WIDTH = 1000;
     final int FRAME_HEIGHT = 1000;
-    public Internsurface(){
+    public InternSurface(){
         /*
          * @code {panel}
-         * Use the panel to create enter fields for the Internsurface
+         * Use the panel to create enter fields for the InternSurface
          * including userid, password, username, email, major. grade. standard
          * creating buttons: intern and back
          */
@@ -105,7 +105,7 @@ public class Internsurface extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                new Usersurface().setVisible(true);
+                new UserSurface().setVisible(true);
             }
         });
         /*

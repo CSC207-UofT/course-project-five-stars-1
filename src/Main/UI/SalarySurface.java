@@ -7,14 +7,14 @@ import java.util.HashMap;
 
 
 import Controller.SalarySystemController;
-public class Salarysurface extends JFrame{
+public class SalarySurface extends JFrame{
     private final JTextField useridInput1;
     private final JTextField useridInput2;
     private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
 
-    public Salarysurface(){
+    public SalarySurface(){
         /*
          * @code {panel}
          * Use the panel to create enter fields for the Salary
@@ -72,14 +72,14 @@ public class Salarysurface extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                new Usersurface().setVisible(true);
+                new UserSurface().setVisible(true);
             }
         });
         /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #Salarysurface(main)
+         * @see #SalarySurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

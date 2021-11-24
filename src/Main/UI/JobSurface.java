@@ -1,60 +1,60 @@
 package UI;
-
 import javax.swing.*;
-// import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-// import Controller.JobpSystemController;
-import Controller.ScheduleSystemController;
-public class schedulesurface extends JFrame{
+import Controller.JobSystemController;
+
+
+public class JobSurface extends JFrame{
     private final JTextField useridInput;
-    private final JTextField ChourInput;
-    // set window size
+    private final JTextField userMajorInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
-    public schedulesurface(){
+
+    public JobSurface(){
         /*
          * @code {panel}
-         * Use the panel to create enter fields for the schedulesurface
-         * including Userid, changehour
-         * creating buttons: schedule and back
+         * Use the panel to create enter fields for the JobPositions
+         * including userid, usermajor
+         * creating buttons: jobposition and back
          */
         JPanel panel = new JPanel();
+
         JLabel userId = new JLabel("Userid:");
         panel.add(userId);
         useridInput = new JTextField(20);
         panel.add(useridInput);
 
-        JLabel chour = new JLabel("Changehour:");
-        panel.add(chour);
-        ChourInput = new JTextField(20);
-        panel.add(ChourInput);
-        JButton scheduleButton = new JButton("Schedule");
-        panel.add(scheduleButton);
-        scheduleButton.addActionListener(new ActionListener() {
-        /**
-         * A helper function for {@code addActionListener}.
-         * It searches and checks the {@code User} by userid
-         * get inputs of text fields behind "id:", and "changehour:".
-         */
+        JLabel userMajor = new JLabel("UserMajor:");
+        panel.add(userMajor);
+        userMajorInput = new JTextField(20);
+        panel.add(userMajorInput);
 
+        JButton jobpButton = new JButton("JobPositions");
+        panel.add(jobpButton);
+
+        /*
+         * A helper function for {@code addActionListener}.
+         * It takes one user and major and match them together.
+         * The system will suggest a position for this User or Intern you entered.
+         */
+        jobpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HashMap<String, Integer> schedules = new HashMap<>();
-                ScheduleSystemController ssc = new ScheduleSystemController(schedules);
+                HashMap<String, String> jobs = new HashMap<>();
+                JobSystemController jsc = new JobSystemController(jobs);
                 String id = useridInput.getText();
-                String changeh = ChourInput.getText();
-                String add = ssc.addSchedule(id);
-                String change = ssc.changeSchedule(id, Integer.parseInt(changeh));
-                int schedule = ssc.checkSchedule(id);
-                JOptionPane.showMessageDialog(null, add);
-                JOptionPane.showMessageDialog(null, change);
-                JOptionPane.showMessageDialog(null, "Here is your weekly schedule: " + schedule);
+                String inputMajor = userMajorInput.getText();
+                String addMajor = jsc.addMajor(id, inputMajor);
+                String getMajor = jsc.getMajor(id);
+                String reference = jsc.getReference(getMajor);
+                JOptionPane.showMessageDialog(null, "This is your added major," +
+                        " remember to add the major that matches the previous one:" + addMajor );
+                JOptionPane.showMessageDialog(null, "Here is the reference job: " + reference);
             }
         });
-
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click back button
@@ -68,15 +68,14 @@ public class schedulesurface extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
 
-                new Usersurface().setVisible(true);
+                new UserSurface().setVisible(true);
             }
         });
-
         /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #schedulesurface(main)
+         * @see #Jobsurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

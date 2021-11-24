@@ -10,9 +10,9 @@ import java.util.Objects;
 /**
  * Represents the job system
  */
-public class Jobposition {
+public class JobPositions {
     /**
-     * Creates a Jobposition with an empty Hashmap
+     * Creates a JobPositions with an empty Hashmap
      * (A String as its key and a String as its value)
      */
     private final HashMap<String, String> majorMap;
@@ -22,7 +22,7 @@ public class Jobposition {
     /**
      * Define a constructor.
      */
-    public Jobposition(HashMap<String, String> jobs) {
+    public JobPositions(HashMap<String, String> jobs) {
         this.majorMap = new HashMap<>();
 
         try {
@@ -41,7 +41,7 @@ public class Jobposition {
     }
 
     /**
-     * Adds major into Jobposition with id as its key and major as its value
+     * Adds major into JobPositions with id as its key and major as its value
      * @param id user's ID
      * @param major user's major
      * @return empty string if user exists,

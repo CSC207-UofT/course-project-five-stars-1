@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 /**
  * Class {@code main} handles login, register ,
- * Also, system start at this point and create a new {@code Loginsurface}
+ * Also, system start at this point and create a new {@code LoginSurface}
  * @author group five-star of CSC207 fall 2021
- * @see Loginsurface
+ * @see LoginSurface
  */
 public class main {
     public static void main (String [] args) {
@@ -43,7 +43,7 @@ public class main {
         HashMap<String, String> jobs = new HashMap<>();
         jobs.put("0", "CEO");
         jobs.put("1", "CS");
-        JobpSystemController jobPositions = new JobpSystemController(jobs);
+        JobSystemController jobPositions = new JobSystemController(jobs);
 
         //This is a test database for Intern
         HashMap<Intern, Integer> intern = new HashMap<>();
@@ -58,7 +58,7 @@ public class main {
          *
          * @param frame the frame that is currently viewing
          */
-        Loginsurface frame = new Loginsurface(userManager);
+        LoginSurface frame = new LoginSurface(userManager);
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
         frame.setVisible (true);
