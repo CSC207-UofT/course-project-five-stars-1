@@ -63,13 +63,10 @@ public class ScheduleSurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new UserSurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
 
         /*

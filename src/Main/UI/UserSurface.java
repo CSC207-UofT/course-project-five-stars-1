@@ -1,8 +1,6 @@
 package UI;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class UserSurface extends JFrame{
 
@@ -37,64 +35,47 @@ public class UserSurface extends JFrame{
          * It is activated when you click Salary button
          * And you can go to SalarySurface
          */
-        salaryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                UserSurface.this.setVisible(false);
-                JFrame salaryinterface = new SalarySurface();
-                salaryinterface.setVisible(true);
-            }
+        salaryButton.addActionListener(e -> {
+            UserSurface.this.setVisible(false);
+            JFrame salaryinterface = new SalarySurface();
+            salaryinterface.setVisible(true);
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click JobPositions button
          * And you can go back to Jobsurface
          */
-        jpButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                UserSurface.this.setVisible(false);
-                JFrame jobpinterface = new JobSurface();
-                jobpinterface.setVisible(true);
-            }
+        jpButton.addActionListener(e -> {
+            UserSurface.this.setVisible(false);
+            JFrame jobpinterface = new JobSurface();
+            jobpinterface.setVisible(true);
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click Schedule button
          * And you can go back to ScheduleSurface
          */
-        sdButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                UserSurface.this.setVisible(false);
-                JFrame scheduleinterface = new ScheduleSurface();
-                scheduleinterface.setVisible(true);
-            }
+        sdButton.addActionListener(e -> {
+            UserSurface.this.setVisible(false);
+            JFrame scheduleinterface = new ScheduleSurface();
+            scheduleinterface.setVisible(true);
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click intern button
          * And you can go back to InternSurface
          */
-        internButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                UserSurface.this.setVisible(false);
-                JFrame internsurface = new InternSurface();
-                internsurface.setVisible(true);
-            }
+        internButton.addActionListener(e -> {
+            UserSurface.this.setVisible(false);
+            JFrame internsurface = new InternSurface();
+            internsurface.setVisible(true);
         });
         /*
          * A helper function for {@code addActionListener}.
          * It is activated when you click exit button
          * And you can exit the window
          */
-        existButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                UserSurface.this.setVisible(false);
-            }
-        });
+        existButton.addActionListener(e -> UserSurface.this.setVisible(false));
 
 
         /*
