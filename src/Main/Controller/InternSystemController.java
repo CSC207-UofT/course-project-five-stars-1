@@ -1,7 +1,6 @@
 package Controller;
 
 import Entity.Intern;
-import Gateway.InternReadWriter;
 import UseCase.InternManager;
 
 import java.util.HashMap;
@@ -11,8 +10,6 @@ import java.util.Objects;
  */
 public class InternSystemController {
     private final InternManager internManagement;
-
-    InternReadWriter readWriter = new InternReadWriter();
 
     public InternSystemController(HashMap<Intern, Integer> intern){
         this.internManagement = new InternManager(intern);
