@@ -60,11 +60,11 @@ public class TestUserManager {
         assertEquals(expected, false);
         boolean expected2 = um.verifyUser("gb@gmail.com", "imtheworst");
         assertEquals(expected2, true);
-        String expected_string = "User list saved!\r\n" +
+        String expected_string = "User list saved!\n" +
                 "[Employee {Username = testEmployee, Salary = 0, Attendance = false, ID = 111, Email = gb@gmail.com, " +
-                "Major = computer science}]\r\n" +
+                "Major = computer science}]\n" +
                 "User file read successfully!";
-        assertEquals(expected_string, output.toString().trim());
+        assertEquals(expected_string.trim(), output.toString().trim());
     }
 
     @Test
@@ -91,12 +91,12 @@ public class TestUserManager {
         um.createEmployee("testEmployee",
                 "imtheworst", "121", "gb@gmail.com", "computer science");
         um.fire("121");
-        String expected_string = "User list saved!\r\n" +
+        String expected_string = "User list saved!\n" +
                 "[Employee {Username = testEmployee, Salary = 0, Attendance = false, ID = 121, Email = gb@gmail.com, " +
-                "Major = computer science}]\r\n" +
-                "User file read successfully!\r\n" +
+                "Major = computer science}]\n" +
+                "User file read successfully!\n" +
                 "Successful! This employee has been removed";
-        assertEquals(expected_string, output.toString().trim());
+        assertEquals(expected_string.trim(), output.toString().trim());
 
     }
 
