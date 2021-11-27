@@ -30,13 +30,13 @@ public class JobReadWriter implements ReadWriter{
      * @return list of users
      */
     @Override
-    public HashMap<String, Integer> readFromFile(String filePath) throws IOException, ClassNotFoundException {
+    public HashMap<String, String> readFromFile(String filePath) throws IOException, ClassNotFoundException {
 
         InputStream file = new FileInputStream(filePath);
         InputStream buffer = new BufferedInputStream(file);
         ObjectInput input = new ObjectInputStream(buffer);
 
-        HashMap<String, Integer> job_list = (HashMap<String, Integer>) input.readObject();
+        HashMap<String, String> job_list = (HashMap<String, String>) input.readObject();
         // serialize the Map
         input.close();
         return job_list;

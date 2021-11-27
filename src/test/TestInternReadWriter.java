@@ -7,7 +7,6 @@ import java.io.*;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestInternReadWriter {
     static InternReadWriter readWriter = new InternReadWriter();
