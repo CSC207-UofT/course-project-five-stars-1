@@ -1,10 +1,6 @@
 package UI;
 import javax.swing.*;
-// import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashMap;
-
 
 import Controller.SalarySystemController;
 public class SalarySurface extends JFrame{
@@ -46,18 +42,15 @@ public class SalarySurface extends JFrame{
          * It searches and checks the salary of userid1 and userid2.
          * It can store the salary we entered.
          */
-        salaryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                HashMap<String, Integer> salaries = new HashMap<>();
-                SalarySystemController ssc = new SalarySystemController(salaries);
-                String id1 = useridInput1.getText();
-                String id2 = useridInput2.getText();
-                String salary = SalaryInput.getText();
-                String addSalary = ssc.addSalary(id1, id2, Integer.parseInt(salary));
-                JOptionPane.showMessageDialog(null,  addSalary);
-                JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
-            }
+        salaryButton.addActionListener(e -> {
+            HashMap<String, Integer> salaries = new HashMap<>();
+            SalarySystemController ssc = new SalarySystemController(salaries);
+            String id1 = useridInput1.getText();
+            String id2 = useridInput2.getText();
+            String salary1 = SalaryInput.getText();
+            String addSalary = ssc.addSalary(id1, id2, Integer.parseInt(salary1));
+            JOptionPane.showMessageDialog(null,  addSalary);
+            JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
         });
         /*
          * A helper function for {@code addActionListener}.
@@ -67,13 +60,10 @@ public class SalarySurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new UserSurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
         /*
          * A helper method for the constructor.

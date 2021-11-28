@@ -1,12 +1,8 @@
 package UI;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import Controller.InternSystemController;
 import Entity.Intern;
-
 import java.util.HashMap;
 import java.util.Random;
-
 import javax.swing.*;
 
 public class InternSurface extends JFrame{
@@ -71,25 +67,22 @@ public class InternSurface extends JFrame{
          * It searches and checks the {@code Intern} exist or not
          * If the Intern does not exist, it gives the intern a new id.
          */
-        internButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                HashMap<Intern, Integer> intern = new HashMap<>();
-                InternSystemController isc = new InternSystemController(intern);
-                String id1 = useridInput.getText();
-                String username = nameInput.getText();
-                String password = passwordInput.getText();
-                String email = emailInput.getText();
-                String major = majorInput.getText();
-                String grade = gradeInput.getText();
-                String standard = standardInput.getText();
-                Random id = new Random();
-                int id2 = id.nextInt(10) + 10;
-                String randomId = String.valueOf(id2);
-                JOptionPane.showMessageDialog(null, isc.registerInformation(id1, randomId, username,
-                        password, email, major, Integer.parseInt(grade)));
-                JOptionPane.showMessageDialog(null, isc.updateInformation(id1, Integer.parseInt(standard)));
-            }
+        internButton.addActionListener(e -> {
+            HashMap<Intern, Integer> intern = new HashMap<>();
+            InternSystemController isc = new InternSystemController(intern);
+            String id1 = useridInput.getText();
+            String username = nameInput.getText();
+            String password = passwordInput.getText();
+            String email = emailInput.getText();
+            String major = majorInput.getText();
+            String grade = gradeInput.getText();
+            String standard = standardInput.getText();
+            Random id = new Random();
+            int id2 = id.nextInt(10) + 10;
+            String randomId = String.valueOf(id2);
+            JOptionPane.showMessageDialog(null, isc.registerInformation(id1, randomId, username,
+                    password, email, major, Integer.parseInt(grade)));
+            JOptionPane.showMessageDialog(null, isc.updateInformation(id1, Integer.parseInt(standard)));
         });
 
         /*
@@ -100,13 +93,10 @@ public class InternSurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new UserSurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
         /*
          * A helper method for the constructor.
