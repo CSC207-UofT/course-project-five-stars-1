@@ -1,7 +1,6 @@
 package UI;
 import javax.swing.*;
 import java.util.HashMap;
-
 import Controller.JobSystemController;
 
 

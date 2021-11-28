@@ -1,10 +1,8 @@
 package UI;
 import Controller.InternSystemController;
 import Entity.Intern;
-
 import java.util.HashMap;
 import java.util.Random;
-
 import javax.swing.*;
 
 public class InternSurface extends JFrame{

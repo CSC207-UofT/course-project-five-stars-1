@@ -1,6 +1,5 @@
 package UI;
 import Controller.UserSystemController;
-
 import javax.swing.*;
 import java.util.Random;
 public class LoginSurface extends JFrame {

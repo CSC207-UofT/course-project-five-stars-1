@@ -2,7 +2,6 @@ package UI;
 import javax.swing.*;
 import java.util.HashMap;
 
-
 import Controller.SalarySystemController;
 public class SalarySurface extends JFrame{
     private final JTextField useridInput1;
