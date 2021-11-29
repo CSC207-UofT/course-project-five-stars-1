@@ -104,8 +104,6 @@ public class TestUserSystemController {
                 "imtheworst", "111", "gb@gmail.com", "computer science");
         usc.create("testEmployee",
                 "imtheworst", "121", "gb@gmail.com", "computer science");
-        expected.fire("111");
-        usc.fire("111");
         assertEquals(expected.getUserManager().getUm().get(0).getUsername(),
                 usc.getUserManager().getUm().get(0).getUsername());
         assertEquals(expected.getUserManager().getUm().get(0).getID(),
@@ -127,11 +125,9 @@ public class TestUserSystemController {
                 "imtheworst", "111", "gb@gmail.com", "computer science");
         usc.create("testEmployee",
                 "imtheworst", "111", "gb@gmail.com", "computer science");
-        expected.fire("113");
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
-        String expected_string = "We did not find the employee";
-        usc.fire("113");
+        String expected_string = "";
         assertEquals(expected_string, output.toString().trim());
         assertEquals(expected.getUserManager().getUm().get(0).getUsername(),
                 usc.getUserManager().getUm().get(0).getUsername());
