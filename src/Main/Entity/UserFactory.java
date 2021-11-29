@@ -5,7 +5,7 @@ import Entity.Employer;
 import Entity.Employee;
 
 public class UserFactory {
-    public static User getUser(String type,String username, String password, String id, String email, String major){
+    public User getUser(String type,String username, String password, String id, String email, String major){
         if("Employee".equalsIgnoreCase(type)){
             return new Employee(username, password, id, email, major);
         }else if("Employer".equalsIgnoreCase(type)){

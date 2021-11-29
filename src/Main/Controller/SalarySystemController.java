@@ -48,16 +48,11 @@ public class SalarySystemController {
      * @param salary A unique int to represent salary.
      */
     public String addSalary(String id1, String id2, int salary) {
-        if (this.salaryManagement.getSm().containsKey(id2)){
-            if (Objects.equals(id1, "0")){
-                this.salaryManagement.getSm().put(id2, salary);
-                return "Added salary of employee(id: " + id2 + ") successfully";
-            }else{
-                return "You don't have the authority to add salary.";
-            }
+        if (Objects.equals(id1, "0")){
+            this.salaryManagement.getSm().put(id2, salary);
+            return "Added salary of employee(id: " + id2 + ") successfully";
         }else{
-            this.salaryManagement.getSm().put(id2, 0);
-            return "User information added successfully.";
+            return "You don't have the authority to add salary.";
         }
     }
 

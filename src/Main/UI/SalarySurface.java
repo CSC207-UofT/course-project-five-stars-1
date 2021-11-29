@@ -39,7 +39,8 @@ public class SalarySurface extends JFrame{
 
         /*
          * A helper function for {@code addActionListener}.
-         * It searches and checks the salary of userid1 and userid2.
+         * It searches if userid1 (is the employer) has the authority to add salary to userid2 and
+         * then if userid1 has the authority to add the salary of userid2, then add it to userid2.
          * It can store the salary we entered.
          */
         salaryButton.addActionListener(e -> {
