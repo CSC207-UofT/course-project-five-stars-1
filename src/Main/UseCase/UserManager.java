@@ -5,6 +5,8 @@ import Gateway.UserReadWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Represents the system of Users
@@ -92,7 +94,8 @@ public class UserManager {
      * @param id A unique String for each User.
      */
     public void createEmployee(String username, String password, String id, String email, String major){
-        User user = new Employee(username, password, id, email, major);
+        UserFactory factory = new UserFactory();
+        User user = factory.getUser("Employee", username, password, id, email, major);
         createEmployeeEmployer(user);
     }
 
@@ -103,7 +106,8 @@ public class UserManager {
      * @param id A unique String for each User.
      */
     public void createEmployer(String username, String password, String id, String email, String major){
-        User user = new Employer(username, password, id, email, major);
+        UserFactory factory = new UserFactory();
+        User user = factory.getUser("Employer", username, password, id, email, major);
         createEmployeeEmployer(user);
     }
 
@@ -144,5 +148,18 @@ public class UserManager {
         System.out.println("We did not find the employee");
         return false;
     }
+    public static final Pattern VALID_EMAIL_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    /**
+     * Verify the email is valid or not
+     * @param email user's email
+     * @return ture if email is valid, return false otherwise.
+     */
+    public boolean isValidEmail(String email) {
+        Matcher matcher = VALID_EMAIL_REGEX.matcher(email);
+        return matcher.find();
+    }
+
 
 }

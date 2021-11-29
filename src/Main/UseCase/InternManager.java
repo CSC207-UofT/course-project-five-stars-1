@@ -1,6 +1,7 @@
 package UseCase;
 
 import Entity.Intern;
+import Entity.UserFactory;
 import Gateway.InternReadWriter;
 
 import java.io.IOException;

@@ -13,7 +13,7 @@ public class LoginSurface extends JFrame {
     UserSystemController userManager;
 
     public LoginSurface(UserSystemController userManager){
-        /*
+        /**
          * @code {panel}
          * Use the panel to create enter fields for the LoginSurface
          * including userid, userid, password, username, email, major
@@ -21,8 +21,6 @@ public class LoginSurface extends JFrame {
          */
         this.userManager = userManager;
         JPanel panel = new JPanel();
-        JLabel userLabel = new JLabel("Userid:");
-        panel.add(userLabel);
 
         JLabel passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
@@ -55,7 +53,7 @@ public class LoginSurface extends JFrame {
         int i = id.nextInt(10);
         String randomId = String.valueOf(i);
 
-        /*
+        /**
          * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          * It restores the data we entered
@@ -67,10 +65,15 @@ public class LoginSurface extends JFrame {
             String username = nameInput.getText();
             String email = emailInput.getText();
             String major = majorInput.getText();
-            userManager.create(randomId, password, username, email, major);
-            JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
+            if (userManager.isValidEmail(email) && password.length() > 0){
+                userManager.create(randomId, password, username, email, major);
+                JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
+            }else{
+                JOptionPane.showMessageDialog(null, "Please enter a correct email or a correct password.");
+            }
         });
-        /*
+
+        /**
          * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          *
@@ -91,7 +94,7 @@ public class LoginSurface extends JFrame {
 
         });
 
-        /*
+        /**
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
