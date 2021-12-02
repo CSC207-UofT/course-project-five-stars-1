@@ -4,6 +4,10 @@ Prepare a short written document updating your TA on your group's progress so fa
 
 - [x] SOLID
 
+
+-From solid design principles,  our project includes most of the five basic principles of object-oriented design as required: Single responsibility principle (SRP), Liskov substitution principle (LSP), Interface segregation principle (ISP) and the Dependency inversion principle (DIP). And we followed the requirements of those principles successfully.
+
+
 - Single Responsibility Principle
   We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class should have only a single responsibility. This happens to our controller folder as well, each controller file contains one class that handle one specific scenario, so each class only have one reason to change.
 - Liskov Substitution Principle:
@@ -14,8 +18,6 @@ Prepare a short written document updating your TA on your group's progress so fa
 - Dependency Inversion Principle:
   Followed clean architecture so that individual pieces are separated
   For example, We modify Controllers, and it will never affect Use Case and Entities
-- Need to improve: OPEN/CLOSE PRINCIPLE
-  In each of the user interface(UI), we always have buttons, inputInfo and outputInfo. We repeats those codes in each of the files in UI (although they are not totally the same). But the basic use of them are the same, so we think we can create another folder “panel” which includes InputInforPanel, OutputInfoPanel, ButtonPanel and even more functionalities. This way in UI files we just need to import the file(panel) we need and then call it there. With this design,  we can add any number of buttons or textfields and we don't need to re-write the code.
 
 
 
@@ -53,7 +55,7 @@ Prepare a short written document updating your TA on your group's progress so fa
 
 
   Employee Scenario:
-    An employee who is recruited by an employer should register his username, temporary password, major and email by themself. The system will show the employee the log-in page, he will use his username and password to login in.  We believe the first time the employee logs in, the system will show him/her 5 options, salary, jobposition, intern, schedule and exit, he/she can choose one of them but they don’t have rights to do some of the function in these option. The employee logs in to the system and he can see his profile page, he now can see all his personal information including the detailed components of his salary and the reference job position.
+    An employee who is recruited by an employer should register his username, temporary password, major and email by themselves. The system will show the employee the log-in page, he will use his username and password to login in.  We believe the first time the employee logs in, the system will show him/her 5 options, salary, jobposition, intern, schedule and exit, he/she can choose one of them but they don’t have rights to do some of the function in these option. The employee logs in to the system and he can see his profile page, he now can see all his personal information including the detailed components of his salary and the reference job position.
 
   Intern Scenario:
     Firstly,  only employer can edit the detailed information of interns. Employees and interns can not change the information. The system will check their IDs to judge whether he(or she) is an employer.
