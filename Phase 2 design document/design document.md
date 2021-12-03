@@ -44,9 +44,7 @@
 - Strategy Design Pattern: All the Use Case specific ReadWriter classes (such as UserReadWriter) in the Gateway Package only differ in their behaviour, but all have the same functionalities such as read and write serialized file. To avoid duplicate code and coupling, we introduced a Interface called ReadWriter in Gateway Package, which all other file reading and writing classes implement. This makes ReadWriter independent of a particular implementation of an algorithm, which makes later modification and extension much easier: Open / Closed Principle. 
 - Future - Facade Design Pattern: We want our User to see their information together, and not separately in a case by case fashion, which is what we have currently. It might be a little coomplicated for users to use. So, we want to create a Facade class that ties together multiple Controllers in order to gather the information simultaneously. Then the GUI can directly utilize the Facade to display the user information, such as salary and schedule at the same time.
   
-- [x] Progress Report
-- Contribution of each member since phase 1
-- Link to significant pull requests & Explanation
+- [x] Progress Report of Members
 - Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in teh Gateway Package. Note that I used the main branch most of the times so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
 - Canyang
 - Shihan
