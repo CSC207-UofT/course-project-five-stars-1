@@ -2,29 +2,9 @@
 
 - [x] Specification
 
- - Running the project that implements an HR system that allows the user in the company to access relevant information and status. Each user is either an employer, an employee or an intern. Each of them is associated with a username, a password, salary, an email, a major and id. It should be able to get all users in the company and with their corresponding information: username, password, major, email and id. An employer should be able to set information for an Intern and give employee salary. An intern can become an employee if he/she reaches the standard of promotion. Then, this intern would be added into the user of the employee. 
+ - Running the HR system software allows the user in the company to access relevant information and status. Each user is either an employer, an employee or an intern. Each of them is associated with a username, a password, an email, a major, id, salary, schedule, and more. The software is capable of getting all users in the company and with their corresponding information: username, password, major, email and id, salary, schedule, and job position. An employer should be able to create account for an Intern and set salary, schedule, and job information for any users in the company. An intern can become an employee if he orshe reaches the standard of promotion. Then, this intern would become an employee. 
 
- - While running, the UI program prints an Intellij tab where users can give the following commands: create the personal profile for new employees, allow the employer or employee to navigate through the directory structure they've built to view and change the profiles of employees he or she has created, allow employees to check their information such as salary and id, exit the system. We have five entity classes: Employee, Employer, Intern, UserFactory and User. Five use case classes: SalaryManagement, Usermanager, JobPosition, InternManager and WeeklySchedule. Five controllers: SalarySystemController, InternSystemController, ScheduleSystemController, JobSystemController and UserSystemController. And one main user interface: GUI with six surfaces: InternSurface, JobSurface, LoginSurface, SalarySurface, ScheduleSurface and UserSurface. 
-
-
-
-- [x] Scenario Walk-Through
-
-
-  Employer Scenario:
-
-  Firstly, employer uses this HR system and the system shows him the log-in page using the UserSystemController. Register himself through the registration button UserManager use case, we will need to enter his ID, username, password, salary, and attendance. After he successfully registered himself, the system will send him back to the login page. When the employer login, he can change put employee’s salary, add new Interns in the company and he can also check for the schedule about himself. Noticed that only the employer has the authorization to create an Intern account. (So far, everyone can create a User since our code did not add the restriction on different users’ rights.)
-
-
-  Employee Scenario:
-    An employee who is recruited by an employer should register his username, temporary password, major and email by themself. The system will show the employee the log-in page, he will use his username and password to login in.  We believe the first time the employee logs in, the system will show him/her 5 options, salary, jobposition, intern, schedule and exit, he/she can choose one of them but they don’t have rights to do some of the function in these option. The employee logs in to the system and he can see his profile page, he now can see all his personal information including the detailed components of his salary and the reference job position.
-
-  Intern Scenario:
-    Firstly,  only employer can edit the detailed information of interns. Employees and interns can not change the information. The system will check their IDs to judge whether he(or she) is an employer.
-Employer needs to add the detailed information of one intern and his (or her) internship grade to our HR System.
-Next, The employer can enter the standard grade to select the interns that their grades exceed the standard grade. Their will be accepted as our employees.
-After the grading, interns can check their accepting status by entering their IDs.
-
+ - While running, the UI package prompts user to a pop up window where users can give the following commands: create the personal profile for users, allow the users to navigate through their stored information, so that they are able to view and change the profiles of users he or she has created, allow employees to check their information such as salary and id, allow Employers to create account for Intern, and exit the system. We have five entity classes: Employee, Employer, Intern, UserFactory and User; Five use case classes: SalaryManagement, Usermanager, JobPosition, InternManager and WeeklySchedule; Five controllers: SalarySystemController, InternSystemController, ScheduleSystemController, JobSystemController and UserSystemController; six gateway classes: ReadWrite Interface, UserReadWriter; SalaryReadWriter, ScheduleReadWriter, InternReadWriter, and JobReadWriter; And one main user interface: GUI with six surfaces: InternSurface, JobSurface, LoginSurface, SalarySurface, ScheduleSurface and UserSurface. 
 
 - [x] UML
 - Note: image of UML attached to the folder - Phase 2
