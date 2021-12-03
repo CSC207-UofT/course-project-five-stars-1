@@ -27,7 +27,8 @@ After the grading, interns can check their accepting status by entering their ID
 
 
 - [x] UML
-- need to put the image in
+- ![alt text](https://github.com/CSC207-UofT/course-project-five-stars-1/blob/main/uml.jpg?raw=true)
+- 
 - The UML shows connection between 
 
 
