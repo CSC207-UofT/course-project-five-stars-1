@@ -31,10 +31,11 @@ After the grading, interns can check their accepting status by entering their ID
 - This UML shows connection between each package of the program, as well as individual classes within a package. For instance, UI uses both the Gateway and Controller package. Gateway and Controller uses Use Case package. Use Case uses Entity Package. THis means clean architecture is followed: more details later in section Clean Architecture. Within packages, the relationships between classes is also shown. For instance, we can see clearly all classes implements ReadWriter Interface in Gateway package. Similarly, Employee, Employer, and Intern are child classes of User in Entity package.
 
 
-- [x] Description of major decisions
+- [x] Major decisions
 -	Our users are employees, employer, and interns. So we created a abstract class User, with child of Employee, Employer, and Intern. In addition, we have corresponding opeartional classes in Use Case, Gateway, and Controller package for Employee, Employer, and Intern.
 -	In order to make our data storage flexible and enable pernanent data storage, we used serialization to store data, and realized this by creating a Gateway Package.
 -	Only the employee has the authority to change an user information, and other users can create and modify the information.
+-	Created ReadWrite Interface in the Gateway class so that all necesssary classes can implement it. Ensures all necessary methods are implemented.
 
 
 - [x] Packaging Strategy
@@ -49,7 +50,7 @@ After the grading, interns can check their accepting status by entering their ID
 - Single Responsibility Principle
   We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class   should have only a single responsibility. This is true to our controller folder as well, where each controller file contains one class that handle one specific     scenario, so that each class only have one reason to change.
 - Open / Closed Principle:
-  Our program is open for extenstion and closed for modification. We used a parent abstract User that have many child classes such as Employer, Employee, and Intern. In addition, all of our use cases does not use the child class directly, but uses User. This means our program is open for extension because if we add new User descendents such as Security, nothing needs to be modified in the Use Case and the code still works, which is closed for modification.
+  Our program is open for extenstion and closed for modification. We used a parent abstract User that have many child classes such as Employer, Employee, and Intern. In addition, all of our use cases does not use the child class directly, but uses User. This means our program is open for extension because if we add new User descendents – such as Security, Manger, and Appicants – nothing needs to be modified in the Use Case and the code still works, which is closed for modification.
 - Liskov Substitution Principle:
   User can be substituted to Employer, Employee, and Intern without running into problems as the child classes didn’t remove or alter any features from the parent     class User. Similarily, Use case specific gateway implements ReadWrite Interface, which can be replaced by its child classes too.
 - Interface Segregation Principle
@@ -59,15 +60,20 @@ After the grading, interns can check their accepting status by entering their ID
 
  
 - [x] Design Patterns
-
-  The template design pattern is significantly important for our group project. Our hr system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent User inside of Entity,  this class is the template that decides the main structure of User, then after this, we are free to create subclasses to override specific steps of the algorithm without changing its structure. So we create different kinds of roles for the User in the company, such as manager, boss, employee and applicants, User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people(User superclass). The User superclass are the foundation of the whole hr system.
-  ??????????????????????????????????????????????????? One more pattern
+- Template design pattern: It is significantly important for our group project. Our HR system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent any user inside of Entity. This class, called User, is the template that decides the main structure of any user. Then after this, we are free to create subclasses to override specific methods and add more features without changing its structure. Hence, we create different kinds of roles for the User in the company, such as Employer, Employee, Intern, Applicants, Manager, Security, and more. User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people (User superclass). The User superclass are the foundation of the entire HR system.
+- Factory Design Pattern: There are many users in a HR system. We've added an UserFactory class in the entities. The UserFactory contains all types of users. When we want to create a User of a specific type, we just use the UserFacotory and specify our needs. This gives a more convenient implementation of classes in the Use Case Package by calling the UserFactory. Also, by doing this we obsure the creation process for these related users, which increases encapsulation and abstraction. In addition, using factory design pattern allows us to add more user types without interacting with other classes. This is closely related to Open / Closed Principle in SOLID.
+- Future: 
+  
   
   
 - [x] Progress Report
 - Contribution of each member since phase 1
 - Link to significant pull requests & Explanation
-- summary of group member's contribution
+- Tian Shu
+- Canyang
+- Shihan
+- Yiteng
+- Yuelin
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test.
