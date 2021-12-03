@@ -13,10 +13,10 @@
 
 - Then, you will be prompted to the next window. There are five buttons which are Salary, JobPositions, Schedule, Intern and Exist. Click on any of those to explore further.
 
-- When you log in to the Salary, there are userid 1 and userid 2 and also the salary, only when you put 0 into the userid 1 that means you are the employer thus you have the authority to give the userid 2 salary.
+  - If you click the Salary button, you will be prompted to another window with 3 entrees:  UserID1, and UserID2, and Salary. The purpose of the winder is to allow user with UserID1 to change the salary of the user with UserID2. Only when UserID1 equal to 0 that your can edit the salary of the corresponding UserID2; otherwise, you have no authority to change the salary of user with userid 2. When the salary is correctly updated, the monthly, yearly, and after-tax salary will be shown for user with uUerID2 after you clik the "Set Salary" button. Click the button "Back" when done.
 
 
-After that, you can click back to come back to the user information surface, if you click to on the JobPosition, you can see there is Userid, UserMajor, type your userid and UserMajor, then you can be referenced base on what your major is, like if you type computer science(remember to type " " in it), base on the major, you would get a reference as IT department and we only have a few major that can be referenced so far.
+  - If you click the JobPosition button, you will be prompted to another window with 2 entrees: UserID and UserMajor. Type in your userid and update your UserMajor, then you can be referenced to a department base on your major. For example, you entered "computer science" you would get a reference as IT department based on your major. Note that and we only have a few major that can be referenced so far.
 
 Then, If you click on the schedule, you can see there are Userid and Changehour that shows to you, according to your userid and change hours, you can see how many hours you work for the entire week. The basic working hour for a week is 40 hours and your actual working hour is the basic hour add the change hour which the change hour can either be positive or negative.
 
