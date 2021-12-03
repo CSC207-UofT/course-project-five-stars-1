@@ -1,23 +1,8 @@
 ## Task 6 — Progress Report
 
-Prepare a short written document updating your TA on your group's progress so far. At your next meeting with your TA, your group should be ready to present a summary of your progress report to your TA. Each group member must present part of the progress report.
+- [x] Indication of how to run the code
 
-- [x] SOLID
-
-- Single Responsibility Principle
-  We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class should have only a single responsibility. This happens to our controller folder as well, each controller file contains one class that handle one specific scenario, so each class only have one reason to change.
-- Liskov Substitution Principle:
-  Employer, Employee, and Intern extended from User and didn’t remove or alter any features
-  Use case specific gateway implements ReadWrite Interface, and only extended.
-- Interface Segregation Principle
-  ReadWrite is a small interface, so that all class that implemented ReadWrite used all of its attributes
-- Dependency Inversion Principle:
-  Followed clean architecture so that individual pieces are separated
-  For example, We modify Controllers, and it will never affect Use Case and Entities
-- Need to improve: OPEN/CLOSE PRINCIPLE
-  In each of the user interface(UI), we always have buttons, inputInfo and outputInfo. We repeats those codes in each of the files in UI (although they are not totally the same). But the basic use of them are the same, so we think we can create another folder “panel” which includes InputInforPanel, OutputInfoPanel, ButtonPanel and even more functionalities. This way in UI files we just need to import the file(panel) we need and then call it there. With this design,  we can add any number of buttons or textfields and we don't need to re-write the code.
-
-
+  ??????????????????????????????? - Should be another document
 
 - [x] Specification
 
@@ -25,23 +10,6 @@ Prepare a short written document updating your TA on your group's progress so fa
 
  - While running, the UI program prints an Intellij tab where users can give the following commands: create the personal profile for new employees or intern, allow the employer or intern to navigate through the directory structure they've built to view and change the profiles of employees he or she has created, allow employees or intern to check their information such as salary and id, exit the system. We now have three entity classes: Employee, Employer and User. Two use case classes: SalaryManagement and Usermanager. Two controllers: SalarySystemController and UserSystemController. And one basic command-line user interface: UI. In the next phase, we want to add another entity called intern, another interface called fireable and also another controller which is internController. After that, re-modifying our GUI is inevitable and we will also add the intern in it.
 
-
-
-- [x] Indication of how to run the code
-
-  ???????????????????????????????
-
-
-- [x] Description of major decisions
-
-  ?????????????????????????
-
-
-
-- [x] Clean Architecture
-
-- 
-  For the clean architecture, we design the system of our project based on what we learned from class. We divided the system into logical pieces and specify how those pieces communicate with each other. As you can see, we categorized our project files into five files: Entity, UseCase, Controller, Gateway and User Interface. We followed exactly the four layers we learnt from class: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI). Also, we not only follow the categorized rules but also we also follow the dependency rule: Dependence on adjacent layer — from outer to inner, Dependence within the same layer is allowed  (but try to minimize coupling). We make sure our project does not skip any layers while running.
 
 
 - Scenario Walk-Through
@@ -62,14 +30,50 @@ Next, The employer can enter the standard grade to select the interns that their
 After the grading, interns can check their accepting status by entering their IDs.
 
 
+- [x] UML
+
+
+- [x] Description of major decisions
+
+  ?????????????????????????
+
+
+
+
+- [x] Packaging Strategy
+
+- [x] Clean Architecture
+
+- 
+  For the clean architecture, we design the system of our project based on what we learned from class. We divided the system into logical pieces and specify how those pieces communicate with each other. As you can see, we categorized our project files into five files: Entity, UseCase, Controller, Gateway and User Interface. We followed exactly the four layers we learnt from class: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI). Also, we not only follow the categorized rules but also we also follow the dependency rule: Dependence on adjacent layer — from outer to inner, Dependence within the same layer is allowed  (but try to minimize coupling). We make sure our project does not skip any layers while running.
+  
+- [x] SOLID
+
+- Single Responsibility Principle
+  We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class should have only a single responsibility. This happens to our controller folder as well, each controller file contains one class that handle one specific scenario, so each class only have one reason to change.
+- Liskov Substitution Principle:
+  Employer, Employee, and Intern extended from User and didn’t remove or alter any features
+  Use case specific gateway implements ReadWrite Interface, and only extended.
+- Interface Segregation Principle
+  ReadWrite is a small interface, so that all class that implemented ReadWrite used all of its attributes
+- Dependency Inversion Principle:
+  Followed clean architecture so that individual pieces are separated
+  For example, We modify Controllers, and it will never affect Use Case and Entities
+- Need to improve: OPEN/CLOSE PRINCIPLE
+  In each of the user interface(UI), we always have buttons, inputInfo and outputInfo. We repeats those codes in each of the files in UI (although they are not totally the same). But the basic use of them are the same, so we think we can create another folder “panel” which includes InputInforPanel, OutputInfoPanel, ButtonPanel and even more functionalities. This way in UI files we just need to import the file(panel) we need and then call it there. With this design,  we can add any number of buttons or textfields and we don't need to re-write the code.
 
 
 
 - [x] Design Patterns
 
   The template design pattern is significantly important for our group project. Our hr system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent User inside of Entity,  this class is the template that decides the main structure of User, then after this, we are free to create subclasses to override specific steps of the algorithm without changing its structure. So we create different kinds of roles for the User in the company, such as manager, boss, employee and applicants, User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people(User superclass). The User superclass are the foundation of the whole hr system.
-  
   ??????????????????????????????????????????????????? One more pattern
+  
+  
+- [x] Progress Report
+- Open question
+- What worked well
+- summary of group member's contribution
   
 
 - [x] Use of GitHub Features
