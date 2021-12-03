@@ -38,6 +38,7 @@ After the grading, interns can check their accepting status by entering their ID
 
 
 - [x] Packaging Strategy
+- We categorized our project files into five packages: Entity, UseCase, Controller, Gateway and User Interface. It was done so to create boundaries between classes, motivated by Single Responsibility Principle. We followed exactly the four layers by Clean Architecture: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI).
 
 - [x] Clean Architecture
 
