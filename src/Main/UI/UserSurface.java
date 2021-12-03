@@ -26,7 +26,7 @@ public class UserSurface extends JFrame{
         JButton internButton = new JButton("Intern");
         panel.add(internButton);
 
-        JButton existButton = new JButton("Exist");
+        JButton existButton = new JButton("Exit");
         panel.add(existButton);
 
         /*

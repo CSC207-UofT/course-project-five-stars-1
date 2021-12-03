@@ -23,7 +23,7 @@ public class InternSurface extends JFrame{
          * creating buttons: intern and back
          */
         JPanel panel = new JPanel();
-        JLabel userId = new JLabel("Userid:");
+        JLabel userId = new JLabel("UserID:");
         panel.add(userId);
         useridInput = new JTextField(20);
         panel.add(useridInput);
