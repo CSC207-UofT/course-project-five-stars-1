@@ -11,15 +11,11 @@
 - This UML shows connection between each package of the program, as well as individual classes within a package. For instance, UI uses both the Gateway and Controller package. Gateway and Controller uses Use Case package. Use Case uses Entity Package. THis means clean architecture is followed: more details later in section Clean Architecture. Within packages, the relationships between classes is also shown. For instance, we can see clearly all classes implements ReadWriter Interface in Gateway package. Similarly, Employee, Employer, and Intern are child classes of User in Entity package.
 
 
-- [x] Major decisions
+- [x] Major Design Decisions
 -	Our users are employees, employer, and interns. So we created a abstract class User, with child of Employee, Employer, and Intern. In addition, we have corresponding opeartional classes in Use Case, Gateway, and Controller package for Employee, Employer, and Intern.
 -	In order to make our data storage flexible and enable pernanent data storage, we used serialization to store data, and realized this by creating a Gateway Package.
 -	Only the employee has the authority to change an user information, and other users can create and modify the information.
 -	Created ReadWrite Interface in the Gateway class so that all necesssary classes can implement it. Ensures all necessary methods are implemented.
-
-
-- [x] Packaging Strategy
-- We categorized our project files into five packages: Entity, UseCase, Controller, Gateway and User Interface. It was done so to create boundaries between classes, motivated by Single Responsibility Principle. We followed exactly the four layers by Clean Architecture: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI).
 
 - [x] Clean Architecture
 
@@ -38,6 +34,8 @@
 - Dependency Inversion Principle:
   Followed clean architecture so that individual pieces are separated. For example, We modify Controllers, and it will never affect Use Case and Entities.
 
+- [x] Packaging Strategy
+- We categorized our project files into five packages: Entity, UseCase, Controller, Gateway and User Interface. It was done so to create boundaries between classes, motivated by Single Responsibility Principle. We followed exactly the four layers by Clean Architecture: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI).
  
 - [x] Design Patterns
 - Template Design Pattern: It is significantly important for our group project. Our HR system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent any user inside of Entity. This class, called User, is the template that decides the main structure of any user. Then after this, we are free to create subclasses to override specific methods and add more features without changing its structure. Hence, we create different kinds of roles for the User in the company, such as Employer, Employee, Intern, Applicants, Manager, Security, and more. User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people (User superclass). The User superclass are the foundation of the entire HR system.
@@ -58,3 +56,21 @@
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test. Note: classes in UI not required to be tested.
 - Link to pull request: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/14#issue-1052842072, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/15#issue-1052850708, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/17#issue-1052915473, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867. Note that our tests are completed through various pull requests. Some of them are not shown because it is directly done in the main branch.
+
+- [x] Use of Github Features: 
+- Created Branches of our own to work locally.
+- Used pull requests and merge when necessary.
+- Used issues to address questions to be solved.
+- Able to work together efficiently and simotaneously.
+
+- [x] Code Style and Documentation
+- No warnings and erros related to style
+- All classes are well documented using JavaDoc
+- Java programmer should be able to understand your code easily because of our neat organization.
+
+- [x] Refactoring and Code Smell
+- Some of us used branches with pull requests to work on project simitaneously and refactor different parts of the program.
+- Refactored naming convensions from Phase 1.
+- Refactored function in the UI package using lambda.
+- All code smells are solved
+
