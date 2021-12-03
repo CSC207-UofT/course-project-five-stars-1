@@ -28,15 +28,13 @@ After the grading, interns can check their accepting status by entering their ID
 
 - [x] UML
 - Note: image of UML attached to the folder - Phase 2
-- 
 - This UML shows connection between each package of the program, as well as individual classes within a package. For instance, UI uses both the Gateway and Controller package. Gateway and Controller uses Use Case package. Use Case uses Entity Package. THis means clean architecture is followed: more details later in section Clean Architecture. Within packages, the relationships between classes is also shown. For instance, we can see clearly all classes implements ReadWriter Interface in Gateway package. Similarly, Employee, Employer, and Intern are child classes of User in Entity package.
 
 
 - [x] Description of major decisions
-
-  ?????????????????????????
-
-
+-	Our users are employees, employer, and interns. So we created a abstract class User, with child of Employee, Employer, and Intern. In addition, we have corresponding opeartional classes in Use Case, Gateway, and Controller package for Employee, Employer, and Intern.
+-	In order to make our data storage flexible and enable pernanent data storage, we used serialization to store data, and realized this by creating a Gateway Package.
+-	Only the employee has the authority to change an user information, and other users can create and modify the information.
 
 
 - [x] Packaging Strategy
