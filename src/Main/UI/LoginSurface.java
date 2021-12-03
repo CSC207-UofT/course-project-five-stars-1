@@ -51,7 +51,8 @@ public class LoginSurface extends JFrame {
 
         Random id = new Random();
         int i = id.nextInt(10);
-        String randomId = String.valueOf(i);
+        int y = i + 1;
+        String randomId = String.valueOf(y);
 
         /**
          * A helper function for {@code ActionListener} in LoginSurface
@@ -65,11 +66,11 @@ public class LoginSurface extends JFrame {
             String username = nameInput.getText();
             String email = emailInput.getText();
             String major = majorInput.getText();
-            if (userManager.isValidEmail(email) && password.length() > 0){
+            if (userManager.isValidEmail(email) && password.length() > 5 && username.length() > 0){
                 userManager.create(randomId, password, username, email, major);
                 JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
             }else{
-                JOptionPane.showMessageDialog(null, "Please enter a correct email or a correct password.");
+                JOptionPane.showMessageDialog(null, "Please enter a correct email or a correct password or a correct username.");
             }
         });
 
