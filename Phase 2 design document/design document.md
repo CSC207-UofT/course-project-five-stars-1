@@ -1,9 +1,5 @@
 ## Task 6 — Progress Report
 
-- [x] Indication of how to run the code
-
-  ??????????????????????????????? - Should be another document
-
 - [x] Specification
 
  - Running the project that implements an HR system that allows the user in the company to access relevant information and status. Each user is either an employer, an employee or an intern. Each of them is associated with a username, a password, salary, attendance, and id. It should be able to get all users in the company and with their corresponding information: username, salary, attendance, and id. An employer should be able to set information for a particular employee, such as salary adjustment.  An intern can become an employee if he/she reaches the standard of promotion. Then, this intern would be added into the user of the employee. On top of that, we also want to implement an interface called fireable which is used to consider if an employee or intern will fire or not based on their performance.
@@ -31,6 +27,8 @@ After the grading, interns can check their accepting status by entering their ID
 
 
 - [x] UML
+- need to put the image in
+- 
 
 
 - [x] Description of major decisions
@@ -77,4 +75,4 @@ After the grading, interns can check their accepting status by entering their ID
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test.
-- Link to pull request
+- Link to pull request:
