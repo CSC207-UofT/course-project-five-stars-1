@@ -1,22 +1,19 @@
 package UI;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashMap;
+import Controller.JobSystemController;
 
-import Controller.JobpSystemController;
 
-
-public class Jobpsurface extends JFrame{
+public class JobSurface extends JFrame{
     private final JTextField useridInput;
     private final JTextField userMajorInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
 
-    public Jobpsurface(){
+    public JobSurface(){
         /*
          * @code {panel}
-         * Use the panel to create enter fields for the Jobposition
+         * Use the panel to create enter fields for the JobPositions
          * including userid, usermajor
          * creating buttons: jobposition and back
          */
@@ -32,7 +29,7 @@ public class Jobpsurface extends JFrame{
         userMajorInput = new JTextField(20);
         panel.add(userMajorInput);
 
-        JButton jobpButton = new JButton("Jobposition");
+        JButton jobpButton = new JButton("JobPositions");
         panel.add(jobpButton);
 
         /*
@@ -40,20 +37,17 @@ public class Jobpsurface extends JFrame{
          * It takes one user and major and match them together.
          * The system will suggest a position for this User or Intern you entered.
          */
-        jobpButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                HashMap<String, String> jobs = new HashMap<>();
-                JobpSystemController jsc = new JobpSystemController(jobs);
-                String id = useridInput.getText();
-                String inputMajor = userMajorInput.getText();
-                String addMajor = jsc.addMajor(id, inputMajor);
-                String getMajor = jsc.getMajor(id);
-                String reference = jsc.getReference(getMajor);
-                JOptionPane.showMessageDialog(null, "This is your added major," +
-                        " remember to add the major that matches the previous one:" + addMajor );
-                JOptionPane.showMessageDialog(null, "Here is the reference job: " + reference);
-            }
+        jobpButton.addActionListener(e -> {
+            HashMap<String, String> jobs = new HashMap<>();
+            JobSystemController jsc = new JobSystemController(jobs);
+            String id = useridInput.getText();
+            String inputMajor = userMajorInput.getText();
+            String addMajor = jsc.addMajor(id, inputMajor);
+            String getMajor = jsc.getMajor(id);
+            String reference = jsc.getReference(getMajor);
+            JOptionPane.showMessageDialog(null, "This is your added major," +
+                    " remember to add the major that matches the previous one:" + addMajor );
+            JOptionPane.showMessageDialog(null, "Here is the reference job: " + reference);
         });
         /*
          * A helper function for {@code addActionListener}.
@@ -63,13 +57,10 @@ public class Jobpsurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new Usersurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
         /*
          * A helper method for the constructor.

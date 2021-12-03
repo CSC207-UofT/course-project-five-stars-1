@@ -1,23 +1,22 @@
 package UI;
-
 import javax.swing.*;
 // import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-// import Controller.JobpSystemController;
+// import Controller.JobSystemController;
 import Controller.ScheduleSystemController;
-public class schedulesurface extends JFrame{
+public class ScheduleSurface extends JFrame{
     private final JTextField useridInput;
     private final JTextField ChourInput;
     // set window size
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
-    public schedulesurface(){
+    public ScheduleSurface(){
         /*
          * @code {panel}
-         * Use the panel to create enter fields for the schedulesurface
+         * Use the panel to create enter fields for the ScheduleSurface
          * including Userid, changehour
          * creating buttons: schedule and back
          */
@@ -63,20 +62,17 @@ public class schedulesurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new Usersurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
 
         /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #schedulesurface(main)
+         * @see #ScheduleSurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

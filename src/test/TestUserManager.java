@@ -97,8 +97,5 @@ public class TestUserManager {
                 "User file read successfully!\r\n" +
                 "Successful! This employee has been removed";
         assertEquals(expected_string, output.toString().trim());
-
     }
-
-
 }

@@ -1,0 +1,9 @@
+- [x] Equitable use
+- [x] Flexibility in use
+- [x] Simple and intuitive use
+- [x] Perceptible informatin
+- [x] Tolerance for Error
+- [x] Low Physical Effort
+- [x] Size and Space for Approach and use
+- [x] Market the Program
+- [x] Usage by demographics

@@ -5,6 +5,8 @@ import UseCase.UserManager;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.regex.Matcher;
+
 
 /**
  * Controls the UserManagement system.
@@ -58,12 +60,8 @@ public class UserSystemController {
         return userManager.verifyUser(email, password);
     }
 
-    /**
-     * Remove user from system.
-     * @param id user's ID
-     */
-    public void fire(String id){
-        this.userManager.fire(id);
+    public boolean isValidEmail(String email) {
+        return userManager.isValidEmail(email);
     }
 
 }

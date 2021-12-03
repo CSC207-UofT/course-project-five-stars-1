@@ -1,6 +1,6 @@
 package Controller;
 
-import UseCase.SalaryManagement;
+import UseCase.SalaryManager;
 
 // import java.util.HashMap;
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import java.util.Objects;
  * Controls the SalaryManagement system.
  */
 public class SalarySystemController {
-    private final SalaryManagement salaryManagement;
+    private final SalaryManager salaryManagement;
 
     public SalarySystemController(HashMap<String, Integer> salaries){
-        this.salaryManagement = new SalaryManagement(salaries);
+        this.salaryManagement = new SalaryManager(salaries);
     }
 
     /**
@@ -21,7 +21,7 @@ public class SalarySystemController {
      * @return salaryManagement.
      */
 
-    public SalaryManagement getSalaryManagement(){
+    public SalaryManager getSalaryManagement(){
         return salaryManagement;
     }
 
@@ -48,16 +48,11 @@ public class SalarySystemController {
      * @param salary A unique int to represent salary.
      */
     public String addSalary(String id1, String id2, int salary) {
-        if (this.salaryManagement.getSm().containsKey(id2)){
-            if (Objects.equals(id1, "0")){
-                this.salaryManagement.getSm().put(id2, salary);
-                return "Added salary of employee(id: " + id2 + ") successfully";
-            }else{
-                return "You don't have the authority to add salary.";
-            }
+        if (Objects.equals(id1, "0")){
+            this.salaryManagement.getSm().put(id2, salary);
+            return "Added salary of employee(id: " + id2 + ") successfully";
         }else{
-            this.salaryManagement.getSm().put(id2, 0);
-            return "User information added successfully.";
+            return "You don't have the authority to add salary.";
         }
     }
 

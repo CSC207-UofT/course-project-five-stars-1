@@ -1,4 +1,4 @@
-import Controller.JobpSystemController;
+import Controller.JobSystemController;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
@@ -7,19 +7,19 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestJobpSystemController {
-    static JobpSystemController jsc;
+public class TestJobSystemController {
+    static JobSystemController jsc;
 
     @BeforeAll
     public static void setUpJobPSystemController(){
-        jsc = new JobpSystemController(new HashMap<String, String>());
+        jsc = new JobSystemController(new HashMap<String, String>());
     }
 
     @Test
-    public void testGetJobposition(){
-        jsc = new JobpSystemController(new HashMap<String, String>());
+    public void testGetJobPosition(){
+        jsc = new JobSystemController(new HashMap<String, String>());
         jsc.addMajor("200", "computer science");
-        JobpSystemController actual = jsc;
+        JobSystemController actual = jsc;
         HashMap<String, String> expected = new HashMap<>();
         expected.put("200", "computer science");
         assertEquals(expected, actual.getJobposition().getMajorMap());
@@ -27,7 +27,7 @@ public class TestJobpSystemController {
 
     @Test
     public void testAddMajor(){
-        jsc = new JobpSystemController(new HashMap<String, String>());
+        jsc = new JobSystemController(new HashMap<String, String>());
 
         String actual = jsc.addMajor("200", "computer science");
         assertEquals("computer science", actual);

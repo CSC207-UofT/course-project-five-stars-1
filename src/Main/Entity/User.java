@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 /**
  * Represents a User in the system.
  */
-public abstract class User implements Serializable {
+public class User implements Serializable {
 
 
     private String username;

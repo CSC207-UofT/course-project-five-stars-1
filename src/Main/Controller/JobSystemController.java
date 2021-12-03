@@ -1,22 +1,22 @@
 package Controller;
-import UseCase.Jobposition;
+import UseCase.JobPositions;
 
 import java.util.HashMap;
 // import java.util.Objects;
 /**
- * Controls the Jobposition system.
+ * Controls the JobPositions system.
  */
-public class JobpSystemController {
-    private final Jobposition jobposition;
+public class JobSystemController {
+    private final JobPositions jobposition;
 
-    public JobpSystemController(HashMap<String, String> jobs){
-        this.jobposition = new Jobposition(jobs);
+    public JobSystemController(HashMap<String, String> jobs){
+        this.jobposition = new JobPositions(jobs);
     }
     /**
      * Getter jobposition
      * @return jobposition.
      */
-    public Jobposition getJobposition(){
+    public JobPositions getJobposition(){
         return jobposition;
     }
 

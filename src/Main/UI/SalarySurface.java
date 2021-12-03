@@ -1,20 +1,16 @@
 package UI;
 import javax.swing.*;
-// import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-
 import Controller.SalarySystemController;
-public class Salarysurface extends JFrame{
+public class SalarySurface extends JFrame{
     private final JTextField useridInput1;
     private final JTextField useridInput2;
     private final JTextField SalaryInput;
     final int FRAME_WIDTH = 500;
     final int FRAME_HEIGHT = 500;
 
-    public Salarysurface(){
+    public SalarySurface(){
         /*
          * @code {panel}
          * Use the panel to create enter fields for the Salary
@@ -43,21 +39,19 @@ public class Salarysurface extends JFrame{
 
         /*
          * A helper function for {@code addActionListener}.
-         * It searches and checks the salary of userid1 and userid2.
+         * It searches if userid1 (is the employer) has the authority to add salary to userid2 and
+         * then if userid1 has the authority to add the salary of userid2, then add it to userid2.
          * It can store the salary we entered.
          */
-        salaryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                HashMap<String, Integer> salaries = new HashMap<>();
-                SalarySystemController ssc = new SalarySystemController(salaries);
-                String id1 = useridInput1.getText();
-                String id2 = useridInput2.getText();
-                String salary = SalaryInput.getText();
-                String addSalary = ssc.addSalary(id1, id2, Integer.parseInt(salary));
-                JOptionPane.showMessageDialog(null,  addSalary);
-                JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
-            }
+        salaryButton.addActionListener(e -> {
+            HashMap<String, Integer> salaries = new HashMap<>();
+            SalarySystemController ssc = new SalarySystemController(salaries);
+            String id1 = useridInput1.getText();
+            String id2 = useridInput2.getText();
+            String salary1 = SalaryInput.getText();
+            String addSalary = ssc.addSalary(id1, id2, Integer.parseInt(salary1));
+            JOptionPane.showMessageDialog(null,  addSalary);
+            JOptionPane.showMessageDialog(null,  ssc.showSalary(id2));
         });
         /*
          * A helper function for {@code addActionListener}.
@@ -67,19 +61,16 @@ public class Salarysurface extends JFrame{
         JButton btn1 = new JButton("Back");
         panel.add(btn1);
 
-        btn1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
+        btn1.addActionListener(e -> {
+            dispose();
 
-                new Usersurface().setVisible(true);
-            }
+            new UserSurface().setVisible(true);
         });
         /*
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #Salarysurface(main)
+         * @see #SalarySurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);

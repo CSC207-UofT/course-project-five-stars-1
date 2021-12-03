@@ -1,11 +1,8 @@
 package UI;
 import Controller.UserSystemController;
-
 import javax.swing.*;
 import java.util.Random;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-public class Loginsurface extends JFrame {
+public class LoginSurface extends JFrame {
 
     private final JPasswordField passwordInput;
     private final JTextField nameInput;
@@ -15,17 +12,15 @@ public class Loginsurface extends JFrame {
     final int FRAME_HEIGHT = 500;
     UserSystemController userManager;
 
-    public Loginsurface(UserSystemController userManager){
-        /*
+    public LoginSurface(UserSystemController userManager){
+        /**
          * @code {panel}
-         * Use the panel to create enter fields for the Loginsurface
+         * Use the panel to create enter fields for the LoginSurface
          * including userid, userid, password, username, email, major
          * creating buttons: register, login and back
          */
         this.userManager = userManager;
         JPanel panel = new JPanel();
-        JLabel userLabel = new JLabel("Userid:");
-        panel.add(userLabel);
 
         JLabel passwordLabel = new JLabel("Password: ");
         panel.add(passwordLabel);
@@ -56,55 +51,55 @@ public class Loginsurface extends JFrame {
 
         Random id = new Random();
         int i = id.nextInt(10);
-        String randomId = String.valueOf(i);
+        int y = i + 1;
+        String randomId = String.valueOf(y);
 
-        /*
-         * A helper function for {@code ActionListener} in Loginsurface
+        /**
+         * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          * It restores the data we entered
          * Including password, name, email, major
          * @see actionPerformed(ActionEvent)
          */
-        rButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String password = passwordInput.getText();
-                String username = nameInput.getText();
-                String email = emailInput.getText();
-                String major = majorInput.getText();
+        rButton.addActionListener(e -> {
+            String password = passwordInput.getText();
+            String username = nameInput.getText();
+            String email = emailInput.getText();
+            String major = majorInput.getText();
+            if (userManager.isValidEmail(email) && password.length() > 5 && username.length() > 0){
                 userManager.create(randomId, password, username, email, major);
                 JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
+            }else{
+                JOptionPane.showMessageDialog(null, "Please enter a correct email or a correct password or a correct username.");
             }
         });
-        /*
-         * A helper function for {@code ActionListener} in Loginsurface
+
+        /**
+         * A helper function for {@code ActionListener} in LoginSurface
          * Check and return whether a user is registered successfully.
          *
          * @param email the {@code char[]} whose email is waiting to be checked
          * @param password the {@code char[]} that the password is waiting to be checked
          * @see addActionListener(ActionEvent)
          */
-        lButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String password = passwordInput.getText();
-                String email = emailInput.getText();
-                if(userManager.verify(email, password) == false)
-                    JOptionPane.showMessageDialog(null,"Please enter an exist user");
-                else{
-                    Loginsurface.this.setVisible(false);
-                    JFrame userinterface = new Usersurface();
-                    userinterface.setVisible(true);
-                }
-
+        lButton.addActionListener(e -> {
+            String password = passwordInput.getText();
+            String email = emailInput.getText();
+            if(!userManager.verify(email, password))
+                JOptionPane.showMessageDialog(null,"Please enter an exist user");
+            else{
+                LoginSurface.this.setVisible(false);
+                JFrame userinterface = new UserSurface();
+                userinterface.setVisible(true);
             }
+
         });
 
-        /*
+        /**
          * A helper method for the constructor.
          * Set up the title, size, layout, infoPanel, buttonPanel and visibility of LoginFrame.
          *
-         * @see #Loginsurface(main)
+         * @see #LoginSurface(main)
          */
         this.setLayout (null);
         panel.setSize(250,250);
