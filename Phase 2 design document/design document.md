@@ -71,75 +71,10 @@ After the grading, interns can check their accepting status by entering their ID
   
   
 - [x] Progress Report
-- Open question
-- What worked well
+- Contribution of each member since phase 1
+- Link to significant pull requests & Explanation
 - summary of group member's contribution
-  
 
-- [x] Use of GitHub Features
-
-  Created Branches of our own to work locally
-  pull requests and merge when necessary
-  → able to work together efficiently and simotaneously
-
-
-- [x] Code Style and Documentation
-
-  No, in Intellij, there are only a few warnings related to more features that we plan to extend. Other than that, all there are no warnings related to styles and etc.
-
-  Yes! Javadoc is used where needed.
-
-  Yes! If a Java programmer were to open your repo and navigate to a random file, they would be able to understand your code.
-
-
-- [x] Testing
-
-  Yes, most components of our system are tested. The user interface components would be difficult to test due to your design, but we will find a way to test it later.
-  All test files are under:  src / test
-
-
-- [x] Refactoring
-
-  Yes, there is evidence that your team has refactored code in a meaningful way during the project.
-  After phase0, we reorganized all the codes and seperated them into five folders. In each of the folders, we created more files where each file handle a specific scenerio. But at that time, we did not know how to use pull request, so you may not be able to find it thought requests.
-  For phase 1, some of us used branches with pull requests to work on project simitaneously and refactor different parts of the program.
-  For code smells, some of our entity have relative long parameters, we may fix this in the future by giving default values.
-
-
-
-
-- [x] Code Organization Functionality
-
-Is your code organized in a meaningful way? Is it easy to find things in your package structure? Tell us about how you decided to organize your code and why!
-  Organized code into packages according to clean architecture
-  inner most layer: entities
-  second layer: use case
-  third layers: gateway and controllers
-  outer most layer: user interface
-able to change outer layers without interfering inner layers
-
-
-
-- [x] Functionality
-
-Does your program do what the specification says it should do?
-  Yes, can can be extended to add more features such as fire and recruit
-Demo your program's functionality to your TA or make a short video!
-  Live demo
-Is the functionality sufficiently ambitious, given the size of your group?
-  Of course
-Can your program store state and load state? I.e. Can the state persist across runs of your program?
-  Yes, data are being stored perminantly in relative paths in txt files using serialization
-
-
-- [x] Design Document
-
-Is all of the above discussed in an organized way?
-  Definitely
-Does your design document convince your team that you deserve the grade you are hoping to earn?
-  Of course
-If it does, then it will likely convince your TA too!
-  :)
-
-
-- [x] Teammate Contribution and Plan
+- [x] Unit Testing
+- All classes are tested, where each method has at least 1 corresponding unit test.
+- Link to pull request
