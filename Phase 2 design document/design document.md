@@ -28,7 +28,7 @@ After the grading, interns can check their accepting status by entering their ID
 
 - [x] UML
 - need to put the image in
-- 
+- The UML shows connection between 
 
 
 - [x] Description of major decisions
@@ -43,25 +43,22 @@ After the grading, interns can check their accepting status by entering their ID
 - [x] Clean Architecture
 
 - 
-  For the clean architecture, we design the system of our project based on what we learned from class. We divided the system into logical pieces and specify how those pieces communicate with each other. As you can see, we categorized our project files into five files: Entity, UseCase, Controller, Gateway and User Interface. We followed exactly the four layers we learnt from class: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI). Also, we not only follow the categorized rules but also we also follow the dependency rule: Dependence on adjacent layer — from outer to inner, Dependence within the same layer is allowed  (but try to minimize coupling). We make sure our project does not skip any layers while running.
+  For the clean architecture, we design the system of our project based on what we learned from class. We divided the system into logical pieces and specify how those pieces communicate with each other. As you can see, we categorized our project files into five packages: Entity, UseCase, Controller, Gateway and User Interface. We followed exactly the four layers we learnt from class: Enterprise Business Rules(Entity), Application Business Rules(UseCase), Interface Adapters(Controller, Gateways) and Frameworks & Drivers(UI). We also follow the dependency rule: Dependence on adjacent layer — from outer to inner, where the inner layers does not know the existance of the outer layer. Although dependency within the same layer is allowed, we tried to minimize coupling when designing program architecture. We ensured our project does not skip any layers while running.
   
 - [x] SOLID
 
 - Single Responsibility Principle
-  We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class should have only a single responsibility. This happens to our controller folder as well, each controller file contains one class that handle one specific scenario, so each class only have one reason to change.
+  We did good on this one. For example, in Entity folder, we use only one class to handle one single role (intern, employee, employer, user), such that every class   should have only a single responsibility. This is true to our controller folder as well, where each controller file contains one class that handle one specific     scenario, so that each class only have one reason to change.
+- Open / Closed Principle:
+  Our program is open for extenstion and closed for modification. We used a parent abstract User that have many child classes such as Employer, Employee, and Intern. In addition, all of our use cases does not use the child class directly, but uses User. This means our program is open for extension because if we add new User descendents such as Security, nothing needs to be modified in the Use Case and the code still works, which is closed for modification.
 - Liskov Substitution Principle:
-  Employer, Employee, and Intern extended from User and didn’t remove or alter any features
-  Use case specific gateway implements ReadWrite Interface, and only extended.
+  User can be substituted to Employer, Employee, and Intern without running into problems as the child classes didn’t remove or alter any features from the parent     class User. Similarily, Use case specific gateway implements ReadWrite Interface, which can be replaced by its child classes too.
 - Interface Segregation Principle
-  ReadWrite is a small interface, so that all class that implemented ReadWrite used all of its attributes
+  ReadWrite is a small interface, so that all class that implemented ReadWrite used all of its attributes.
 - Dependency Inversion Principle:
-  Followed clean architecture so that individual pieces are separated
-  For example, We modify Controllers, and it will never affect Use Case and Entities
-- Need to improve: OPEN/CLOSE PRINCIPLE
-  In each of the user interface(UI), we always have buttons, inputInfo and outputInfo. We repeats those codes in each of the files in UI (although they are not totally the same). But the basic use of them are the same, so we think we can create another folder “panel” which includes InputInforPanel, OutputInfoPanel, ButtonPanel and even more functionalities. This way in UI files we just need to import the file(panel) we need and then call it there. With this design,  we can add any number of buttons or textfields and we don't need to re-write the code.
+  Followed clean architecture so that individual pieces are separated. For example, We modify Controllers, and it will never affect Use Case and Entities.
 
-
-
+ 
 - [x] Design Patterns
 
   The template design pattern is significantly important for our group project. Our hr system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent User inside of Entity,  this class is the template that decides the main structure of User, then after this, we are free to create subclasses to override specific steps of the algorithm without changing its structure. So we create different kinds of roles for the User in the company, such as manager, boss, employee and applicants, User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people(User superclass). The User superclass are the foundation of the whole hr system.
