@@ -62,15 +62,13 @@ After the grading, interns can check their accepting status by entering their ID
 - [x] Design Patterns
 - Template design pattern: It is significantly important for our group project. Our HR system includes the detailed information of tons of people(User). In order to avoid code duplication, we only want to create one class to represent any user inside of Entity. This class, called User, is the template that decides the main structure of any user. Then after this, we are free to create subclasses to override specific methods and add more features without changing its structure. Hence, we create different kinds of roles for the User in the company, such as Employer, Employee, Intern, Applicants, Manager, Security, and more. User with those roles are still part of User so they share the same properties as User. These are the subclasses that override the information of people (User superclass). The User superclass are the foundation of the entire HR system.
 - Factory Design Pattern: There are many users in a HR system. We've added an UserFactory class in the entities. The UserFactory contains all types of users. When we want to create a User of a specific type, we just use the UserFacotory and specify our needs. This gives a more convenient implementation of classes in the Use Case Package by calling the UserFactory. Also, by doing this we obsure the creation process for these related users, which increases encapsulation and abstraction. In addition, using factory design pattern allows us to add more user types without interacting with other classes. This is closely related to Open / Closed Principle in SOLID.
-- Builder Design Pattern: Little Horse Brother :)
+- Strategy Design Pattern: All the Use Case specific ReadWriter classes (such as UserReadWriter) in the Gateway Package only differ in their behaviour, but all have the same functionalities such as read and write serialized file. To avoid duplicate code and coupling, we introduced a Interface called ReadWriter in Gateway Package, which all other file reading and writing classes implement. This makes ReadWriter independent of a particular implementation of an algorithm, which makes later modification and extension much easier: Open / Closed Principle. 
 - Future - Facade Design Pattern: We want our User to see their information together, and not separately in a case by case fashion, which is what we have currently. It might be a little coomplicated for users to use. So, we want to create a Facade class that ties together multiple Controllers in order to gather the information simultaneously. Then the GUI can directly utilize the Facade to display the user information, such as salary and schedule at the same time.
-  
-  
   
 - [x] Progress Report
 - Contribution of each member since phase 1
 - Link to significant pull requests & Explanation
-- Tian Shu
+- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests:
 - Canyang
 - Shihan
 - Yiteng
