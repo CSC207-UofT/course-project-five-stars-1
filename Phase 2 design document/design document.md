@@ -68,7 +68,7 @@ After the grading, interns can check their accepting status by entering their ID
 - [x] Progress Report
 - Contribution of each member since phase 1
 - Link to significant pull requests & Explanation
-- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests:
+- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in teh Gateway Package. Note that I used the main branch most of the times so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
 - Canyang
 - Shihan
 - Yiteng
@@ -76,4 +76,4 @@ After the grading, interns can check their accepting status by entering their ID
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test.
-- Link to pull request:
+- Link to pull request: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/14#issue-1052842072, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/15#issue-1052850708, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/17#issue-1052915473, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867. Note that our tests are completed through various pull requests. Some of them are not shown because it is directly done in the main branch.
