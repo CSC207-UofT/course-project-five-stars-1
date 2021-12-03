@@ -70,7 +70,7 @@ public class LoginSurface extends JFrame {
                 userManager.create(randomId, password, username, email, major);
                 JOptionPane.showMessageDialog(null, "Your registration is successful and your id is :" + randomId);
             }else{
-                JOptionPane.showMessageDialog(null, "Please enter a correct email or a correct password or a correct username.");
+                JOptionPane.showMessageDialog(null, "Please enter a correct email format, a password of length at least 6, and a username of length at least 1.");
             }
         });
 
