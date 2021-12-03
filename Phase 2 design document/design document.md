@@ -12,7 +12,7 @@
 
 
 
-- Scenario Walk-Through
+- [x] Scenario Walk-Through
 
 
   Employer Scenario:
