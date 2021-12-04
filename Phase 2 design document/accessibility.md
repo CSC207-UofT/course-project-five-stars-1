@@ -18,8 +18,9 @@ As a group, answer the following questions:
 
     (b) Explain why the principle does not apply to a program like yours.
 1. Principle 1: Equitable Use
-    
-    wdadadwadawdadadadadadada
+
+   Base on Principle 1( Equitable Use), Our design is useful and marketable to people with the need to hr system. It provides the same means of use for all users:(employer, employee, intern) identical whenever possible; equivalent when not. It avoids segregating or stigmatizing any users because in login UI every user has its own password and account. It provides the provisions for privacy, security, and safety should be equally available to all users. The text field for the password is secured, others can not see what you entered. It makes the design appealing to all users.
+
 
 2. 2123131
 3. 231131
