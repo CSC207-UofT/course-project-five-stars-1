@@ -54,5 +54,7 @@ As a group, answer the following questions:
 
 - Write a paragraph about who you would market your program towards, if you were to sell or license your program to customers. This could be a specific category such as "students" or more vague, such as "people who like games". Try to give a bit more detail along with the category.
 
+  -- In the United States, only 38% of all employees work for companies with more than 1,000 employees, and only 22% work for companies with more than 10,000 employees. So instead of focusing our software sales and product strategy toward the biggest companies, we are planning to target a less saturated market quickly: the mid-market. There is a large number of relatively small companies in the mid-market that only require the basic functions of the hr system because of the limited working capital. We are aiming this kind of company because firstly we are aware that our hr system, for now, is not qualified to sell to some big company. So these small companies are our best choice. On the other hand, if we can find a way to tap into the small business market, the profit is still considerable. For example, Paychex dominates the market for small business payroll and still is very large, profitable, and growing.
+
 
 - Write a paragraph about whether or not your program is less likely to be used by certain demographics. For example, a program that converts txt files to files that can be printed by a braille printer are less likely to be used by people who do not read braille.
