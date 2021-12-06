@@ -75,7 +75,7 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/21#issue-1053618098
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254487
 - Yiteng
-- Yuelin
+- Yuelin:  Wrote some features and enhance exist features to increase the quality of user experience. Created the sketch of the design document and fixed it base on the Phase 1 report comments. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/4#issue-1052569192 Added the button feature to each of the user interfaces so that the user can always go back to the last page viewed, and moreover we can use this feature to test our system without restarting it again when we test it.
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test. Note: classes in UI not required to be tested.
