@@ -45,11 +45,11 @@
 - Future - Facade Design Pattern: We want our User to see their information together, and not separately in a case by case fashion, which is what we have currently. It might be a little complicated for users to use. So, we want to create a Facade class that ties together multiple Controllers in order to gather the information simultaneously. Then the GUI can directly utilize the Facade to display the user information, such as salary and schedule at the same time.
   
 - [x] Progress Report of Members
-- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in teh Gateway Package. Note that I used the main branch most of the time so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
+- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in the Gateway Package. Note that I used the main branch most of the time so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
 - Canyang
 - Shihan
 - Yiteng
-- Yuelin
+- Yuelin: Wrote some features and enhance exist features to increase the quality of user experience. Created the sketch of the design document and fixed it base on the Phase 1 report comments. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/4#issue-1052569192 Added the button feature to each of the user interfaces so that the user can always go back to the last page viewed, and moreover we can use this feature to test our system without restarting it again when we test it.
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test. Note: classes in UI not required to be tested.
