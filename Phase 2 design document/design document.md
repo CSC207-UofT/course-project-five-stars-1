@@ -45,8 +45,22 @@
 - Future - Facade Design Pattern: We want our User to see their information together, and not separately in a case by case fashion, which is what we have currently. It might be a little complicated for users to use. So, we want to create a Facade class that ties together multiple Controllers in order to gather the information simultaneously. Then the GUI can directly utilize the Facade to display the user information, such as salary and schedule at the same time.
   
 - [x] Progress Report of Members
-- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in the Gateway Package. Note that I used the main branch most of the time so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
-- Canyang
+- Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in teh Gateway Package. Note that I used the main branch most of the time so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
+- Canyang : 
+- Since I fogot to make pull request and I only committed to the github, thus I copy paste some of my commit link below to demonstrate some main contributions about our group project.
+- Fixing Gui and fixing the main code problem:
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/1991647d62963cfd14f5fe021dcc4d0ba287218d
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/e691f2cd9db38c7c5e2bf651dc59111006d5e594
+- Write the code for entity, usecase, controller and GUI:
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/f20013782a76a713457c1253edbf8959d41c6d52
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/55876f4fc3c8a66f6bf8cb78628d339203fecac8
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/155af693b38743d4c2a30f441ceb9ef17dd6c1fe
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/a99ab2b20899dc0afa7142de0cf9260fb87db93d
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/17529b02c97cbded2c7e3e133c1fca9f0b6ae992
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/be86621cfab9ca2aef58eb0b58062e16231848fd
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/e4136fda38a422bc499bc180fc5e2283e3d20592
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/f63a3232b813e616f2e9ecc0a8556b3d311d0766
+https://github.com/CSC207-UofT/course-project-five-stars-1/commit/b08708d68d93b4f0f2734401499243eff114c60a
 - Shihan: link for tests:
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/11#issue-1052789623
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/12#issue-1052807218
@@ -61,7 +75,7 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/21#issue-1053618098
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254487
 - Yiteng
-- Yuelin: Wrote some features and enhance exist features to increase the quality of the user experience. Created the sketch of the design document and fixed it base on the Phase 1 report comments. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/4#issue-1052569192 Added the button feature to each of the user interfaces so that the user can always go back to the last page viewed, and moreover we can use this feature to test our system without restarting it again when we test it.
+- Yuelin
 
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test. Note: classes in UI not required to be tested.
