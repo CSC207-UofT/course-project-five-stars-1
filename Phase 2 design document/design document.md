@@ -103,5 +103,6 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254
 - Some of us used branches with pull requests to work on project simultaneously and refactor different parts of the program.
 - Refactored naming conversions from Phase 1.
 - Refactored function in the UI package using lambda.
+- Catches all exceptions in the UI package so the program doesn't crash when users input an incorrect value: i.e. enter float when int is required.
 - All code smells are solved
 
