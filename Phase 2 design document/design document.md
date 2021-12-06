@@ -61,7 +61,10 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/commit/be86621cfab9ca
 https://github.com/CSC207-UofT/course-project-five-stars-1/commit/e4136fda38a422bc499bc180fc5e2283e3d20592
 https://github.com/CSC207-UofT/course-project-five-stars-1/commit/f63a3232b813e616f2e9ecc0a8556b3d311d0766
 https://github.com/CSC207-UofT/course-project-five-stars-1/commit/b08708d68d93b4f0f2734401499243eff114c60a
-- Shihan: link for tests:
+- Shihan: 
+All I have done so far are tests. Every pull requests under my name on Github is about tests and I always made a pull request after each time I completed one test. The following link contains two test for controllers. Other pull requests are also tests but only contains one test. 
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978
+- link for other tests:
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/11#issue-1052789623
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/12#issue-1052807218
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/13#issue-1052833098
@@ -70,7 +73,6 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/15#issue-1052850
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/16#issue-1052854427
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/17#issue-1052915473
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/18#issue-1053047433
-https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/21#issue-1053618098
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254487
