@@ -85,6 +85,12 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254
 - [x] Unit Testing
 - All classes are tested, where each method has at least 1 corresponding unit test. Note: classes in UI not required to be tested.
 - Link to pull request: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/14#issue-1052842072, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/15#issue-1052850708, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/17#issue-1052915473, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978, https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867. Note that our tests are completed through various pull requests. Some of them are not shown because it is directly done in the main branch.
+- For Entity, we compared the output for the method and the string we expected. We will provide the expected sting in our test.
+- For the Use case, we will compare the output for the method in Usecase and the output from the entity method. Since we wrote a use case based on the entity, everything is correct if they generate the same result.
+- For the Controller, a similar process as we did in the use case. Compared between the output for the method in Usecase and the output from the Controller. Since we wrote Controller based on the Use case, everything is correct if they generate the same result.
+- For Gateway,  we compared the output for the method and the string we expected. We will provide the expected sting in our test.
+- In addition, for the methods may produce multiple outputs, our tests covered all the possible outputs and we passed these tests.
+- Also for the methods containing strings, we import java.io.ByteArrayOutputStream and java.io.PrintStream to check the output string are what we expect.
 - We didn't ReadWriter Interface as interface can not instantiate methods.
 - We didn't test the User class as most of its major functionalities are not implemented and are overriden in the child classes.
 
