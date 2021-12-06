@@ -8,10 +8,12 @@ import java.io.Serializable;
 public class Intern extends User implements Serializable {
 
     private boolean acceptable;
+    int leave_days;
 
     public Intern(String username, String password, String id, String email, String major){
         super(username, password, id, email, major);
         this.acceptable = false;
+        this.leave_days = 30;
     }
 
     /**
