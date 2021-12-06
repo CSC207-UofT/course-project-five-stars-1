@@ -12,10 +12,10 @@
 
 
 - [x] Major Design Decisions
--	Our users are employees, employer, and interns. So we created an abstract class User, with child of Employee, Employer, and Intern. In addition, we have corresponding operational classes in Use Case, Gateway, and Controller package for Employee, Employer, and Intern.
--	In order to make our data storage flexible and enable permanent data storage, we used serialization to store data, and realized this by creating a Gateway Package.
--	Only the employee has the authority to change a user information, and other users can create and modify the information.
--	Created ReadWrite Interface in the Gateway class so that all necessary classes can implement it. Ensures all necessary methods are implemented.
+- Our users are employees, employer, and interns. So we created an abstract class User, with child of Employee, Employer, and Intern. In addition, we have corresponding operational classes in Use Case, Gateway, and Controller package for Employee, Employer, and Intern.
+- In order to make our data storage flexible and enable permanent data storage, we used serialization to store data, and realized this by creating a Gateway Package.
+- Only the employee has the authority to change a user information, and other users can create and modify the information.
+- Created ReadWrite Interface in the Gateway class so that all necessary classes can implement it. Ensures all necessary methods are implemented.
 
 - [x] Clean Architecture
 
@@ -76,7 +76,9 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/18#issue-1053047
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/21#issue-1053618098
 https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254487
-- Yiteng
+- Yiteng: 
+- Wrote some use cases, entities, controllers. For example: Intern(entity), InternManager(use case), and InternSystemController(controller). Commit: https://github.com/CSC207-UofT/course-project-five-stars-1/commit/a332bc53b44d05a9f8fa04fb2f2f13fdd1d959c8, https://github.com/CSC207-UofT/course-project-five-stars-1/commit/5b25b898c463404c93ea8fb024206925f48d10ad, https://github.com/CSC207-UofT/course-project-five-stars-1/commit/59a43842bda47624554aa56b68dd76dcc6089e69, https://github.com/CSC207-UofT/course-project-five-stars-1/commit/215ae16f87d9f9b5665946453c1a84218e531cc1. 
+- Wrote some unit tests for Intern, InternManager, and InternSystemController. Commit: https://github.com/CSC207-UofT/course-project-five-stars-1/commit/be024572f69bc0824ba64f759bb46315fb758572, https://github.com/CSC207-UofT/course-project-five-stars-1/commit/8d05bf6fb4951b5da54742d3a60313b6e3b86225 (Sorry for the inconvenience that in Phase 1 I did not make the pull request, all the time I use commit and push to the main branch.)
 - Yuelin:  Wrote some features and enhance exist features to increase the quality of user experience. Created the sketch of the design document and fixed it base on the Phase 1 report comments. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/4#issue-1052569192 Added the button feature to each of the user interfaces so that the user can always go back to the last page viewed, and moreover we can use this feature to test our system without restarting it again when we test it.
 
 - [x] Unit Testing
