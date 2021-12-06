@@ -47,7 +47,19 @@
 - [x] Progress Report of Members
 - Tian Shu: Wrote unit tests for Gateway Class, meaning more serialization files in the tests. Helped to formulate the design document. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/7#issue-1052760969 Creating database for the program using Serialization in the Gateway Package. Note that I used the main branch most of the time so not everything was shown in this pull request. https://github.com/CSC207-UofT/course-project-five-stars-1/pull/26#issue-1065115410 this is all pull request for all unit tests that I wrote for the Gateway class. 
 - Canyang
-- Shihan
+- Shihan: link for tests:
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/11#issue-1052789623
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/12#issue-1052807218
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/13#issue-1052833098
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/14#issue-1052842072
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/15#issue-1052850708
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/16#issue-1052854427
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/17#issue-1052915473
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/18#issue-1053047433
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/19#issue-1053097978
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/20#issue-1053115867
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/21#issue-1053618098
+https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254487
 - Yiteng
 - Yuelin: Wrote some features and enhance exist features to increase the quality of user experience. Created the sketch of the design document and fixed it base on the Phase 1 report comments. Pull requests: https://github.com/CSC207-UofT/course-project-five-stars-1/pull/4#issue-1052569192 Added the button feature to each of the user interfaces so that the user can always go back to the last page viewed, and moreover we can use this feature to test our system without restarting it again when we test it.
 
