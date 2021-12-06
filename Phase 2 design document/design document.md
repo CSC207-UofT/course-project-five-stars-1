@@ -88,7 +88,7 @@ https://github.com/CSC207-UofT/course-project-five-stars-1/pull/38#issue-1070254
 - For Entity, we compared the output for the method and the string we expected. We will provide the expected sting in our test.
 - For the Use case, we will compare the output for the method in Usecase and the output from the entity method. Since we wrote a use case based on the entity, everything is correct if they generate the same result.
 - For the Controller, a similar process as we did in the use case. Compared between the output for the method in Usecase and the output from the Controller. Since we wrote Controller based on the Use case, everything is correct if they generate the same result.
-- For Gateway,  we compared the output for the method and the string we expected. We will provide the expected sting in our test.
+- For gateway, we created two test files for each method, one using our implemented method, another using standard serialization. Then we compared the two serialized objects after converting them back to a java object.
 - In addition, for the methods may produce multiple outputs, our tests covered all the possible outputs and we passed these tests.
 - Also for the methods containing strings, we import java.io.ByteArrayOutputStream and java.io.PrintStream to check the output string are what we expect.
 - We didn't ReadWriter Interface as interface can not instantiate methods.
