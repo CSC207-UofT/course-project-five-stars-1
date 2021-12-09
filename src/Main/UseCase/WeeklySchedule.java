@@ -29,7 +29,6 @@ public class WeeklySchedule {
         } catch (IOException e) {
             System.out.println("Schedule list did not save.");
         }
-
         try {
             System.out.println(readWriter.readFromFile("schedules.ser"));
             System.out.println("Schedule file read successfully!");

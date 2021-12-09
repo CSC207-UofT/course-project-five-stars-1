@@ -19,12 +19,12 @@ public class JobSurface extends JFrame{
          */
         JPanel panel = new JPanel();
 
-        JLabel userId = new JLabel("Userid:");
+        JLabel userId = new JLabel("UserID:");
         panel.add(userId);
         useridInput = new JTextField(20);
         panel.add(useridInput);
 
-        JLabel userMajor = new JLabel("UserMajor:");
+        JLabel userMajor = new JLabel("User Major:");
         panel.add(userMajor);
         userMajorInput = new JTextField(20);
         panel.add(userMajorInput);
@@ -45,8 +45,8 @@ public class JobSurface extends JFrame{
             String addMajor = jsc.addMajor(id, inputMajor);
             String getMajor = jsc.getMajor(id);
             String reference = jsc.getReference(getMajor);
-            JOptionPane.showMessageDialog(null, "This is your added major," +
-                    " remember to add the major that matches the previous one:" + addMajor );
+            JOptionPane.showMessageDialog(null, "This is your added major, " + addMajor +
+                    ". Remember to use this major when logging in." );
             JOptionPane.showMessageDialog(null, "Here is the reference job: " + reference);
         });
         /*

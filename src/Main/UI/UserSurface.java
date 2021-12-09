@@ -26,12 +26,8 @@ public class UserSurface extends JFrame{
         JButton internButton = new JButton("Intern");
         panel.add(internButton);
 
-        JButton leavedaysButton = new JButton("LeaveDays");
-        panel.add(leavedaysButton);
-
-        JButton existButton = new JButton("Exist");
+        JButton existButton = new JButton("Exit");
         panel.add(existButton);
-
 
         /*
          * A helper function for {@code addActionListener}.
@@ -72,16 +68,6 @@ public class UserSurface extends JFrame{
             UserSurface.this.setVisible(false);
             JFrame internsurface = new InternSurface();
             internsurface.setVisible(true);
-        });
-        /*
-         * A helper function for {@code addActionListener}.
-         * It is activated when you click LeaveDays button
-         * And you can go back to the LeaveSurface
-         */
-        leavedaysButton.addActionListener(e -> {
-            UserSurface.this.setVisible(false);
-            JFrame leavedaysinterface = new LeaveSurface();
-            leavedaysinterface.setVisible(true);
         });
         /*
          * A helper function for {@code addActionListener}.

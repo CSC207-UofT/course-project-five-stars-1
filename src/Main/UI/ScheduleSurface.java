@@ -21,12 +21,12 @@ public class ScheduleSurface extends JFrame{
          * creating buttons: schedule and back
          */
         JPanel panel = new JPanel();
-        JLabel userId = new JLabel("Userid:");
+        JLabel userId = new JLabel("UserID:");
         panel.add(userId);
         useridInput = new JTextField(20);
         panel.add(useridInput);
 
-        JLabel chour = new JLabel("Changehour:");
+        JLabel chour = new JLabel("Change Hour:");
         panel.add(chour);
         ChourInput = new JTextField(20);
         panel.add(ChourInput);
