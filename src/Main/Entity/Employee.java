@@ -7,8 +7,11 @@ import java.io.Serializable;
  */
 public class Employee extends User implements Serializable{
 
+    int leave_days;
+
     public Employee(String username, String password, String id, String email, String major){
         super(username, password, id, email, major);
+        this.leave_days = 30;
     }
 
     /**
